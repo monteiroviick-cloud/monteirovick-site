@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>monteirovick Estratégia & Fala</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="monteirovick — Estratégia &amp; Fala" />
+  <meta property="og:description" content="Transforme o pensamento em fala que move decisões, reputação e resultado." />
+  <meta property="og:image" content="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Transforme o pensamento em fala que move decisões, reputação e resultado. Estratégia e fala com Vick Monteiro." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vinho-escuro: #0a0305;
+      --vinho: #1e0910;
+      --vinho-medio: #3a1018;
+      --vermelho: #c0292a;
+      --bege: #e9ded2;
+      --bege-muted: rgba(233,222,210,0.54);
+      --line: rgba(233,222,210,0.1);
+      --branco: #f5f0eb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--vinho-escuro);
+      color: var(--bege);
+      overflow-x: hidden;
+    }
+
+    .site-shell {
+      background:
+        linear-gradient(90deg, rgba(233,222,210,0.022) 1px, transparent 1px),
+        linear-gradient(rgba(233,222,210,0.022) 1px, transparent 1px),
+        var(--vinho-escuro);
+      background-size: 80px 80px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 24px 60px;
+      gap: 28px;
+    }
+    nav::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(10,3,5,0.96) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .nav-logo { position: relative; z-index: 1; }
+    .nav-logo svg { height: 18px; width: auto; }
+    .nav-links {
+      position: relative; z-index: 1;
+      display: flex; gap: 36px; list-style: none;
+    }
+    .nav-links a {
+      color: var(--bege-muted); text-decoration: none;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--bege); }
+    .nav-cta {
+      position: relative; z-index: 1;
+      background: transparent; border: 1px solid rgba(233,222,210,0.18);
+      color: var(--bege); padding: 10px 24px;
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; text-decoration: none; transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--vermelho); border-color: var(--vermelho); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative; min-height: 100vh;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background: #0a0305;
+    }
+    .hero-content {
+      position: relative; z-index: 3;
+      display: flex; flex-direction: column; justify-content: center;
+      min-height: 100vh;
+      padding: 190px 60px 90px;
+      max-width: 820px;
+    }
+    .hero-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--vermelho); display: flex; align-items: center; gap: 12px; margin-bottom: 32px;
+    }
+    .hero-label::before {
+      content: ''; display: inline-block; width: 28px; height: 1px; background: var(--vermelho);
+    }
+    .hero-headline {
+      font-size: clamp(36px, 4vw, 62px); font-weight: 800;
+      line-height: 1.04; letter-spacing: -0.02em; margin-bottom: 28px;
+    }
+    .hero-headline .hero-line { display: block; white-space: nowrap; }
+    .hero-sub {
+      font-size: 16px; font-weight: 400; line-height: 1.78;
+      color: var(--bege-muted); max-width: 460px; margin-bottom: 44px;
+    }
+    .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--vermelho); color: var(--branco); padding: 15px 32px;
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      border: none; cursor: pointer; text-decoration: none; transition: background 0.2s; display: inline-block;
+    }
+    .btn-primary:hover { background: #a02020; }
+    .btn-ghost {
+      color: var(--bege-muted); font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+      text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--bege); }
+    .btn-ghost::after { content: '→'; font-size: 14px; }
+
+    .hero-image {
+      position: absolute; inset: 0; z-index: 1;
+    }
+    .hero-image img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 68% center;
+      opacity: 0.88; display: block;
+      transform: scale(1.5) translateX(14%);
+      transform-origin: center center;
+    }
+    /* gradient that bleeds the photo into the background no hard edge */
+    .hero-image::before {
+      content: ''; position: absolute; inset: 0; z-index: 1;
+      background:
+        linear-gradient(to right, #0a0305 0%, rgba(10,3,5,0.95) 14%, rgba(10,3,5,0.6) 34%, rgba(10,3,5,0.08) 58%, transparent 100%),
+        linear-gradient(to top, #0a0305 0%, rgba(10,3,5,0.5) 8%, transparent 25%),
+        linear-gradient(to bottom, #0a0305 0%, transparent 6%);
+    }
+    .hero-image::after {
+      content: ''; position: absolute; inset: 0; z-index: 2;
+      background: radial-gradient(ellipse 50% 60% at 75% 45%, rgba(192,41,42,0.06) 0%, transparent 60%);
+    }
+    .hero-scroll {
+      position: absolute; top: 140px; right: 40px; z-index: 4;
+      display: flex; flex-direction: column; align-items: center; gap: 12px;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(233,222,210,0.22);
+      writing-mode: vertical-rl; text-orientation: mixed;
+    }
+    .hero-scroll-line { width: 1px; height: 48px; background: rgba(233,222,210,0.18); }
+
+    /* ─── MARQUEE ─── */
+    .marquee-section {
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      overflow: hidden; padding: 16px 0; background: var(--vinho);
+    }
+    .marquee-track { display: flex; animation: marquee 28s linear infinite; white-space: nowrap; }
+    .marquee-item {
+      display: inline-flex; align-items: center; gap: 20px; padding: 0 36px;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(233,222,210,0.28);
+    }
+    .marquee-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--vermelho); flex-shrink: 0; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ─── SHARED ─── */
+    .section-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--vermelho); display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .section-tag::before { content: ''; display: inline-block; width: 22px; height: 1px; background: var(--vermelho); }
+    .section-title {
+      font-size: clamp(26px, 2.8vw, 42px); font-weight: 800;
+      line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 24px;
+    }
+    .section-title em { font-style: italic; font-weight: 400; color: var(--bege-muted); }
+    .section-body { font-size: 15px; font-weight: 400; line-height: 1.8; color: var(--bege-muted); margin-bottom: 18px; }
+
+    /* ─── ESTRATÉGIA & FALA ─── */
+    .ef-section { padding: 120px 60px; border-top: 1px solid var(--line); }
+    .ef-inner { max-width: 1180px; margin: 0 auto; }
+
+    .ef-top {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+      margin-bottom: 80px;
+    }
+    .ef-top-right { padding-top: 8px; }
+    .ef-body {
+      font-size: 19px; font-weight: 400; line-height: 1.85;
+      color: var(--bege-muted); margin-bottom: 18px;
+    }
+    .ef-body strong { color: var(--bege); font-weight: 600; }
+
+    .ef-beliefs {
+      border-top: 0; padding-top: 60px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; background: transparent;
+    }
+    .ef-belief {
+      background: var(--vinho-escuro); padding: 40px 36px;
+      border-bottom: 2px solid transparent; transition: border-color 0.3s;
+    }
+    .ef-belief:hover { border-bottom-color: var(--vermelho); }
+    .ef-belief-num {
+      font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--vermelho); margin-bottom: 20px;
+    }
+    .ef-belief-title { font-size: 20px; font-weight: 700; margin-bottom: 12px; line-height: 1.2; }
+    .ef-belief-text { font-size: 16px; font-weight: 400; line-height: 1.75; color: var(--bege-muted); }
+
+    .ef-statement {
+      margin-top: 80px; padding: 60px;
+      background: var(--vinho);
+      border-left: 3px solid var(--vermelho);
+      display: flex; flex-direction: column; gap: 20px;
+    }
+    .ef-statement-quote {
+      font-size: clamp(20px, 2.4vw, 32px); font-weight: 700;
+      line-height: 1.2; letter-spacing: -0.01em;
+    }
+    .ef-statement-quote em { font-style: italic; font-weight: 400; color: var(--bege-muted); }
+    .ef-statement-sub { font-size: 14px; font-weight: 500; color: var(--bege-muted); line-height: 1.6; max-width: 640px; }
+
+    /* ─── SOBRE ─── */
+    .sobre {
+      padding: 120px 60px; border-top: 1px solid var(--line);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+      max-width: 1180px; margin: 0 auto;
+    }
+    .sobre-img-wrap { position: relative; overflow: hidden; }
+    .sobre-img-wrap img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top;
+      filter: grayscale(100%) contrast(1.08); display: block; opacity: 0.8;
+    }
+    .sobre-img-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 55%;
+      background: linear-gradient(to top, var(--vinho-escuro) 0%, transparent 100%);
+    }
+    .sobre-quote {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 24px 28px; border-left: 2px solid var(--vermelho);
+      background: rgba(10,3,5,0.9); backdrop-filter: blur(8px);
+    }
+    .sobre-quote p { font-size: 14px; font-weight: 500; line-height: 1.6; color: var(--bege); font-style: italic; }
+    .sobre-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1px; background: var(--line); margin-top: 48px;
+    }
+    .stat { background: var(--vinho-escuro); padding: 22px 18px; }
+    .stat-number { font-size: 24px; font-weight: 800; color: var(--vermelho); letter-spacing: -0.03em; line-height: 1; margin-bottom: 5px; }
+    .stat-label { font-size: 11px; font-weight: 500; color: var(--bege-muted); line-height: 1.4; }
+
+    /* ─── PILARES ─── */
+    .pilares { background: var(--vinho); padding: 100px 60px; border-top: 1px solid var(--line); }
+    .pilares-header {
+      max-width: 1180px; margin: 0 auto 60px;
+      display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .pilares-header-right { font-size: 13px; color: var(--bege-muted); max-width: 260px; line-height: 1.65; text-align: right; }
+    .pilares-grid {
+      max-width: 1180px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--line);
+    }
+    .pilar { background: var(--vinho); padding: 44px 36px; position: relative; overflow: hidden; transition: background 0.3s; }
+    .pilar:hover { background: #270a11; }
+    .pilar-number {
+      font-size: 72px; font-weight: 900; color: rgba(192,41,42,0.09);
+      line-height: 1; position: absolute; top: 12px; right: 20px;
+      letter-spacing: -0.04em; pointer-events: none;
+    }
+    .pilar-title { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 14px; }
+    .pilar-body { font-size: 14px; font-weight: 400; line-height: 1.75; color: var(--bege-muted); }
+
+    /* ─── PARA QUEM ─── */
+    .para-quem-section { padding: 120px 0; border-top: 1px solid var(--line); }
+    .para-quem { max-width: 1180px; margin: 0 auto; padding: 0 60px; display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
+    .dores-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: 28px; }
+    .dor-item { padding: 16px 0; border-bottom: 1px solid var(--line); display: flex; gap: 16px; align-items: flex-start; }
+    .dor-bullet { width: 5px; height: 5px; border-radius: 50%; background: var(--vermelho); flex-shrink: 0; margin-top: 7px; }
+    .dor-text { font-size: 15px; font-weight: 400; line-height: 1.65; color: var(--bege-muted); }
+    .dor-text strong { color: var(--bege); font-weight: 600; }
+    .frase-destaque { background: var(--vinho); border-left: 2px solid var(--vermelho); padding: 24px 28px; margin-top: 40px; }
+    .frase-destaque p { font-size: 14px; font-weight: 500; line-height: 1.7; font-style: italic; color: var(--bege); }
+    .frase-destaque cite { display: block; margin-top: 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--vermelho); font-style: normal; }
+
+    /* ─── MAPA DE FALA ─── */
+    .mapa-section {
+      padding: 0; border-top: 1px solid var(--line);
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(192,41,42,0.07) 0%, transparent 65%),
+        var(--vinho);
+    }
+
+    .mapa-hero {
+      max-width: 1180px; margin: 0 auto; padding: 100px 60px 80px;
+      text-align: center; position: relative;
+    }
+    .mapa-hero .section-tag { justify-content: center; }
+    .mapa-hero .section-tag::before { display: none; }
+
+    .mapa-headline {
+      font-size: clamp(36px, 5vw, 72px); font-weight: 800;
+      line-height: 1.04; letter-spacing: -0.03em; margin-bottom: 24px;
+    }
+    .mapa-headline em { font-style: italic; font-weight: 400; color: var(--bege-muted); }
+
+    .mapa-sub {
+      font-size: 17px; font-weight: 400; line-height: 1.75;
+      color: var(--bege-muted); max-width: 580px; margin: 0 auto 16px;
+    }
+    .mapa-microcopy {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(233,222,210,0.3); margin-bottom: 64px;
+    }
+
+    .mapa-quiz-wrap {
+      max-width: 820px; margin: 0 auto;
+      padding: 0 60px 100px;
+    }
+
+    .quiz {
+      border: 1px solid rgba(233,222,210,0.15);
+      background: rgba(10,3,5,0.5);
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+    }
+    .quiz-progress-bar { height: 3px; background: rgba(233,222,210,0.06); position: relative; overflow: hidden; }
+    .quiz-progress-fill {
+      position: absolute; top: 0; left: 0; height: 100%;
+      background: var(--vermelho); transition: width 0.5s ease;
+    }
+    .quiz-head {
+      padding: 20px 32px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      border-bottom: 1px solid rgba(233,222,210,0.08);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--bege-muted);
+    }
+    .quiz-body { padding: 40px 40px 36px; }
+
+    .question { display: none; }
+    .question.is-active { display: block; }
+    .question h3 {
+      font-size: clamp(22px, 2.6vw, 32px); font-weight: 700; line-height: 1.1;
+      letter-spacing: -0.01em; margin-bottom: 28px; color: var(--bege);
+    }
+    .options { display: grid; gap: 10px; }
+    .option {
+      width: 100%; min-height: 56px; padding: 16px 20px;
+      border: 1px solid rgba(233,222,210,0.1);
+      background: rgba(10,3,5,0.35);
+      color: var(--bege-muted);
+      font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 400;
+      line-height: 1.4; text-align: left; cursor: pointer; transition: all 0.15s;
+    }
+    .option:hover { border-color: rgba(233,222,210,0.35); background: rgba(192,41,42,0.12); color: var(--bege); }
+    .option.is-selected { border-color: rgba(192,41,42,0.55); background: rgba(192,41,42,0.18); color: var(--bege); }
+
+    .quiz-actions {
+      margin-top: 28px; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    }
+    .quiz-btn {
+      min-height: 46px; padding: 13px 22px;
+      border: 1px solid rgba(233,222,210,0.15); background: transparent; color: var(--bege);
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.15s;
+    }
+    .quiz-btn:hover { border-color: rgba(233,222,210,0.3); }
+    .quiz-btn.primary { background: var(--vermelho); border-color: var(--vermelho); font-size: 12px; padding: 13px 32px; }
+    .quiz-btn.primary:hover { background: #a02020; }
+
+    .lead-form { display: none; }
+    .lead-form.is-active { display: block; }
+    .lead-form h3 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .lead-form p { font-size: 14px; color: var(--bege-muted); line-height: 1.65; margin-bottom: 24px; }
+    .field-grid { display: grid; gap: 10px; }
+    .quiz-input {
+      width: 100%; min-height: 52px; padding: 14px 16px;
+      border: 1px solid rgba(233,222,210,0.12); background: rgba(10,3,5,0.5);
+      color: var(--bege); font-family: 'Montserrat', sans-serif; font-size: 14px;
+      outline: none; transition: border-color 0.15s;
+    }
+    .quiz-input:focus { border-color: var(--vermelho); }
+    .quiz-input::placeholder { color: rgba(233,222,210,0.28); }
+
+    .result-panel { display: none; }
+    .result-panel.is-active { display: block; }
+    .result-title {
+      font-size: clamp(24px, 3vw, 36px); font-weight: 800; line-height: 1.06;
+      letter-spacing: -0.02em; color: var(--bege); margin-bottom: 14px;
+    }
+    .result-copy { font-size: 16px; line-height: 1.75; color: var(--bege-muted); margin-bottom: 20px; }
+    .result-list { list-style: none; display: grid; gap: 9px; margin-bottom: 28px; }
+    .result-list li { font-size: 14px; color: var(--bege-muted); }
+    .result-list li::before { content: "+ "; color: var(--vermelho); font-weight: 700; }
+
+    /* ─── SERVIÇOS ─── */
+    .servicos {
+      padding: 100px 60px; border-top: 1px solid var(--line);
+      background: var(--vinho-escuro);
+    }
+    .servicos-inner { max-width: 1180px; margin: 0 auto; }
+    .servicos-intro {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end;
+      margin-bottom: 60px;
+    }
+    .servicos-intro-right { font-size: 15px; color: var(--bege-muted); line-height: 1.75; }
+
+    /* categorias */
+    .servicos-categoria { margin-bottom: 48px; }
+    .servicos-cat-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
+      color: rgba(233,222,210,0.3); margin-bottom: 16px; padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+    .servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
+    .servicos-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); }
+
+    .servico-card {
+      background: var(--vinho-escuro); padding: 36px 32px;
+      position: relative; transition: background 0.3s; overflow: hidden;
+    }
+    .servico-card:hover { background: var(--vinho); }
+    .servico-card.destaque { background: var(--vinho); }
+    .servico-card.em-breve { opacity: 0.7; }
+
+    .servico-badge {
+      display: inline-block; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--vermelho);
+      border: 1px solid rgba(192,41,42,0.4); padding: 4px 10px; margin-bottom: 18px;
+    }
+    .servico-badge.soon { color: rgba(233,222,210,0.4); border-color: rgba(233,222,210,0.15); }
+    .servico-nome { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 12px; }
+    .servico-desc { font-size: 14px; font-weight: 400; line-height: 1.72; color: var(--bege-muted); margin-bottom: 24px; }
+    .servico-detail {
+      font-size: 12px; font-weight: 500; line-height: 1.6;
+      color: rgba(233,222,210,0.35); margin-bottom: 24px;
+      padding-top: 16px; border-top: 1px solid var(--line);
+    }
+    .servico-link {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--vermelho); text-decoration: none;
+      display: flex; align-items: center; gap: 8px; transition: gap 0.2s;
+    }
+    .servico-link:hover { gap: 14px; }
+    .servico-link.disabled { color: rgba(233,222,210,0.3); pointer-events: none; }
+
+    /* ─── MANIFESTO ─── */
+    .manifesto {
+      padding: 120px 60px; text-align: center; position: relative; overflow: hidden;
+      border-top: 1px solid var(--line);
+    }
+    .manifesto-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(192,41,42,0.09) 0%, transparent 65%), var(--vinho);
+    }
+    .manifesto-content { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
+    .manifesto-pre { font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--vermelho); margin-bottom: 36px; }
+    .manifesto-text {
+      font-size: clamp(28px, 4vw, 56px); font-weight: 800; line-height: 1.1;
+      letter-spacing: -0.025em; margin-bottom: 36px;
+    }
+    .manifesto-text em { font-style: italic; font-weight: 400; color: var(--bege-muted); }
+    .manifesto-body { font-size: 16px; font-weight: 400; line-height: 1.8; color: var(--bege-muted); max-width: 540px; margin: 0 auto 40px; }
+
+    /* ─── CONTATO ─── */
+    .contato-section { background: var(--vinho-escuro); border-top: 1px solid var(--line); }
+    .cta-section { padding: 120px 60px; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .cta-form { display: flex; flex-direction: column; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-label { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bege-muted); }
+    .form-field {
+      background: rgba(233,222,210,0.04); border: 1px solid rgba(233,222,210,0.1);
+      color: var(--bege); padding: 14px 16px;
+      font-family: 'Montserrat', sans-serif; font-size: 14px;
+      transition: border-color 0.2s; outline: none; width: 100%;
+    }
+    .form-field:focus { border-color: var(--vermelho); }
+    .form-field::placeholder { color: rgba(233,222,210,0.22); }
+    .form-textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      background: var(--vermelho); color: var(--branco); border: none;
+      padding: 16px 36px; font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.2s; align-self: flex-start;
+    }
+    .form-submit:hover { background: #a02020; }
+    .social-links { display: flex; flex-direction: column; gap: 0; margin-top: 40px; }
+    .social-link {
+      display: flex; align-items: center; gap: 16px; text-decoration: none;
+      color: var(--bege-muted); font-size: 14px; font-weight: 500;
+      padding: 15px 0; border-bottom: 1px solid var(--line); transition: color 0.2s;
+    }
+    .social-link:hover { color: var(--bege); }
+    .social-platform { font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--vermelho); min-width: 70px; }
+
+    /* ─── NAV SCROLL ─── */
+    nav.scrolled::before { background: rgba(10,3,5,0.98) !important; backdrop-filter: blur(12px); }
+
+    /* ─── GALERIA EXPERIÊNCIA ─── */
+    .galeria-section { padding: 100px 60px; border-top: 1px solid var(--line); background: var(--vinho-escuro); }
+    .galeria-inner { max-width: 1180px; margin: 0 auto; }
+    .galeria-header { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 48px; }
+    .galeria-header-right { font-size: 15px; color: var(--bege-muted); line-height: 1.75; text-align: right; }
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      grid-template-rows: 320px 280px;
+      gap: 4px;
+    }
+    .galeria-item { overflow: hidden; position: relative; background: var(--vinho); }
+    .galeria-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(20%) contrast(1.05);
+      transition: transform 0.6s ease, filter 0.4s;
+    }
+    .galeria-item:hover img { transform: scale(1.04); filter: grayscale(0%) contrast(1.08); }
+    .galeria-item.span-col { grid-column: 1; grid-row: 1 / 3; }
+    .galeria-item.span-row { grid-column: 2 / 4; }
+    .galeria-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(to top, rgba(10,3,5,0.85) 0%, transparent 100%);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(233,222,210,0.6); opacity: 0; transition: opacity 0.3s;
+    }
+    .galeria-item:hover .galeria-caption { opacity: 1; }
+
+    /* ─── NÚMEROS ─── */
+    .numeros-section {
+      padding: 100px 60px; border-top: 1px solid var(--line);
+      background: var(--vinho);
+    }
+    .numeros-inner { max-width: 1180px; margin: 0 auto; }
+    .numeros-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--line); margin-top: 56px;
+    }
+    .numero-item { background: var(--vinho); padding: 48px 36px; }
+    .numero-valor {
+      font-size: clamp(48px, 5vw, 72px); font-weight: 900;
+      color: var(--bege); line-height: 1; letter-spacing: -0.04em; margin-bottom: 12px;
+    }
+    .numero-valor span { color: var(--vermelho); }
+    .numero-label { font-size: 13px; font-weight: 500; color: var(--bege-muted); line-height: 1.5; }
+
+    /* ─── DEPOIMENTOS ─── */
+    .depoimenos-section { padding: 100px 60px; border-top: 1px solid var(--line); background: var(--vinho-escuro); }
+    .depoimentos-inner { max-width: 1180px; margin: 0 auto; }
+    .depoimentos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); margin-top: 56px; }
+    .depoimento-card { background: var(--vinho-escuro); padding: 36px 32px; }
+    .depoimento-texto {
+      font-size: 15px; font-weight: 400; line-height: 1.75;
+      color: var(--bege-muted); font-style: italic; margin-bottom: 24px;
+    }
+    .depoimento-texto::before { content: '"'; color: var(--vermelho); font-size: 28px; font-style: normal; line-height: 0; vertical-align: -10px; margin-right: 4px; }
+    .depoimento-autor { display: flex; flex-direction: column; gap: 4px; }
+    .depoimento-nome { font-size: 13px; font-weight: 700; color: var(--bege); }
+    .depoimento-cargo { font-size: 11px; font-weight: 500; color: rgba(233,222,210,0.35); letter-spacing: 0.05em; }
+
+    /* ─── PRODUTOS (checkered) ─── */
+    .produtos-section { padding: 100px 60px; border-top: 1px solid var(--line); background: var(--vinho); }
+    .produtos-inner { max-width: 1180px; margin: 0 auto; }
+    .produtos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .produto-card {
+      position: relative; overflow: hidden;
+      border: 1px solid rgba(233,222,210,0.1);
+      transition: transform 0.3s, border-color 0.3s;
+      text-decoration: none; display: block; color: inherit;
+    }
+    .produto-card:hover { transform: translateY(-6px); border-color: rgba(192,41,42,0.5); }
+    .produto-thumb {
+      aspect-ratio: 4/3; position: relative; overflow: hidden;
+    }
+    /* checkered pattern damier em cores da marca */
+    .produto-thumb-bg {
+      position: absolute; inset: 0;
+      background-color: var(--vinho);
+      background-image:
+        linear-gradient(45deg, var(--vinho-medio) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--vinho-medio) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--vinho-medio) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--vinho-medio) 75%);
+      background-size: 32px 32px;
+      background-position: 0 0, 0 16px, 16px -16px, -16px 0px;
+      opacity: 0.8;
+    }
+    .produto-thumb-img {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .produto-thumb-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      border: 1px solid rgba(233,222,210,0.1);
+    }
+    .produto-badge-wrap {
+      position: absolute; top: 16px; left: 16px; z-index: 2;
+    }
+    .produto-badge {
+      display: inline-block; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      background: var(--vermelho); color: var(--branco);
+      padding: 5px 12px;
+    }
+    .produto-body { background: var(--vinho-escuro); padding: 28px 28px 24px; }
+    .produto-nome { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .produto-desc { font-size: 13px; color: var(--bege-muted); line-height: 1.65; margin-bottom: 20px; }
+    .produto-cta {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--vermelho); display: flex; align-items: center; gap: 8px; transition: gap 0.2s;
+    }
+    .produto-card:hover .produto-cta { gap: 14px; }
+
+    /* ─── SOCIAL ─── */
+    .social-section { padding: 80px 60px; border-top: 1px solid var(--line); background: var(--vinho-escuro); }
+    .social-inner { max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 48px; }
+    .social-pre { font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--vermelho); }
+    .social-headline { font-size: clamp(24px, 3vw, 40px); font-weight: 800; letter-spacing: -0.02em; text-align: center; }
+    .social-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); width: 100%; }
+    .social-card {
+      background: var(--vinho-escuro); padding: 40px 36px;
+      display: flex; flex-direction: column; gap: 12px;
+      text-decoration: none; color: inherit; transition: background 0.3s;
+    }
+    .social-card:hover { background: var(--vinho); }
+    .social-card-icon { font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--vermelho); }
+    .social-card-handle { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+    .social-card-desc { font-size: 13px; color: var(--bege-muted); line-height: 1.6; }
+    .social-card-arrow { font-size: 18px; color: var(--vermelho); margin-top: auto; padding-top: 16px; transition: transform 0.2s; }
+    .social-card:hover .social-card-arrow { transform: translateX(6px); }
+
+    .logos-section > div { max-width: 1180px !important; }
+    .client-logo {
+      height: 44px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      opacity: 0.42;
+      display: block;
+    }
+    .client-logo.invert { filter: brightness(0) invert(1); }
+    .client-logo.screen {
+      filter: grayscale(1) invert(1) brightness(1.8);
+      mix-blend-mode: screen;
+      opacity: 0.5;
+    }
+    .video-card {
+      position: relative;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(10,3,5,0.22), rgba(10,3,5,0.78)),
+        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") center/cover;
+      border: 1px solid rgba(233,222,210,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--bege);
+    }
+    .video-play {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--vermelho);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+      transition: transform 0.2s, background 0.2s;
+    }
+    .video-play::before {
+      content: '';
+      margin-left: 5px;
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 20px solid var(--branco);
+    }
+    .video-card:hover .video-play { transform: scale(1.05); background: #a02020; }
+    .video-caption {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(233,222,210,0.74);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--vinho-escuro); border-top: 1px solid rgba(233,222,210,0.06);
+      padding: 40px 60px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-logo { display: flex; align-items: center; }
+    .footer-logo svg { height: 16px; width: auto; opacity: 0.3; }
+    .footer-copy { font-size: 11px; font-weight: 400; color: rgba(233,222,210,0.22); letter-spacing: 0.05em; }
+    .footer-right { display: flex; gap: 28px; }
+    .footer-right a { font-size: 11px; font-weight: 500; color: rgba(233,222,210,0.32); text-decoration: none; letter-spacing: 0.1em; transition: color 0.2s; }
+    .footer-right a:hover { color: var(--bege); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+      .hero { min-height: 100svh; }
+      .hero-content { min-height: 100svh; padding: 136px 24px 78px; max-width: 100%; }
+      .hero-headline { font-size: 38px; line-height: 1.02; text-shadow: 0 3px 18px rgba(10,3,5,0.85); }
+      .hero-sub { font-size: 18px; max-width: 22rem; }
+      .hero-image img { object-position: 58% center; opacity: 0.96; transform: scale(1.04); }
+      .hero-image::before {
+        background:
+          linear-gradient(to right, #0a0305 0%, rgba(10,3,5,0.9) 22%, rgba(10,3,5,0.55) 56%, rgba(10,3,5,0.12) 100%),
+          linear-gradient(to top, #0a0305 0%, rgba(10,3,5,0.72) 18%, transparent 48%),
+          linear-gradient(to bottom, #0a0305 0%, rgba(10,3,5,0.4) 14%, transparent 32%);
+      }
+      .hero-scroll { display: none; }
+      .ef-section { padding: 80px 24px; }
+      .ef-top { grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
+      .ef-beliefs { grid-template-columns: 1fr; }
+      .ef-statement { padding: 36px 28px; margin-top: 48px; }
+      .sobre { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
+      .pilares { padding: 80px 24px; }
+      .pilares-header { flex-direction: column; gap: 16px; align-items: flex-start; }
+      .pilares-header-right { text-align: left; }
+      .pilares-grid { grid-template-columns: 1fr; }
+      .para-quem { grid-template-columns: 1fr; padding: 0 24px; gap: 48px; }
+      .logos-section { padding: 52px 24px !important; }
+      .logos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 34px 24px !important; }
+      .client-logo { height: 38px; max-width: 148px; }
+      .para-quem-grid { grid-template-columns: 1fr !important; }
+      .mapa-hero { padding: 80px 24px 60px; }
+      .mapa-quiz-wrap { padding: 0 24px 80px; }
+      .quiz-body { padding: 28px 24px 24px; }
+      .servicos { padding: 80px 24px; }
+      .servicos-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
+      .servicos-grid, .servicos-grid-2 { grid-template-columns: 1fr; }
+      .servicos-grid > a { grid-column: auto !important; }
+      .galeria-section { padding: 80px 24px; }
+      .galeria-header { grid-template-columns: 1fr; gap: 20px; }
+      .galeria-header-right { text-align: left; }
+      .galeria-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .galeria-item.span-col { grid-column: 1 / 3; grid-row: auto; }
+      .galeria-item.span-row { grid-column: 1 / 3; }
+      .galeria-real-grid { grid-template-columns: 1fr !important; grid-template-rows: none !important; }
+      .galeria-real-item { grid-column: auto !important; grid-row: auto !important; min-height: 260px; }
+      .numeros-section { padding: 80px 24px; }
+      .numeros-grid { grid-template-columns: 1fr 1fr; }
+      .depoimenos-section { padding: 80px 24px; }
+      .depoimentos-grid { grid-template-columns: 1fr; }
+      .produtos-section { padding: 80px 24px; }
+      .produtos-grid { grid-template-columns: 1fr; }
+      .social-section { padding: 60px 24px; }
+      .social-cards { grid-template-columns: 1fr; }
+      .manifesto { padding: 80px 24px; }
+      .remind-video-section { padding: 80px 24px !important; }
+      .remind-video-section > div { max-width: 100% !important; }
+      .remind-video-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+      .cta-section { grid-template-columns: 1fr; padding: 80px 24px; gap: 48px; }
+      footer { flex-direction: column; gap: 20px; padding: 32px 24px; text-align: center; }
+    }
+
+    @media (max-width: 520px) {
+      nav { gap: 16px; }
+      .nav-cta { padding: 10px 14px; font-size: 10px; }
+      .nav-logo svg { height: 16px; max-width: 46vw; }
+      .hero-actions { align-items: stretch; }
+      .btn-primary, .btn-ghost { width: 100%; justify-content: center; text-align: center; }
+      .numeros-grid { grid-template-columns: 1fr; }
+      .quiz-head, .quiz-actions { align-items: stretch; flex-direction: column; }
+      .quiz-btn, .quiz-btn.primary { width: 100%; }
+      .footer-right { flex-wrap: wrap; justify-content: center; gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-shell">
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html#inicio" aria-label="monteirovick">
+    <svg width="392" height="47" viewBox="0 0 392 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M38.5254 14.0157C42.4012 14.0157 45.437 15.1288 47.633 17.3653C49.8694 19.6017 50.9826 22.8906 50.9826 27.2319V45.1436H46.8133V27.6468C46.8133 24.4389 46.0341 21.9899 44.4656 20.3101C42.9375 18.6302 40.7618 17.7802 37.9485 17.7802C34.7406 17.7802 32.2107 18.782 30.3689 20.7756C28.5272 22.7287 27.6063 25.4508 27.6063 28.9421V45.1537H23.437V27.6569C23.437 24.449 22.6578 22 21.0893 20.3202C19.5612 18.6403 17.3652 17.7903 14.5115 17.7903C11.3441 17.7903 8.81418 18.7921 6.93193 20.7857C5.09016 22.7388 4.16928 25.4609 4.16928 28.9522V45.1638H0V14.2484H3.99725V19.885C5.09016 18.0028 6.61822 16.5557 8.58143 15.5437C10.5345 14.5217 12.7912 14.0157 15.3312 14.0157C17.8712 14.0157 20.1481 14.5621 22.0304 15.6652C23.9531 16.7581 25.38 18.3873 26.3211 20.5428C27.4545 18.5088 29.0838 16.92 31.1988 15.7866C33.3542 14.6127 35.8032 14.0258 38.5355 14.0258L38.5254 14.0157ZM75.0268 45.4371C72.0516 45.4371 69.3699 44.7692 66.9817 43.4435C64.5935 42.0774 62.7112 40.1951 61.3451 37.8069C59.9789 35.4186 59.2908 32.7167 59.2908 29.7011C59.2908 26.6854 59.9789 23.9835 61.3451 21.5953C62.7112 19.207 64.5935 17.345 66.9817 16.0194C69.3699 14.6836 72.0516 14.0258 75.0268 14.0258C78.002 14.0258 80.6836 14.6937 83.0719 16.0194C85.4601 17.3551 87.3221 19.207 88.6478 21.5953C90.0139 23.9835 90.7021 26.6854 90.7021 29.7011C90.7021 32.7167 90.0139 35.4186 88.6478 37.8069C87.312 40.1951 85.4601 42.0774 83.0719 43.4435C80.6836 44.7793 78.002 45.4371 75.0268 45.4371ZM75.0268 41.7333C77.2227 41.7333 79.1758 41.2475 80.8962 40.2659C82.657 39.2439 84.0332 37.817 85.0047 35.9752C85.9863 34.1335 86.4721 32.0387 86.4721 29.6909C86.4721 27.3432 85.9863 25.2484 85.0047 23.4067C84.0231 21.5649 82.657 20.1583 80.8962 19.1767C79.1758 18.1546 77.2126 17.6486 75.0268 17.6486C72.841 17.6486 70.8575 18.1546 69.0967 19.1767C67.3764 20.1583 66.0001 21.5649 64.9881 23.4067C64.0065 25.2484 63.5208 27.3432 63.5208 29.6909C63.5208 32.0387 64.0065 34.1335 64.9881 35.9752C66.0102 37.817 67.3764 39.2439 69.0967 40.2659C70.8575 41.2475 72.8308 41.7333 75.0268 41.7333ZM114.969 14.0157C118.845 14.0157 121.921 15.1491 124.188 17.426C126.495 19.6624 127.649 22.931 127.649 27.2319V45.1436H123.479V27.6468C123.479 24.4389 122.68 21.9899 121.071 20.3101C119.462 18.6302 117.175 17.7802 114.2 17.7802C110.87 17.7802 108.229 18.782 106.276 20.7756C104.353 22.7287 103.402 25.4508 103.402 28.9421V45.1537H99.2329V14.2484H103.23V19.9458C104.364 18.0635 105.932 16.6164 107.926 15.6044C109.96 14.552 112.307 14.0157 114.969 14.0157ZM155.235 43.2613C154.456 43.9697 153.474 44.5162 152.3 44.9108C151.167 45.265 149.973 45.4371 148.718 45.4371C145.824 45.4371 143.587 44.6579 142.019 43.0893C140.45 41.5208 139.671 39.3147 139.671 36.4508V17.77H134.146V14.2484H139.671V7.49864H143.84V14.2484H153.241V17.77H143.84V36.208C143.84 38.0497 144.285 39.4564 145.186 40.438C146.127 41.3791 147.453 41.8446 149.183 41.8446C150.043 41.8446 150.863 41.7029 151.652 41.4297C152.472 41.1565 153.181 40.7618 153.767 40.2558L155.235 43.2512V43.2613ZM188.64 30.9863H162.794C163.027 34.1942 164.262 36.805 166.498 38.7986C168.734 40.7517 171.548 41.7333 174.958 41.7333C176.881 41.7333 178.641 41.3993 180.24 40.7314C181.849 40.0231 183.236 39.0111 184.41 37.6753L186.757 40.3773C185.391 42.0268 183.661 43.2715 181.586 44.1316C179.552 44.9918 177.296 45.4269 174.837 45.4269C171.669 45.4269 168.846 44.759 166.377 43.4334C163.948 42.0672 162.045 40.185 160.679 37.7968C159.313 35.4085 158.625 32.7066 158.625 29.6909C158.625 26.6753 159.273 23.9734 160.568 21.5851C161.904 19.1969 163.705 17.3349 165.972 16.0092C168.279 14.6734 170.87 14.0157 173.723 14.0157C176.577 14.0157 179.147 14.6836 181.414 16.0092C183.681 17.3349 185.462 19.1969 186.757 21.5851C188.053 23.9329 188.7 26.6348 188.7 29.6909L188.64 30.9863ZM173.723 17.598C170.748 17.598 168.239 18.5594 166.204 20.472C164.211 22.3542 163.067 24.8133 162.794 27.8694H184.703C184.43 24.8133 183.276 22.3441 181.242 20.472C179.249 18.5493 176.739 17.598 173.723 17.598ZM197.181 14.2484H201.35V45.1436H197.181V14.2484ZM199.296 7.48852C198.435 7.48852 197.707 7.19505 197.12 6.60811C196.533 6.02118 196.239 5.3128 196.239 4.49312C196.239 3.67343 196.533 3.02577 197.12 2.43883C197.707 1.8519 198.435 1.55843 199.296 1.55843C200.156 1.55843 200.884 1.8519 201.471 2.43883C202.058 2.98529 202.352 3.65319 202.352 4.4324C202.352 5.29257 202.058 6.02118 201.471 6.60811C200.884 7.19505 200.156 7.48852 199.296 7.48852ZM216.954 20.2999C217.936 18.2254 219.383 16.6569 221.296 15.6044C223.249 14.552 225.657 14.0157 228.521 14.0157V18.0635L227.519 18.0028C224.271 18.0028 221.721 19.0046 219.889 20.9982C218.047 22.9918 217.126 25.7949 217.126 29.3975V45.1335H212.957V14.2484H216.954V20.2999ZM248.416 45.4371C245.441 45.4371 242.759 44.7692 240.371 43.4435C237.983 42.0774 236.101 40.1951 234.734 37.8069C233.368 35.4186 232.68 32.7167 232.68 29.7011C232.68 26.6854 233.368 23.9835 234.734 21.5953C236.101 19.207 237.983 17.345 240.371 16.0194C242.759 14.6836 245.441 14.0258 248.416 14.0258C251.391 14.0258 254.073 14.6937 256.461 16.0194C258.849 17.3551 260.711 19.207 262.037 21.5953C263.403 23.9835 264.091 26.6854 264.091 29.7011C264.091 32.7167 263.403 35.4186 262.037 37.8069C260.701 40.1951 258.849 42.0774 256.461 43.4435C254.073 44.7793 251.391 45.4371 248.416 45.4371ZM248.416 41.7333C250.612 41.7333 252.565 41.2475 254.286 40.2659C256.046 39.2439 257.423 37.817 258.394 35.9752C259.376 34.1335 259.861 32.0387 259.861 29.6909C259.861 27.3432 259.376 25.2484 258.394 23.4067C257.413 21.5649 256.046 20.1583 254.286 19.1767C252.565 18.1546 250.602 17.6486 248.416 17.6486C246.23 17.6486 244.247 18.1546 242.486 19.1767C240.766 20.1583 239.389 21.5649 238.378 23.4067C237.396 25.2484 236.91 27.3432 236.91 29.6909C236.91 32.0387 237.396 34.1335 238.378 35.9752C239.4 37.817 240.766 39.2439 242.486 40.2659C244.247 41.2475 246.23 41.7333 248.416 41.7333Z" fill="#E9DED2"/>
+      <path d="M304.276 14.2889L291.253 45.1537H282.013L269.05 14.2889H278.289L286.83 35.2871L295.665 14.2889H304.276Z" fill="#E9DED2"/>
+      <path d="M316.875 14.2889H307.93V45.1537H316.875V14.2889ZM312.402 9.97794C310.753 9.97794 309.417 9.50231 308.385 8.54095C307.353 7.58971 306.837 6.39559 306.837 4.98897C306.837 3.58234 307.353 2.38823 308.385 1.43698C309.417 0.485741 310.753 0 312.402 0C314.052 0 315.388 0.455382 316.42 1.37627C317.452 2.29715 317.968 3.44067 317.968 4.81694C317.968 6.30452 317.452 7.54923 316.42 8.54095C315.388 9.4922 314.052 9.97794 312.402 9.97794Z" fill="#E9DED2"/>
+      <path d="M339.088 45.6091C335.799 45.6091 332.834 44.9412 330.193 43.6054C327.592 42.2291 325.548 40.3368 324.05 37.9283C322.593 35.5198 321.875 32.7875 321.875 29.7213C321.875 26.6551 322.603 23.9228 324.05 21.5143C325.538 19.1058 327.592 17.2337 330.193 15.8878C332.834 14.5115 335.799 13.8234 339.088 13.8234C342.377 13.8234 345.17 14.5115 347.578 15.8878C350.027 17.2236 351.808 19.1564 352.911 21.6863L345.969 25.4103C344.36 22.5769 342.053 21.1601 339.027 21.1601C336.69 21.1601 334.767 21.9292 333.229 23.4573C331.701 24.9853 330.932 27.07 330.932 29.7112C330.932 32.3524 331.701 34.437 333.229 35.9651C334.757 37.4932 336.69 38.2622 339.027 38.2622C342.083 38.2622 344.401 36.8455 345.969 34.012L352.911 37.7967C351.798 40.2457 350.027 42.1583 347.578 43.5346C345.17 44.9108 342.336 45.599 339.088 45.599V45.6091Z" fill="#E9DED2"/>
+      <path d="M371.096 33.0405L366.796 37.2907V45.1537H357.84V2.58049H366.796V26.6753L379.87 14.2889H390.546L377.695 27.3634L391.69 45.1537H380.852L371.096 33.0405Z" fill="#E9DED2"/>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#inicio">Início</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="mapa-de-fala.html">Mapa de Fala</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="mapa-de-fala.html" class="nav-cta">Fazer meu mapa</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="hero-headline"><span class="hero-line">Sua fala pode ser</span><span class="hero-line">tão clara quanto</span><span class="hero-line">sua competência.</span></h1>
+    <p class="hero-sub">Transforme o pensamento em fala que move decisões, reputação e resultado.</p>
+    <div class="hero-actions">
+      <a href="#mapa" class="btn-primary">Fazer meu mapa de fala</a>
+      <a href="#conceito" class="btn-ghost">Conhecer o conceito</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img
+loading="lazy"       src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg"
+      alt="Vick Monteiro em reunião"
+      onerror="this.style.display='none'"
+    />
+  </div>
+  <div class="hero-scroll"><span class="hero-scroll-line"></span>scroll</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Oratória Estratégica</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Pensamento Estruturado</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Fala que Move Negócio</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Marca Pessoal</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Participação Estratégica</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Olhar Analítico</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Comunicação de Alto Impacto</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Estratégia de Fala</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Oratória Estratégica</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Pensamento Estruturado</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Fala que Move Negócio</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Marca Pessoal</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Participação Estratégica</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Olhar Analítico</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Comunicação de Alto Impacto</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Estratégia de Fala</span>
+  </div>
+</div>
+
+<!-- ESTRATÉGIA & FALA -->
+<section class="ef-section" id="conceito">
+  <div class="ef-inner">
+    <div class="ef-top">
+      <div>
+        <p class="section-tag">estratégia &amp; fala</p>
+        <h2 class="section-title" style="font-size: clamp(32px, 3.8vw, 56px);">Estratégia<br/>&amp; Fala.</h2>
+      </div>
+      <div class="ef-top-right">
+        <p class="ef-body">
+          Toda fala acontece em um contexto, com uma pessoa específica, com um resultado que precisa acontecer depois. Estratégia &amp; fala une pensamento estruturado, repertório de marca e comunicação aplicada ao trabalho real.
+        </p>
+        <p class="ef-body">
+          A ideia é aprender a usar a fala como ferramenta de decisão, com argumento, lógica e estrutura.
+        </p>
+      </div>
+    </div>
+
+    <div class="ef-beliefs">
+      <div class="ef-belief">
+        <p class="ef-belief-num">01</p>
+        <h3 class="ef-belief-title">Fala como ferramenta de posicionamento.</h3>
+        <p class="ef-belief-text">Aqui eu ensino a usar a fala para liderar discussões e mover projetos, com argumento e lógica.</p>
+      </div>
+      <div class="ef-belief">
+        <p class="ef-belief-num">02</p>
+        <h3 class="ef-belief-title">Estrutura liberta.</h3>
+        <p class="ef-belief-text">Quando o pensamento tem eixo, a fala fica mais natural e mais precisa. Você não precisa roteirizar a vida: só dar sentido ao que vai dizer.</p>
+      </div>
+      <div class="ef-belief">
+        <p class="ef-belief-num">03</p>
+        <h3 class="ef-belief-title">A escolha de palavras constrói percepção.</h3>
+        <p class="ef-belief-text">Dois profissionais com o mesmo nível são percebidos de forma diferente porque falam diferente. A forma como você fala te leva a novos lugares.</p>
+      </div>
+    </div>
+
+    <div style="max-width: 1180px; margin: 0 auto; padding: 48px 0 0; text-align: center;">
+      <a href="#mapa" class="btn-primary">Quero descobrir o que minha fala precisa</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" style="border-top: 1px solid var(--line);">
+  <div class="sobre">
+    <div style="position: relative;">
+      <div class="sobre-img-wrap">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00433.jpg" alt="Vick Monteiro" />
+        <div class="sobre-img-overlay"></div>
+      </div>
+    </div>
+    <div>
+      <p class="section-tag">Sobre</p>
+      <h2 class="section-title">Vick Monteiro.</h2>
+      <p class="section-body">Estrategista de marca, especialista em comunicação e fundadora da <a href="https://instagram.com/remind.bx" target="_blank" style="color:var(--vermelho);text-decoration:none;font-weight:600;">@remind.bx</a>.</p>
+      <p class="section-body">Ensino profissionais a organizar o pensamento e a fala, com repertório de mercado, didática e visão de negócio. Não sou coach. Trago pautas relevantes, penso junto e entrego ferramentas práticas.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 0; margin-top: 36px; margin-bottom: 36px;">
+        <a href="https://instagram.com/monteirovick" target="_blank" style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--bege-muted);font-size:13px;font-weight:500;transition:color 0.2s;" onmouseover="this.style.color='var(--bege)'" onmouseout="this.style.color='var(--bege-muted)'">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--vermelho);min-width:80px;">Instagram</span>
+          @monteirovick
+        </a>
+        <a href="https://instagram.com/remind.bx" target="_blank" style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--bege-muted);font-size:13px;font-weight:500;transition:color 0.2s;" onmouseover="this.style.color='var(--bege)'" onmouseout="this.style.color='var(--bege-muted)'">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--vermelho);min-width:80px;">REMIND</span>
+          @remind.bx
+        </a>
+        <a href="https://www.linkedin.com/in/victoriafmonteiro/" target="_blank" style="display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--bege-muted);font-size:13px;font-weight:500;transition:color 0.2s;" onmouseover="this.style.color='var(--bege)'" onmouseout="this.style.color='var(--bege-muted)'">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--vermelho);min-width:80px;">LinkedIn</span>
+          Vick Monteiro
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS CLIENTES -->
+<section class="logos-section" style="padding: 48px 60px; border-top: 1px solid var(--line); background: var(--vinho);">
+  <div style="max-width: 1180px; margin: 0 auto;">
+    <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(233,222,210,0.28); text-align: center; margin-bottom: 44px;">Empresas que já confiaram na Vick</p>
+    <div class="logos-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 44px 32px; align-items: center; justify-items: center;">
+      <img class="client-logo invert" src="assets/logos/clientes/ibm.svg" alt="IBM" />
+      <img class="client-logo invert" src="assets/logos/clientes/ipiranga.svg" alt="Ipiranga" />
+      <img class="client-logo invert" src="assets/logos/clientes/ifood.svg" alt="iFood" />
+      <img class="client-logo invert" src="assets/logos/clientes/bmg.svg" alt="Banco BMG" />
+      <img class="client-logo" src="assets/logos/clientes/rd-station.svg" alt="RD Station" />
+      <img class="client-logo invert" src="assets/logos/clientes/ache.svg" alt="Aché" />
+      <img class="client-logo invert" src="assets/logos/clientes/magalu.svg" alt="Magalu" />
+      <img class="client-logo screen" src="assets/logos/clientes/escad.png" alt="Escad" />
+      <img class="client-logo screen" src="assets/logos/clientes/pedra-forte.png" alt="Pedra Forte" />
+      <img class="client-logo screen" src="assets/logos/clientes/planik.png" alt="Planik" />
+    </div>
+  </div>
+</section>
+
+<!-- PILARES -->
+<section class="pilares" id="metodo">
+  <div class="pilares-header">
+    <div>
+      <p class="section-tag">estratégia &amp; fala</p>
+      <h2 class="section-title">Três movimentos.<br/><em>Uma fala que sustenta.</em></h2>
+    </div>
+    <p class="pilares-header-right">Cada movimento tem uma função. Juntos, sustentam uma fala que funciona no contexto real.</p>
+  </div>
+  <div class="pilares-grid">
+    <div class="pilar" style="padding: 0; overflow: hidden;">
+      <div style="height: 200px; overflow: hidden; position: relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/05. Banco de Imagens/ChatGPT Image 21 de mai. de 2026, 15_19_08.png" alt="Mapear" style="width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:grayscale(20%) contrast(1.05);opacity:0.6;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho) 0%,transparent 50%);"></div>
+        <span class="pilar-number" style="position:absolute;top:12px;right:16px;">1</span>
+      </div>
+      <div style="padding: 28px 32px 36px;">
+        <h3 class="pilar-title">Mapear</h3>
+        <p class="pilar-body">O que está em jogo, quem escuta e qual movimento precisa acontecer. Antes de estruturar a fala, você precisa entender o contexto.</p>
+      </div>
+    </div>
+    <div class="pilar" style="padding: 0; overflow: hidden;">
+      <div style="height: 200px; overflow: hidden; position: relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/05. Banco de Imagens/ChatGPT Image 21 de mai. de 2026, 15_19_15.png" alt="Estruturar" style="width:100%;height:100%;object-fit:cover;object-position:50% center;filter:grayscale(20%) contrast(1.05);opacity:0.6;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho) 0%,transparent 50%);"></div>
+        <span class="pilar-number" style="position:absolute;top:12px;right:16px;">2</span>
+      </div>
+      <div style="padding: 28px 32px 36px;">
+        <h3 class="pilar-title">Estruturar</h3>
+        <p class="pilar-body">A ordem do raciocínio, o argumento central e os pontos que não podem se perder. Estrutura libera a fala, não engessa.</p>
+      </div>
+    </div>
+    <div class="pilar" style="padding: 0; overflow: hidden;">
+      <div style="height: 200px; overflow: hidden; position: relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/05. Banco de Imagens/ChatGPT Image 21 de mai. de 2026, 15_19_26.png" alt="Treinar" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(20%) contrast(1.05);opacity:0.6;" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho) 0%,transparent 50%);"></div>
+        <span class="pilar-number" style="position:absolute;top:12px;right:16px;">3</span>
+      </div>
+      <div style="padding: 28px 32px 36px;">
+        <h3 class="pilar-title">Treinar</h3>
+        <p class="pilar-body">A fala real: reunião, apresentação, decisão, venda, conversa difícil. O treino acontece no contexto onde a fala precisa funcionar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="para-quem-section">
+  <div style="max-width: 1180px; margin: 0 auto; padding: 0 60px;">
+    <div style="text-align: center; margin-bottom: 64px;">
+      <p class="section-tag" style="justify-content: center;">Para quem é</p>
+      <h2 style="font-size: clamp(32px, 4vw, 58px); font-weight: 800; line-height: 1.05; letter-spacing: -0.025em; max-width: 700px; margin: 0 auto 24px;">Você já se viu nessa situação?</h2>
+      <p style="font-size: 17px; color: var(--bege-muted); max-width: 540px; margin: 0 auto; line-height: 1.7; font-style: italic;">"Eu enxergo o que precisa ser feito, mas na hora de explicar parece que nada fica tão claro quanto está na minha cabeça."</p>
+    </div>
+
+    <div class="para-quem-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); margin-bottom: 64px;">
+      <div style="background: var(--vinho-escuro); padding: 36px 32px;">
+        <div style="margin-bottom: 20px;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="0.5" y="0.5" width="27" height="27" rx="1.5" stroke="#c0292a" stroke-opacity="0.5"/><path d="M8 14h12M14 8v12" stroke="#c0292a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--bege);">O ponto vem depois</h3>
+        <p style="font-size: 14px; color: var(--bege-muted); line-height: 1.65;">Você sabia o que queria dizer. Só não saiu daquele jeito. A resposta certa aparece horas depois, na cabeça.</p>
+      </div>
+      <div style="background: var(--vinho-escuro); padding: 36px 32px;">
+        <div style="margin-bottom: 20px;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="0.5" y="0.5" width="27" height="27" rx="1.5" stroke="#c0292a" stroke-opacity="0.5"/><path d="M8 18l4-8 4 6 2-4 2 6" stroke="#c0292a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--bege);">Quanto mais explica, menos convence</h3>
+        <p style="font-size: 14px; color: var(--bege-muted); line-height: 1.65;">A explicação cresce, a clareza some. Você sente que está perdendo a força do argumento no meio do caminho.</p>
+      </div>
+      <div style="background: var(--vinho-escuro); padding: 36px 32px;">
+        <div style="margin-bottom: 20px;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="0.5" y="0.5" width="27" height="27" rx="1.5" stroke="#c0292a" stroke-opacity="0.5"/><circle cx="14" cy="14" r="5" stroke="#c0292a" stroke-width="1.5"/><path d="M14 9V7M14 21v-2M9 14H7M21 14h-2" stroke="#c0292a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--bege);">Entra tarde ou não entra</h3>
+        <p style="font-size: 14px; color: var(--bege-muted); line-height: 1.65;">O argumento existe. Você só não conseguiu colocá-lo na conversa na hora certa. Ou ficou em silêncio quando não devia.</p>
+      </div>
+      <div style="background: var(--vinho-escuro); padding: 36px 32px;">
+        <div style="margin-bottom: 20px;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="0.5" y="0.5" width="27" height="27" rx="1.5" stroke="#c0292a" stroke-opacity="0.5"/><path d="M8 11l6-3 6 3-6 3-6-3z" stroke="#c0292a" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 17l6 3 6-3M8 14l6 3 6-3" stroke="#c0292a" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--bege);">Muda quando sente resistência</h3>
+        <p style="font-size: 14px; color: var(--bege-muted); line-height: 1.65;">A discordância fica ensaiada por dentro. Na hora de falar, você suaviza demais ou abandona a posição.</p>
+      </div>
+      <div style="background: var(--vinho-escuro); padding: 36px 32px;">
+        <div style="margin-bottom: 20px;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="0.5" y="0.5" width="27" height="27" rx="1.5" stroke="#c0292a" stroke-opacity="0.5"/><path d="M14 8l1.76 3.565L20 12.27l-3 2.925.708 4.13L14 17.265l-3.708 2.06L11 15.195 8 12.27l4.24-.705L14 8z" stroke="#c0292a" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--bege);">Entrega bem, mas não é percebido assim</h3>
+        <p style="font-size: 14px; color: var(--bege-muted); line-height: 1.65;">Você faz um trabalho sólido. Mas na hora de mostrar, de defender, de vender, algo não se comunica na mesma proporção.</p>
+      </div>
+      <a href="mapa-de-fala.html" style="background: var(--vinho); padding: 36px 32px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; text-decoration: none; color: inherit; transition: background 0.3s; border: 1px solid transparent; cursor: pointer;" onmouseover="this.style.background='#270a11';this.style.borderColor='rgba(192,41,42,0.4)'" onmouseout="this.style.background='var(--vinho)';this.style.borderColor='transparent'">
+        <div style="margin-bottom: 4px;">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 4L28 16 16 28 4 16 16 4z" stroke="#c0292a" stroke-width="1.5"/><path d="M16 11v10M11 16h10" stroke="#c0292a" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p style="font-size: 16px; color: var(--bege); font-weight: 700; line-height: 1.4;">Se você se viu em pelo menos um desses, o Mapa de Fala é para você.</p>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--vermelho); display: flex; align-items: center; gap: 8px;">Fazer meu mapa grátis <span style="font-size: 16px;">→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MAPA DE FALA -->
+<section class="mapa-section" id="mapa">
+  <div class="mapa-hero">
+    <p class="section-tag">Mapa de Fala</p>
+    <h2 class="mapa-headline">Descubra o que sua fala<br/>precisa <em>desenvolver primeiro.</em></h2>
+    <p class="mapa-sub">Responda 4 perguntas e receba uma leitura inicial do seu momento de fala: onde ela trava, o que precisa mover e qual próximo passo faz mais sentido.</p>
+    <p class="mapa-microcopy">Não é teste de personalidade, é um diagnóstico de fala.</p>
+  </div>
+
+  <div class="mapa-quiz-wrap">
+    <div class="quiz" data-quiz>
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" data-progress-fill style="width: 0%"></div>
+      </div>
+      <div class="quiz-head">
+        <span data-progress>Pergunta 1 de 4</span>
+        <span>~3 min</span>
+      </div>
+      <div class="quiz-body">
+
+        <div class="question is-active" data-question="0">
+          <h3>Onde sua fala mais precisa acompanhar o seu nível?</h3>
+          <div class="options">
+            <button class="option" type="button" data-path="mentoria">Quando preciso me posicionar em reuniões.</button>
+            <button class="option" type="button" data-path="mentoria">Quando apresento uma ideia, projeto ou proposta.</button>
+            <button class="option" type="button" data-path="mentoria">Quando preciso discordar sem fechar portas.</button>
+            <button class="option" type="button" data-path="ebook">Quando vendo meu trabalho, serviços ou produtos.</button>
+            <button class="option" type="button" data-path="mapa">Quando preciso ser lembrado pelo que penso.</button>
+          </div>
+        </div>
+
+        <div class="question" data-question="1">
+          <h3>O que mais acontece na hora?</h3>
+          <div class="options">
+            <button class="option" type="button" data-path="mapa">Eu entendo o ponto, mas não consigo dizer com precisão.</button>
+            <button class="option" type="button" data-path="mentoria">Eu entro tarde na conversa.</button>
+            <button class="option" type="button" data-path="mapa">Eu explico demais e perco a força do argumento.</button>
+            <button class="option" type="button" data-path="mentoria">Eu mudo a fala quando sinto resistência.</button>
+            <button class="option" type="button" data-path="ebook">Eu termino sem deixar claro o próximo passo.</button>
+          </div>
+        </div>
+
+        <div class="question" data-question="2">
+          <h3>O que você quer que a sua fala ajude a mover agora?</h3>
+          <div class="options">
+            <button class="option" type="button" data-path="mapa">Entendimento.</button>
+            <button class="option" type="button" data-path="mentoria">Confiança.</button>
+            <button class="option" type="button" data-path="mentoria">Decisão.</button>
+            <button class="option" type="button" data-path="ebook">Valor percebido.</button>
+            <button class="option" type="button" data-path="mapa">Autoridade.</button>
+          </div>
+        </div>
+
+        <div class="question" data-question="3">
+          <h3>Qual frase mais parece sua?</h3>
+          <div class="options">
+            <button class="option" type="button" data-path="mapa">Eu sabia o que queria dizer, mas não saiu daquele jeito.</button>
+            <button class="option" type="button" data-path="mentoria">Eu pensei na resposta certa depois.</button>
+            <button class="option" type="button" data-path="mapa">Quando tento ser objetivo, parece que perco profundidade.</button>
+            <button class="option" type="button" data-path="mapa">Quanto mais eu explico, menos forte fica.</button>
+            <button class="option" type="button" data-path="ebook">Eu entrego bem, mas nem sempre sei fazer isso ser percebido.</button>
+          </div>
+        </div>
+
+        <div class="lead-form" data-lead>
+          <h3>Quase lá.</h3>
+          <p>Deixa seu nome e e-mail para receber o diagnóstico completo com 3 insights e um próximo passo recomendado.</p>
+          <div class="field-grid">
+            <input class="quiz-input" type="text" placeholder="Nome" />
+            <input class="quiz-input" type="email" placeholder="E-mail" />
+          </div>
+        </div>
+
+        <div class="result-panel" data-result>
+          <p class="result-title" data-result-title></p>
+          <p class="result-copy" data-result-copy></p>
+          <ul class="result-list" data-result-list></ul>
+          <a class="btn-primary" href="#servicos">Ver próximo passo →</a>
+        </div>
+
+        <div class="quiz-actions">
+          <button class="quiz-btn" type="button" data-back>Voltar</button>
+          <button class="quiz-btn primary" type="button" data-next>Avançar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA EXPERIÊNCIA -->
+<section class="galeria-section">
+  <div class="galeria-inner">
+    <div class="galeria-header">
+      <div>
+        <p class="section-tag">Experiência real</p>
+        <h2 class="section-title">Mentorias, consultorias,<br/><em>aulas presenciais e processos com empresas reais.</em></h2>
+      </div>
+      <p class="galeria-header-right">O método acontece em contexto não em teoria.</p>
+    </div>
+    <div class="galeria-real-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:360px 280px;gap:4px;">
+      <!-- Grande esquerda -->
+      <div class="galeria-real-item gr-1" style="grid-column:1;grid-row:1/3;overflow:hidden;position:relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00441.jpg" alt="Vick Monteiro em palestra" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 20px;background:linear-gradient(to top,rgba(10,3,5,0.8) 0%,transparent);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(233,222,210,0.6);">Palestra presencial</div>
+      </div>
+      <!-- Top centro -->
+      <div class="galeria-real-item gr-2" style="overflow:hidden;position:relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7854_Original.jpg" alt="Vick Monteiro" style="width:100%;height:100%;object-fit:cover;object-position:30% 18%;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,3,5,0.8) 0%,transparent);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(233,222,210,0.6);">Evento presencial</div>
+      </div>
+      <!-- Top direita -->
+      <div class="galeria-real-item gr-3" style="overflow:hidden;position:relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00469.jpg" alt="Vick Monteiro" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,3,5,0.8) 0%,transparent);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(233,222,210,0.6);">Método em prática</div>
+      </div>
+      <!-- Bottom centro + direita (wide) -->
+      <div class="galeria-real-item gr-4" style="grid-column:2/4;overflow:hidden;position:relative;">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg" alt="Consultoria" style="width:100%;height:100%;object-fit:cover;object-position:60% 40%;transition:transform 0.6s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'" />
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,3,5,0.8) 0%,transparent);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(233,222,210,0.6);">Reunião estratégica</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NÚMEROS -->
+<section class="numeros-section">
+  <div class="numeros-inner">
+    <p class="section-tag">Em números</p>
+    <h2 class="section-title">Resultado que<br/><em>se mede.</em></h2>
+    <div class="numeros-grid">
+      <div class="numero-item">
+        <div class="numero-valor">+<span>10</span></div>
+        <div class="numero-label">anos construindo marcas e estratégias de comunicação</div>
+      </div>
+      <div class="numero-item">
+        <div class="numero-valor">+<span>500</span></div>
+        <div class="numero-label">clientes replicando as metodologias</div>
+      </div>
+      <div class="numero-item">
+        <div class="numero-valor">+<span>15</span></div>
+        <div class="numero-label">produtos implementados com marcas como Magalu, Microsoft, Vans e outros</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="depoimenos-section">
+  <div class="depoimentos-inner">
+    <h2 class="section-title">Quem passou pelo<br/><em>processo.</em></h2>
+    <div class="depoimentos-grid">
+
+      <div class="depoimento-card" style="position:relative;overflow:hidden;">
+        <div style="font-size:72px;font-weight:900;color:rgba(192,41,42,0.12);line-height:0.8;position:absolute;top:16px;left:20px;font-family:Georgia,serif;">"</div>
+        <p class="depoimento-texto" style="padding-top:24px;">Eu sabia o que queria dizer, mas na hora travava. Depois da mentoria com a Vick, comecei a entrar nas reuniões com uma clareza diferente. Consegui uma promoção dois meses depois.</p>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--vermelho);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--branco);flex-shrink:0;">M</div>
+          <div>
+            <span class="depoimento-nome">Marcos T.</span><br/>
+            <span class="depoimento-cargo">Gerente de Projetos, Tecnologia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depoimento-card" style="position:relative;overflow:hidden;background:var(--vinho);">
+        <div style="font-size:72px;font-weight:900;color:rgba(192,41,42,0.12);line-height:0.8;position:absolute;top:16px;left:20px;font-family:Georgia,serif;">"</div>
+        <p class="depoimento-texto" style="padding-top:24px;">A Vick não ensina técnica de oratória. Ela ensina você a pensar antes de falar. Isso mudou completamente como eu me posiciono em pitchs e apresentações para clientes.</p>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--vermelho);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--branco);flex-shrink:0;">F</div>
+          <div>
+            <span class="depoimento-nome">Fernanda L.</span><br/>
+            <span class="depoimento-cargo">Consultora de Marketing, Serviços</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depoimento-card" style="position:relative;overflow:hidden;">
+        <div style="font-size:72px;font-weight:900;color:rgba(192,41,42,0.12);line-height:0.8;position:absolute;top:16px;left:20px;font-family:Georgia,serif;">"</div>
+        <p class="depoimento-texto" style="padding-top:24px;">Ficava invisível em reuniões. Achava que era timidez. A Vick me mostrou que era falta de estrutura de raciocínio. Diferença enorme no meu posicionamento.</p>
+        <div style="display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line);">
+          <div style="width:36px;height:36px;border-radius:50%;background:var(--vermelho);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--branco);flex-shrink:0;">R</div>
+          <div>
+            <span class="depoimento-nome">Ricardo A.</span><br/>
+            <span class="depoimento-cargo">Coordenador Financeiro, Indústria</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- VÍDEO REMIND -->
+<section class="remind-video-section" style="padding: 100px 60px; border-top: 1px solid var(--line); background: var(--vinho-escuro);">
+  <div style="max-width: 1180px; margin: 0 auto;">
+    <div class="remind-video-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+      <div>
+        <p class="section-tag">REMIND</p>
+        <h2 class="section-title">Quando o problema<br/><em>é a marca inteira.</em></h2>
+        <p class="section-body">Quando o problema não é só a fala, é como a marca está posicionada, atuo por REMIND, unindo branding, estratégia de negócio e experiência do usuário.</p>
+        <p class="section-body">De dentro para fora, com método e resultado.</p>
+        <a href="https://www.rmnd.com.br" target="_blank" class="btn-primary" style="margin-top: 8px; display: inline-block;">Conhecer a REMIND</a>
+      </div>
+      <a class="video-card" href="https://www.youtube.com/watch?v=IqQtkGGqmb0" target="_blank" rel="noopener" aria-label="Assistir ao manifesto da REMIND no YouTube">
+        <span class="video-play" aria-hidden="true"></span>
+        <span class="video-caption">
+          <span>Manifesto REMIND</span>
+          <span>Assistir no YouTube</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+  <div class="servicos-inner">
+    <div class="servicos-intro">
+      <div>
+        <h2 class="section-title">Como posso te<br/><em>ajudar a evoluir?</em></h2>
+      </div>
+      <p class="servicos-intro-right">Cada formato serve um momento diferente. Escolha o que faz mais sentido agora.</p>
+    </div>
+
+    <!-- SESSÕES INDIVIDUAIS -->
+    <div class="servicos-categoria">
+      <p class="servicos-cat-label">Ao vivo, com a Vick</p>
+      <div class="servicos-grid">
+
+        <div class="servico-card destaque" style="padding: 0; overflow: hidden;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg" alt="Sessões Individuais" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">estratégia & fala</span>
+            <h3 class="servico-nome">Mentoria Individual</h3>
+            <p class="servico-desc">Sessões 1:1 de estratégia &amp; fala. Trabalhamos o raciocínio, a estrutura e o posicionamento de voz com base no contexto real do seu trabalho.</p>
+            <p class="servico-detail">Cada sessão parte de uma situação real reunião, apresentação, conversa difícil e entrega um plano de fala acionável. Foco em aplicação imediata, não em teoria.</p>
+            <a href="#contato" class="servico-link">Quero uma sessão →</a>
+          </div>
+        </div>
+
+        <div class="servico-card" style="padding: 0; overflow: hidden;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/1de17c8f-3d6c-4eb8-a39c-58a2eb14423b_Original.jpg" alt="Consultoria" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho-escuro) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">Para times</span>
+            <h3 class="servico-nome">Treinamentos e Workshops</h3>
+            <p class="servico-desc">Para times completos que precisam desenvolver fala estratégica junto, com o mesmo repertório e a mesma linguagem.</p>
+            <p class="servico-detail">Comercial, vendas, RH, lideranças e outras áreas. Formato in company ou remoto, com conteúdo adaptado ao contexto e aos objetivos do time.</p>
+            <a href="#contato" class="servico-link">Quero um treinamento →</a>
+          </div>
+        </div>
+
+        <div class="servico-card" style="padding: 0; overflow: hidden;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_0814_Original.jpg" alt="Consultoria de Marca REMIND" style="width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho-escuro) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">REMIND</span>
+            <h3 class="servico-nome">Consultoria de Marca REMIND</h3>
+            <p class="servico-desc">Quando o problema não é só a fala é como a marca está posicionada, eu resolvo com a REMIND, unindo branding e estratégia de negócio.</p>
+            <p class="servico-detail">Para profissionais e empresas que precisam organizar posicionamento, narrativa e presença de marca antes de falar mais alto no mercado.</p>
+            <a href="https://www.rmnd.com.br" target="_blank" class="servico-link">Ver a REMIND →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PRODUTOS REMIND -->
+    <div class="servicos-categoria" style="margin-bottom: 0;">
+      <div class="servicos-grid">
+
+        <a href="https://rmnd.com.br/livrobrandingevendas" target="_blank" class="servico-card" style="padding:0;overflow:hidden;text-decoration:none;color:inherit;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="https://lirp.cdn-website.com/e9860475/dms3rep/multi/opt/img1-e1124f2d-1920w.png" alt="Branding & Vendas" style="width:100%;height:100%;object-fit:cover;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho-escuro) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">E-book</span>
+            <h3 class="servico-nome">Branding &amp; Vendas</h3>
+            <p class="servico-desc">Eleve o nível das suas vendas com uma estratégia de marca potente.</p>
+            <span class="servico-link">Ver produto →</span>
+          </div>
+        </a>
+
+        <a href="https://rmnd.com.br/jornada_empreendedor" target="_blank" class="servico-card" style="padding:0;overflow:hidden;text-decoration:none;color:inherit;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="https://lirp.cdn-website.com/e9860475/dms3rep/multi/opt/PRODUCT-e2402690-1920w.png" alt="Jornada do Cliente" style="width:100%;height:100%;object-fit:cover;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho-escuro) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">Mapa</span>
+            <h3 class="servico-nome">Jornada do Cliente</h3>
+            <p class="servico-desc">O passo a passo pra criar a estratégia de comunicação da sua empresa.</p>
+            <span class="servico-link">Ver produto →</span>
+          </div>
+        </a>
+
+        <a href="https://www.rmnd.com.br/HUBGESTAO" target="_blank" class="servico-card" style="padding:0;overflow:hidden;text-decoration:none;color:inherit;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="https://lirp.cdn-website.com/e9860475/dms3rep/multi/opt/thumb_site-1920w.png" alt="Hub de Gestão" style="width:100%;height:100%;object-fit:cover;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho-escuro) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">Hub</span>
+            <h3 class="servico-nome">Hub de Gestão</h3>
+            <p class="servico-desc">Uma ferramenta pra organizar toda a gestão do seu negócio.</p>
+            <span class="servico-link">Ver produto →</span>
+          </div>
+        </a>
+
+        <a href="https://rmnd.com.br/guia_geral" target="_blank" class="servico-card" style="padding:0;overflow:hidden;text-decoration:none;color:inherit;">
+          <div style="height: 220px; overflow: hidden; position: relative;">
+            <img loading="lazy" src="https://lirp.cdn-website.com/e9860475/dms3rep/multi/opt/Banner-908e35cb-1920w.png" alt="Estratégia de Vendas" style="width:100%;height:100%;object-fit:cover;filter:grayscale(15%) contrast(1.05);opacity:0.78;" />
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--vinho-escuro) 0%,transparent 50%);"></div>
+          </div>
+          <div style="padding: 28px 32px 32px;">
+            <span class="servico-badge">Guia</span>
+            <h3 class="servico-nome">Estratégia de Vendas</h3>
+            <p class="servico-desc">Aumente a eficácia da sua estratégia de vendas com um funil personalizado.</p>
+            <span class="servico-link">Ver produto →</span>
+          </div>
+        </a>
+
+        <a href="https://www.rmnd.com.br/shop" target="_blank" class="servico-card" style="grid-column: span 2; padding: 28px 36px; display: flex; flex-direction: column; justify-content: center; gap: 14px; text-decoration: none; color: inherit; background: var(--vinho);">
+          <span class="servico-badge" style="border-color: rgba(192,41,42,0.4);">REMIND Shop</span>
+          <h3 class="servico-nome" style="font-size: 22px;">Ver todos os produtos</h3>
+          <p class="servico-desc" style="margin-bottom: 0;">Acesse o catálogo completo de produtos REMIND em rmnd.com.br/shop.</p>
+          <span class="servico-link" style="margin-top: 6px;">Acessar a loja →</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato-section" id="contato">
+  <div class="cta-section">
+    <div>
+      <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 40px;">
+        <div style="width: 72px; height: 72px; border-radius: 50%; overflow: hidden; border: 2px solid var(--vermelho); flex-shrink: 0;">
+          <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/Captura de Tela 2025-11-07 às 20.39.42.png" alt="Vick Monteiro" style="width:120%;height:120%;object-fit:cover;object-position:50% 10%;margin-left:-10%;margin-top:-10%;" />
+        </div>
+        <div>
+          <p style="font-size: 14px; font-weight: 700; color: var(--bege); margin-bottom: 3px;">Vick Monteiro</p>
+          <p style="font-size: 11px; color: var(--bege-muted); letter-spacing: 0.05em;">estratégia &amp; fala · fundadora da REMIND</p>
+        </div>
+      </div>
+      <p class="section-tag">Contato</p>
+      <h2 class="section-title">Vamos falar sobre<br/><em>a sua fala.</em></h2>
+    </div>
+    <form class="cta-form" onsubmit="event.preventDefault(); alert('Mensagem enviada! Em breve entro em contato.')">
+      <div class="form-group"><label class="form-label">Como você se chama?</label><input type="text" class="form-field" placeholder="Seu nome" /></div>
+      <div class="form-group"><label class="form-label">Melhor e-mail para responder</label><input type="email" class="form-field" placeholder="seu@email.com" /></div>
+      <div class="form-group"><label class="form-label">O que você quer desenvolver?</label><textarea class="form-field form-textarea" placeholder="Me conta o que trava, o que você quer conquistar, ou o que precisa agora."></textarea></div>
+      <button type="submit" class="form-submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <svg width="392" height="47" viewBox="0 0 392 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M38.5254 14.0157C42.4012 14.0157 45.437 15.1288 47.633 17.3653C49.8694 19.6017 50.9826 22.8906 50.9826 27.2319V45.1436H46.8133V27.6468C46.8133 24.4389 46.0341 21.9899 44.4656 20.3101C42.9375 18.6302 40.7618 17.7802 37.9485 17.7802C34.7406 17.7802 32.2107 18.782 30.3689 20.7756C28.5272 22.7287 27.6063 25.4508 27.6063 28.9421V45.1537H23.437V27.6569C23.437 24.449 22.6578 22 21.0893 20.3202C19.5612 18.6403 17.3652 17.7903 14.5115 17.7903C11.3441 17.7903 8.81418 18.7921 6.93193 20.7857C5.09016 22.7388 4.16928 25.4609 4.16928 28.9522V45.1638H0V14.2484H3.99725V19.885C5.09016 18.0028 6.61822 16.5557 8.58143 15.5437C10.5345 14.5217 12.7912 14.0157 15.3312 14.0157C17.8712 14.0157 20.1481 14.5621 22.0304 15.6652C23.9531 16.7581 25.38 18.3873 26.3211 20.5428C27.4545 18.5088 29.0838 16.92 31.1988 15.7866C33.3542 14.6127 35.8032 14.0258 38.5355 14.0258L38.5254 14.0157ZM75.0268 45.4371C72.0516 45.4371 69.3699 44.7692 66.9817 43.4435C64.5935 42.0774 62.7112 40.1951 61.3451 37.8069C59.9789 35.4186 59.2908 32.7167 59.2908 29.7011C59.2908 26.6854 59.9789 23.9835 61.3451 21.5953C62.7112 19.207 64.5935 17.345 66.9817 16.0194C69.3699 14.6836 72.0516 14.0258 75.0268 14.0258C78.002 14.0258 80.6836 14.6937 83.0719 16.0194C85.4601 17.3551 87.3221 19.207 88.6478 21.5953C90.0139 23.9835 90.7021 26.6854 90.7021 29.7011C90.7021 32.7167 90.0139 35.4186 88.6478 37.8069C87.312 40.1951 85.4601 42.0774 83.0719 43.4435C80.6836 44.7793 78.002 45.4371 75.0268 45.4371ZM75.0268 41.7333C77.2227 41.7333 79.1758 41.2475 80.8962 40.2659C82.657 39.2439 84.0332 37.817 85.0047 35.9752C85.9863 34.1335 86.4721 32.0387 86.4721 29.6909C86.4721 27.3432 85.9863 25.2484 85.0047 23.4067C84.0231 21.5649 82.657 20.1583 80.8962 19.1767C79.1758 18.1546 77.2126 17.6486 75.0268 17.6486C72.841 17.6486 70.8575 18.1546 69.0967 19.1767C67.3764 20.1583 66.0001 21.5649 64.9881 23.4067C64.0065 25.2484 63.5208 27.3432 63.5208 29.6909C63.5208 32.0387 64.0065 34.1335 64.9881 35.9752C66.0102 37.817 67.3764 39.2439 69.0967 40.2659C70.8575 41.2475 72.8308 41.7333 75.0268 41.7333ZM114.969 14.0157C118.845 14.0157 121.921 15.1491 124.188 17.426C126.495 19.6624 127.649 22.931 127.649 27.2319V45.1436H123.479V27.6468C123.479 24.4389 122.68 21.9899 121.071 20.3101C119.462 18.6302 117.175 17.7802 114.2 17.7802C110.87 17.7802 108.229 18.782 106.276 20.7756C104.353 22.7287 103.402 25.4508 103.402 28.9421V45.1537H99.2329V14.2484H103.23V19.9458C104.364 18.0635 105.932 16.6164 107.926 15.6044C109.96 14.552 112.307 14.0157 114.969 14.0157ZM155.235 43.2613C154.456 43.9697 153.474 44.5162 152.3 44.9108C151.167 45.265 149.973 45.4371 148.718 45.4371C145.824 45.4371 143.587 44.6579 142.019 43.0893C140.45 41.5208 139.671 39.3147 139.671 36.4508V17.77H134.146V14.2484H139.671V7.49864H143.84V14.2484H153.241V17.77H143.84V36.208C143.84 38.0497 144.285 39.4564 145.186 40.438C146.127 41.3791 147.453 41.8446 149.183 41.8446C150.043 41.8446 150.863 41.7029 151.652 41.4297C152.472 41.1565 153.181 40.7618 153.767 40.2558L155.235 43.2512V43.2613ZM188.64 30.9863H162.794C163.027 34.1942 164.262 36.805 166.498 38.7986C168.734 40.7517 171.548 41.7333 174.958 41.7333C176.881 41.7333 178.641 41.3993 180.24 40.7314C181.849 40.0231 183.236 39.0111 184.41 37.6753L186.757 40.3773C185.391 42.0268 183.661 43.2715 181.586 44.1316C179.552 44.9918 177.296 45.4269 174.837 45.4269C171.669 45.4269 168.846 44.759 166.377 43.4334C163.948 42.0672 162.045 40.185 160.679 37.7968C159.313 35.4085 158.625 32.7066 158.625 29.6909C158.625 26.6753 159.273 23.9734 160.568 21.5851C161.904 19.1969 163.705 17.3349 165.972 16.0092C168.279 14.6734 170.87 14.0157 173.723 14.0157C176.577 14.0157 179.147 14.6836 181.414 16.0092C183.681 17.3349 185.462 19.1969 186.757 21.5851C188.053 23.9329 188.7 26.6348 188.7 29.6909L188.64 30.9863ZM173.723 17.598C170.748 17.598 168.239 18.5594 166.204 20.472C164.211 22.3542 163.067 24.8133 162.794 27.8694H184.703C184.43 24.8133 183.276 22.3441 181.242 20.472C179.249 18.5493 176.739 17.598 173.723 17.598ZM197.181 14.2484H201.35V45.1436H197.181V14.2484ZM199.296 7.48852C198.435 7.48852 197.707 7.19505 197.12 6.60811C196.533 6.02118 196.239 5.3128 196.239 4.49312C196.239 3.67343 196.533 3.02577 197.12 2.43883C197.707 1.8519 198.435 1.55843 199.296 1.55843C200.156 1.55843 200.884 1.8519 201.471 2.43883C202.058 2.98529 202.352 3.65319 202.352 4.4324C202.352 5.29257 202.058 6.02118 201.471 6.60811C200.884 7.19505 200.156 7.48852 199.296 7.48852ZM216.954 20.2999C217.936 18.2254 219.383 16.6569 221.296 15.6044C223.249 14.552 225.657 14.0157 228.521 14.0157V18.0635L227.519 18.0028C224.271 18.0028 221.721 19.0046 219.889 20.9982C218.047 22.9918 217.126 25.7949 217.126 29.3975V45.1335H212.957V14.2484H216.954V20.2999ZM248.416 45.4371C245.441 45.4371 242.759 44.7692 240.371 43.4435C237.983 42.0774 236.101 40.1951 234.734 37.8069C233.368 35.4186 232.68 32.7167 232.68 29.7011C232.68 26.6854 233.368 23.9835 234.734 21.5953C236.101 19.207 237.983 17.345 240.371 16.0194C242.759 14.6836 245.441 14.0258 248.416 14.0258C251.391 14.0258 254.073 14.6937 256.461 16.0194C258.849 17.3551 260.711 19.207 262.037 21.5953C263.403 23.9835 264.091 26.6854 264.091 29.7011C264.091 32.7167 263.403 35.4186 262.037 37.8069C260.701 40.1951 258.849 42.0774 256.461 43.4435C254.073 44.7793 251.391 45.4371 248.416 45.4371ZM248.416 41.7333C250.612 41.7333 252.565 41.2475 254.286 40.2659C256.046 39.2439 257.423 37.817 258.394 35.9752C259.376 34.1335 259.861 32.0387 259.861 29.6909C259.861 27.3432 259.376 25.2484 258.394 23.4067C257.413 21.5649 256.046 20.1583 254.286 19.1767C252.565 18.1546 250.602 17.6486 248.416 17.6486C246.23 17.6486 244.247 18.1546 242.486 19.1767C240.766 20.1583 239.389 21.5649 238.378 23.4067C237.396 25.2484 236.91 27.3432 236.91 29.6909C236.91 32.0387 237.396 34.1335 238.378 35.9752C239.4 37.817 240.766 39.2439 242.486 40.2659C244.247 41.2475 246.23 41.7333 248.416 41.7333Z" fill="#E9DED2"/>
+      <path d="M304.276 14.2889L291.253 45.1537H282.013L269.05 14.2889H278.289L286.83 35.2871L295.665 14.2889H304.276Z" fill="#E9DED2"/>
+      <path d="M316.875 14.2889H307.93V45.1537H316.875V14.2889ZM312.402 9.97794C310.753 9.97794 309.417 9.50231 308.385 8.54095C307.353 7.58971 306.837 6.39559 306.837 4.98897C306.837 3.58234 307.353 2.38823 308.385 1.43698C309.417 0.485741 310.753 0 312.402 0C314.052 0 315.388 0.455382 316.42 1.37627C317.452 2.29715 317.968 3.44067 317.968 4.81694C317.968 6.30452 317.452 7.54923 316.42 8.54095C315.388 9.4922 314.052 9.97794 312.402 9.97794Z" fill="#E9DED2"/>
+      <path d="M339.088 45.6091C335.799 45.6091 332.834 44.9412 330.193 43.6054C327.592 42.2291 325.548 40.3368 324.05 37.9283C322.593 35.5198 321.875 32.7875 321.875 29.7213C321.875 26.6551 322.603 23.9228 324.05 21.5143C325.538 19.1058 327.592 17.2337 330.193 15.8878C332.834 14.5115 335.799 13.8234 339.088 13.8234C342.377 13.8234 345.17 14.5115 347.578 15.8878C350.027 17.2236 351.808 19.1564 352.911 21.6863L345.969 25.4103C344.36 22.5769 342.053 21.1601 339.027 21.1601C336.69 21.1601 334.767 21.9292 333.229 23.4573C331.701 24.9853 330.932 27.07 330.932 29.7112C330.932 32.3524 331.701 34.437 333.229 35.9651C334.757 37.4932 336.69 38.2622 339.027 38.2622C342.083 38.2622 344.401 36.8455 345.969 34.012L352.911 37.7967C351.798 40.2457 350.027 42.1583 347.578 43.5346C345.17 44.9108 342.336 45.599 339.088 45.599V45.6091Z" fill="#E9DED2"/>
+      <path d="M371.096 33.0405L366.796 37.2907V45.1537H357.84V2.58049H366.796V26.6753L379.87 14.2889H390.546L377.695 27.3634L391.69 45.1537H380.852L371.096 33.0405Z" fill="#E9DED2"/>
+    </svg>
+  </div>
+  <p class="footer-copy">© 2026 Vick Monteiro. Todos os direitos reservados.</p>
+  <div class="footer-right">
+    <a href="mapa-de-fala.html">Mapa de Fala</a>
+    <a href="https://instagram.com/monteirovick" target="_blank">Instagram</a>
+    <a href="https://instagram.com/remind.bx" target="_blank">REMIND</a>
+    <a href="https://www.linkedin.com/in/victoriafmonteiro/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+
+</div>
+
+<script>
+  // Nav scroll
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  const quiz = document.querySelector('[data-quiz]');
+  if (quiz) {
+    const questions = Array.from(quiz.querySelectorAll('[data-question]'));
+    const lead = quiz.querySelector('[data-lead]');
+    const result = quiz.querySelector('[data-result]');
+    const progressLabel = quiz.querySelector('[data-progress]');
+    const progressFill = quiz.querySelector('[data-progress-fill]');
+    const nextBtn = quiz.querySelector('[data-next]');
+    const backBtn = quiz.querySelector('[data-back]');
+    const resultTitle = quiz.querySelector('[data-result-title]');
+    const resultCopy = quiz.querySelector('[data-result-copy]');
+    const resultList = quiz.querySelector('[data-result-list]');
+    const answers = [];
+    let step = 0;
+    const total = questions.length;
+
+    const results = {
+      mapa: {
+        title: 'Seu primeiro movimento é mapear.',
+        copy: 'Sua fala precisa ganhar direção antes de ganhar volume. O ponto agora é entender onde ela trava e o que precisa ser movido.',
+        items: ['Identificar onde a fala trava', 'Separar contexto, intenção e próximo passo', 'Organizar pensamento antes da exposição']
+      },
+      mentoria: {
+        title: 'Seu caminho pede treino individual.',
+        copy: 'Sua fala já tem conteúdo, mas precisa de prática, repertório e leitura de contexto para sustentar melhor situações reais.',
+        items: ['Reuniões e conversas difíceis', 'Argumento sob pressão', 'Presença com direção']
+      },
+      ebook: {
+        title: 'Seu foco é valor percebido.',
+        copy: 'A questão aparece na forma como você organiza percepção, oferta, serviços e produtos. Sua fala precisa vender valor com mais clareza.',
+        items: ['Comunicar diferencial', 'Construir percepção de marca', 'Transformar entrega em valor entendido']
+      }
+    };
+
+    function render() {
+      questions.forEach((q, i) => q.classList.toggle('is-active', i === step && step < total));
+      lead.classList.toggle('is-active', step === total);
+      result.classList.toggle('is-active', step === total + 1);
+      backBtn.style.visibility = step === 0 ? 'hidden' : 'visible';
+
+      if (step > total) { nextBtn.textContent = 'Refazer'; }
+      else if (step === total) { nextBtn.textContent = 'Ver diagnóstico'; }
+      else { nextBtn.textContent = 'Avançar'; }
+
+      if (step < total) {
+        progressLabel.textContent = `Pergunta ${step + 1} de ${total}`;
+        progressFill.style.width = `${(step / total) * 100}%`;
+      } else if (step === total) {
+        progressLabel.textContent = 'Quase lá';
+        progressFill.style.width = '90%';
+      } else {
+        progressLabel.textContent = 'Diagnóstico inicial';
+        progressFill.style.width = '100%';
+      }
+    }
+
+    function selectedPath() {
+      const score = answers.reduce((acc, path) => { acc[path] = (acc[path] || 0) + 1; return acc; }, {});
+      return Object.keys(score).sort((a, b) => score[b] - score[a])[0] || 'mapa';
+    }
+
+    function showResult() {
+      const data = results[selectedPath()];
+      resultTitle.textContent = data.title;
+      resultCopy.textContent = data.copy;
+      resultList.innerHTML = data.items.map(item => `<li>${item}</li>`).join('');
+    }
+
+    quiz.addEventListener('click', e => {
+      const opt = e.target.closest('.option');
+      if (!opt) return;
+      opt.parentElement.querySelectorAll('.option').forEach(o => o.classList.remove('is-selected'));
+      opt.classList.add('is-selected');
+      answers[step] = opt.dataset.path;
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (step < total && !answers[step]) return;
+      if (step === total) showResult();
+      if (step > total) {
+        answers.length = 0;
+        quiz.querySelectorAll('.option').forEach(o => o.classList.remove('is-selected'));
+        step = 0; render(); return;
+      }
+      step++; render();
+    });
+
+    backBtn.addEventListener('click', () => { if (step === 0) return; step--; render(); });
+    render();
+  }
+</script>
+</body>
+</html>
