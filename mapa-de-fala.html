@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mapa de Fala — monteirovick</title>
+  <title>Mapa de Fala | monteirovick</title>
   <meta name="description" content="Descubra o que sua fala precisa desenvolver primeiro. Diagnóstico gratuito em 4 perguntas." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -201,6 +201,21 @@
 </head>
 <body>
 
+<form name="mapa-de-fala" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="mapa-de-fala" />
+  <input type="hidden" name="subject" value="Novo lead do Mapa de Fala" />
+  <input type="text" name="bot-field" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="source" />
+  <input type="text" name="result_path" />
+  <input type="text" name="result_badge" />
+  <input type="text" name="answer_1" />
+  <input type="text" name="answer_2" />
+  <input type="text" name="answer_3" />
+  <input type="text" name="answer_4" />
+</form>
+
 <nav>
   <a href="index.html#inicio" class="nav-logo" aria-label="monteirovick">
     <img src="drive-download-20260503T001933Z-3-001/assets/01. Branding/01. Logotipo/Property 1=Bege claro.svg" alt="monteirovick">
@@ -220,7 +235,7 @@
   <div class="lp-hero-inner">
     <p class="lp-tag">Mapa de Fala</p>
     <h1 class="lp-headline">Descubra onde sua fala<br/><em>trava de verdade.</em></h1>
-    <p class="lp-sub">4 perguntas. 3 minutos. Um diagnóstico inicial com o que sua fala precisa desenvolver agora — e qual próximo passo faz mais sentido para você.</p>
+    <p class="lp-sub">4 perguntas. 2 minutos. Uma leitura inicial do que sua fala está pedindo agora e qual caminho faz mais sentido para o seu momento.</p>
     <a href="#quiz" class="btn-primary">Fazer meu mapa grátis</a>
     <p class="lp-micro">Grátis. Sem compromisso. Resultado na hora.</p>
   </div>
@@ -235,7 +250,7 @@
       <div class="progress-step">
         <p class="step-num">Passo 1</p>
         <h3 class="step-title">Responda</h3>
-        <p class="step-desc">4 perguntas sobre onde sua fala mais trava e o que você quer mover.</p>
+        <p class="step-desc">4 perguntas simples sobre contexto, trava, necessidade e disposição para agir.</p>
       </div>
       <div class="progress-step">
         <p class="step-num">Passo 2</p>
@@ -245,12 +260,12 @@
       <div class="progress-step">
         <p class="step-num">Passo 3</p>
         <h3 class="step-title">Veja seu resultado</h3>
-        <p class="step-desc">O mapa nomeia sua necessidade e aponta o próximo passo.</p>
+        <p class="step-desc">O mapa nomeia sua necessidade e aproxima você do formato certo.</p>
       </div>
       <div class="progress-step">
         <p class="step-num">Passo 4</p>
         <h3 class="step-title">Siga em frente</h3>
-        <p class="step-desc">Com clareza sobre o que desenvolver e como fazer isso acontecer.</p>
+        <p class="step-desc">Com clareza sobre o que desenvolver primeiro, sem transformar tudo em urgência.</p>
       </div>
     </div>
   </div>
@@ -265,7 +280,7 @@
       <div class="discover-item">
         <div class="discover-icon">🎯</div>
         <h3 class="discover-title">Onde sua fala trava</h3>
-        <p class="discover-desc">Você vai entender o padrão — e o que, de fato, está por trás do bloqueio na hora de falar.</p>
+        <p class="discover-desc">Você vai entender o padrão que aparece quando pensamento, contexto e exposição se encontram.</p>
       </div>
       <div class="discover-item">
         <div class="discover-icon">🧭</div>
@@ -275,7 +290,7 @@
       <div class="discover-item">
         <div class="discover-icon">📌</div>
         <h3 class="discover-title">Qual próximo passo faz sentido</h3>
-        <p class="discover-desc">Não é uma lista genérica. É uma recomendação baseada nas suas respostas e no seu momento.</p>
+        <p class="discover-desc">A recomendação nasce das suas respostas e do momento que a sua fala parece estar atravessando.</p>
       </div>
     </div>
   </div>
@@ -286,7 +301,7 @@
   <div class="lp-quiz-inner">
     <p style="font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--vermelho);margin-bottom:12px;text-align:center;">Mapa de Fala</p>
     <h2 style="font-size:clamp(26px,3vw,40px);font-weight:800;text-align:center;letter-spacing:-0.02em;margin-bottom:8px;">Responda agora.</h2>
-    <p style="text-align:center;color:var(--bege-muted);font-size:15px;margin-bottom:40px;">Não é teste de personalidade. É um diagnóstico de uso.</p>
+    <p style="text-align:center;color:var(--bege-muted);font-size:15px;margin-bottom:40px;">Um mapa curto, direto e baseado no uso real da sua fala.</p>
 
     <div class="quiz-wrapper" data-quiz>
       <div class="quiz-progress-bar">
@@ -294,64 +309,60 @@
       </div>
       <div class="quiz-header">
         <span data-progress>Pergunta 1 de 4</span>
-        <span>~3 min</span>
+        <span>~2 min</span>
       </div>
       <div class="quiz-body">
 
         <div class="question is-active" data-question="0">
-          <h3>Onde sua fala mais precisa acompanhar o seu nível?</h3>
-          <p class="question-sub">Pense na situação que mais te incomoda quando você precisa falar.</p>
+          <h3>O que te trouxe até aqui?</h3>
+          <p class="question-sub">Escolha o motivo mais próximo do seu momento atual.</p>
           <div class="options">
-            <button class="option" type="button" data-path="mentoria">Quando preciso me posicionar em reuniões.</button>
-            <button class="option" type="button" data-path="mentoria">Quando apresento uma ideia, projeto ou proposta.</button>
-            <button class="option" type="button" data-path="mentoria">Quando preciso discordar sem fechar portas.</button>
-            <button class="option" type="button" data-path="ebook">Quando vendo meu trabalho, serviços ou produtos.</button>
-            <button class="option" type="button" data-path="mapa">Quando preciso ser lembrado pelo que penso.</button>
+            <button class="option" type="button" data-path="mentoria">Tenho uma situação importante para conduzir.</button>
+            <button class="option" type="button" data-path="comunidade">Quero praticar minha fala com mais frequência.</button>
+            <button class="option" type="button" data-path="mapa">Penso bastante, mas me perco quando vou falar.</button>
+            <button class="option" type="button" data-path="marca">Preciso comunicar melhor o valor do que faço.</button>
           </div>
         </div>
 
         <div class="question" data-question="1">
-          <h3>O que mais acontece na hora H?</h3>
-          <p class="question-sub">Seja honesto. O mapa só funciona se você responder o que realmente acontece.</p>
+          <h3>Onde a fala costuma falhar?</h3>
+          <p class="question-sub">Pense no padrão que mais se repete quando você precisa se expor.</p>
           <div class="options">
-            <button class="option" type="button" data-path="mapa">Eu entendo o ponto, mas não consigo dizer com precisão.</button>
-            <button class="option" type="button" data-path="mentoria">Eu entro tarde na conversa.</button>
-            <button class="option" type="button" data-path="mapa">Eu explico demais e perco a força do argumento.</button>
-            <button class="option" type="button" data-path="mentoria">Eu mudo a fala quando sinto resistência.</button>
-            <button class="option" type="button" data-path="ebook">Eu termino sem deixar claro o próximo passo.</button>
+            <button class="option" type="button" data-path="mentoria">Na hora de responder, discordar ou sustentar um ponto.</button>
+            <button class="option" type="button" data-path="comunidade">Na constância. Eu evito aparecer ou participar.</button>
+            <button class="option" type="button" data-path="mapa">Na estrutura. Eu começo bem e depois me espalho.</button>
+            <button class="option" type="button" data-path="marca">Na percepção. Explico muito e ainda não valorizam.</button>
           </div>
         </div>
 
         <div class="question" data-question="2">
-          <h3>O que você quer que a sua fala ajude a mover?</h3>
-          <p class="question-sub">Escolha o que está mais próximo do que você precisa agora.</p>
+          <h3>Que tipo de ajuda faria diferença agora?</h3>
+          <p class="question-sub">Essa resposta pesa mais no resultado, porque mostra o formato mais adequado para você.</p>
           <div class="options">
-            <button class="option" type="button" data-path="mapa">Entendimento. Quero que entendam meu ponto.</button>
-            <button class="option" type="button" data-path="mentoria">Confiança. Quero falar com mais segurança.</button>
-            <button class="option" type="button" data-path="mentoria">Decisão. Quero influenciar escolhas e direções.</button>
-            <button class="option" type="button" data-path="ebook">Valor percebido. Quero que meu trabalho seja reconhecido.</button>
-            <button class="option" type="button" data-path="mapa">Autoridade. Quero ser reconhecido pelo que penso.</button>
+            <button class="option" type="button" data-path="mentoria">Olhar 1:1 para uma situação real.</button>
+            <button class="option" type="button" data-path="comunidade">Espaço recorrente para praticar com retorno.</button>
+            <button class="option" type="button" data-path="mapa">Diagnóstico para entender meu padrão de fala.</button>
+            <button class="option" type="button" data-path="marca">Ajustar narrativa, oferta e posicionamento.</button>
           </div>
         </div>
 
         <div class="question" data-question="3">
-          <h3>Qual frase mais parece a sua?</h3>
-          <p class="question-sub">Escolha a que mais ressoa — não a que deveria ser.</p>
+          <h3>Qual próximo passo você toparia dar?</h3>
+          <p class="question-sub">Escolha o movimento que parece possível agora, não o ideal.</p>
           <div class="options">
-            <button class="option" type="button" data-path="mapa">"Eu sabia o que queria dizer, mas não saiu daquele jeito."</button>
-            <button class="option" type="button" data-path="mentoria">"Eu pensei na resposta certa depois."</button>
-            <button class="option" type="button" data-path="mapa">"Quando tento ser objetivo, parece que perco profundidade."</button>
-            <button class="option" type="button" data-path="mapa">"Quanto mais eu explico, menos forte fica."</button>
-            <button class="option" type="button" data-path="ebook">"Eu entrego bem, mas nem sempre sei fazer isso ser percebido."</button>
+            <button class="option" type="button" data-path="mentoria">Marcar uma conversa para trabalhar meu caso.</button>
+            <button class="option" type="button" data-path="comunidade">Entrar em uma comunidade de prática.</button>
+            <button class="option" type="button" data-path="mapa">Receber uma leitura mais profunda antes de decidir.</button>
+            <button class="option" type="button" data-path="marca">Revisar como minha marca comunica valor.</button>
           </div>
         </div>
 
         <div class="lead-form" data-lead>
           <h3>Quase lá.</h3>
-          <p>Deixa seu nome e e-mail para receber o diagnóstico completo com 3 insights e um próximo passo recomendado.</p>
+          <p>Deixa seu nome e e-mail para ver sua leitura de fala com 3 pontos de atenção e um caminho recomendado.</p>
           <div class="field-grid">
-            <input class="quiz-input" type="text" placeholder="Seu nome" />
-            <input class="quiz-input" type="email" placeholder="Melhor e-mail" />
+            <input class="quiz-input" type="text" name="name" placeholder="Seu nome" data-lead-name required />
+            <input class="quiz-input" type="email" name="email" placeholder="Melhor e-mail" data-lead-email required />
           </div>
         </div>
 
@@ -436,31 +447,44 @@
     const resultList = quiz.querySelector('[data-result-list]');
     const resultCta = quiz.querySelector('[data-result-cta]');
     const restartBtn = quiz.querySelector('[data-restart]');
+    const leadName = quiz.querySelector('[data-lead-name]');
+    const leadEmail = quiz.querySelector('[data-lead-email]');
     const answers = [];
     let step = 0;
     const total = questions.length;
 
     const results = {
       mapa: {
-        badge: 'Mapa de Fala',
-        title: 'Sua fala precisa ganhar direção antes de volume.',
-        copy: 'O ponto agora é entender onde ela trava e o que precisa ser movido. Você tem conteúdo — falta estrutura de raciocínio para sustentá-lo na hora certa.',
-        items: ['Identificar onde a fala trava', 'Separar contexto, intenção e próximo passo', 'Organizar pensamento antes da exposição'],
-        cta: 'index.html#mapa'
+        badge: 'Diagnóstico',
+        title: 'Comece pelo mapa da sua fala.',
+        copy: 'Você parece estar numa fase de entender o padrão antes de escolher o formato. O próximo passo é observar onde sua fala se espalha, o que ela tenta resolver e que tipo de estrutura deixaria seu pensamento mais fácil de sustentar.',
+        items: ['Ler o padrão da sua fala', 'Separar contexto, intenção e próximo passo', 'Organizar pensamento antes de treinar presença'],
+        cta: 'index.html#contato',
+        ctaLabel: 'Ir direto para conversar com a Vick'
       },
       mentoria: {
-        badge: 'Mentoria de Fala',
-        title: 'Sua fala tem conteúdo. Precisa de treino e contexto.',
-        copy: 'Você já sabe o que precisa dizer. O que falta é praticar com estrutura, ler o contexto com mais precisão e sustentar o argumento sob pressão.',
-        items: ['Reuniões e conversas difíceis', 'Argumento sob pressão', 'Presença com direção estratégica'],
-        cta: 'index.html#servicos'
+        badge: 'Mentoria individual',
+        title: 'Seu próximo passo é individual.',
+        copy: 'Suas respostas apontam para uma situação concreta, com pouco espaço para improviso. Aqui faz sentido trabalhar 1:1, usando cenas reais do seu trabalho para preparar argumento, condução e resposta.',
+        items: ['Preparar reuniões, pitchs ou conversas difíceis', 'Treinar como sustentar um ponto sob pressão', 'Construir uma fala aplicável ao seu contexto'],
+        cta: 'index.html#mentoria-individual',
+        ctaLabel: 'Ir direto para mentoria individual'
       },
-      ebook: {
-        badge: 'Valor Percebido',
-        title: 'Sua fala precisa vender o que você já entrega.',
-        copy: 'O problema não é o que você faz — é como você comunica isso. Sua fala precisa de mais clareza na hora de posicionar, vender e construir percepção.',
-        items: ['Comunicar diferencial com clareza', 'Construir percepção de valor', 'Transformar entrega em visibilidade'],
-        cta: 'index.html#produtos'
+      comunidade: {
+        badge: 'Comunidade',
+        title: 'Sua fala precisa de prática contínua.',
+        copy: 'O que aparece aqui é necessidade de ritmo. Você não precisa transformar cada fala em uma grande apresentação. Precisa de espaço para testar ideia, ouvir retorno e criar naturalidade com frequência.',
+        items: ['Praticar em ambiente cuidado', 'Receber retorno sem pressão de performance', 'Criar constância para aparecer e se posicionar'],
+        cta: 'seu-lugar-de-fala.html',
+        ctaLabel: 'Ir direto para Seu Lugar de Fala'
+      },
+      marca: {
+        badge: 'Valor percebido',
+        title: 'Sua fala precisa comunicar valor com mais precisão.',
+        copy: 'Suas respostas mostram uma questão de percepção. A entrega existe, mas talvez esteja chegando explicada demais e posicionada de menos. O próximo passo é alinhar narrativa, oferta e marca para que o valor fique mais evidente.',
+        items: ['Traduzir diferencial com mais clareza', 'Ajustar discurso de venda e posicionamento', 'Alinhar fala, marca e percepção de valor'],
+        cta: 'index.html#marca-valor',
+        ctaLabel: 'Ir direto para marca e valor'
       }
     };
 
@@ -488,10 +512,34 @@
 
     function selectedPath() {
       const score = answers.reduce((acc, p) => { acc[p] = (acc[p] || 0) + 1; return acc; }, {});
-      return Object.keys(score).sort((a, b) => score[b] - score[a])[0] || 'mapa';
+      const max = Math.max(...Object.values(score), 0);
+      const currentNeed = answers[2];
+      if (currentNeed && score[currentNeed] === max) return currentNeed;
+      return [...answers].reverse().find(path => score[path] === max) || 'mapa';
     }
 
-    function showResult() {
+    function submitLead(path, data) {
+      const payload = new URLSearchParams();
+      payload.append('form-name', 'mapa-de-fala');
+      payload.append('subject', 'Novo lead do Mapa de Fala');
+      payload.append('name', leadName.value.trim());
+      payload.append('email', leadEmail.value.trim());
+      payload.append('source', window.location.pathname || 'mapa-de-fala.html');
+      payload.append('result_path', path);
+      payload.append('result_badge', data.badge);
+      answers.forEach((answer, index) => {
+        const selected = questions[index].querySelector(`.option[data-path="${answer}"].is-selected`);
+        payload.append(`answer_${index + 1}`, selected ? selected.textContent.trim() : answer);
+      });
+
+      return fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: payload.toString()
+      });
+    }
+
+    async function showResult() {
       const path = selectedPath();
       const data = results[path];
       resultBadge.textContent = data.badge;
@@ -499,6 +547,12 @@
       resultCopy.textContent = data.copy;
       resultList.innerHTML = data.items.map(i => `<li>${i}</li>`).join('');
       resultCta.href = data.cta;
+      resultCta.textContent = data.ctaLabel;
+      try {
+        await submitLead(path, data);
+      } catch (error) {
+        console.warn('Nao foi possivel registrar o lead do Mapa de Fala.', error);
+      }
     }
 
     quiz.addEventListener('click', e => {
@@ -511,6 +565,11 @@
 
     nextBtn.addEventListener('click', () => {
       if (step < total && !answers[step]) return;
+      if (step === total && (!leadName.value.trim() || !leadEmail.validity.valid)) {
+        leadEmail.reportValidity();
+        leadName.reportValidity();
+        return;
+      }
       if (step === total) showResult();
       step++; render();
     });
