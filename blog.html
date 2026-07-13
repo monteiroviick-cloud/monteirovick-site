@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - monteirovick</title>
+  <meta name="description" content="Fala, marca, posicionamento e comunicacao que move resultado. Conteudo autoral de Vick Monteiro." />
+  <meta property="og:title" content="Blog - monteirovick" />
+  <meta property="og:image" content="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vinho-escuro: #0a0305; --vinho: #1e0910; --vinho-medio: #3a1018;
+      --vermelho: #c0292a; --bege: #e9ded2; --bege-muted: rgba(233,222,210,0.54);
+      --line: rgba(233,222,210,0.1); --branco: #f5f0eb;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Montserrat',sans-serif; background:var(--vinho-escuro); color:var(--bege); overflow-x:hidden; }
+    .site-shell { background: linear-gradient(90deg,rgba(233,222,210,0.022) 1px,transparent 1px), linear-gradient(rgba(233,222,210,0.022) 1px,transparent 1px), var(--vinho-escuro); background-size:80px 80px; }
+    nav { position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:24px 60px; }
+    nav::before { content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,3,5,0.96) 0%,transparent 100%);pointer-events:none; }
+    .nav-logo { position:relative;z-index:1; }
+    .nav-logo svg { height:18px;width:auto; }
+    .nav-links { position:relative;z-index:1;display:flex;gap:36px;list-style:none; }
+    .nav-links a { color:var(--bege-muted);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;transition:color 0.2s; }
+    .nav-links a:hover { color:var(--bege); }
+    .nav-cta { position:relative;z-index:1;background:transparent;border:1px solid rgba(233,222,210,0.18);color:var(--bege);padding:10px 24px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all 0.2s; }
+    .nav-cta:hover { background:var(--vermelho);border-color:var(--vermelho); }
+    nav.scrolled::before { background:rgba(10,3,5,0.98) !important;backdrop-filter:blur(12px); }
+    .blog-hero { padding:160px 60px 80px;border-bottom:1px solid var(--line);max-width:1400px;margin:0 auto; }
+    .blog-hero-label { font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--vermelho);display:flex;align-items:center;gap:12px;margin-bottom:28px; }
+    .blog-hero-label::before { content:'';display:inline-block;width:28px;height:1px;background:var(--vermelho); }
+    .blog-hero h1 { font-size:clamp(40px,5vw,72px);font-weight:800;line-height:1.04;letter-spacing:-0.025em;margin-bottom:24px; }
+    .blog-hero h1 em { font-style:italic;font-weight:400;color:var(--bege-muted); }
+    .blog-hero p { font-size:17px;font-weight:400;line-height:1.75;color:var(--bege-muted);max-width:560px; }
+    .blog-filters { padding:32px 60px;max-width:1400px;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap; }
+    .filter-btn { padding:9px 20px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;background:transparent;border:1px solid var(--line);color:var(--bege-muted);cursor:pointer;transition:all 0.2s; }
+    .filter-btn:hover,.filter-btn.active { background:var(--vermelho);border-color:var(--vermelho);color:var(--branco); }
+    .blog-featured { max-width:1400px;margin:0 auto;padding:60px; }
+    .featured-card { display:grid;grid-template-columns:1.2fr 1fr;gap:0;background:var(--vinho);text-decoration:none;color:inherit;overflow:hidden;transition:opacity 0.2s; }
+    .featured-card:hover { opacity:0.92; }
+    .featured-img { aspect-ratio:4/3;overflow:hidden;position:relative; }
+    .featured-img img { width:100%;height:100%;object-fit:cover;filter:grayscale(15%) contrast(1.05);transition:transform 0.6s; }
+    .featured-card:hover .featured-img img { transform:scale(1.03); }
+    .featured-body { padding:56px 48px;display:flex;flex-direction:column;justify-content:space-between; }
+    .post-meta { display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap; }
+    .post-cat { font-size:9px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--vermelho);border:1px solid rgba(192,41,42,0.4);padding:4px 10px; }
+    .post-date { font-size:11px;color:rgba(233,222,210,0.35);letter-spacing:0.05em; }
+    .post-title { font-size:clamp(22px,2.4vw,34px);font-weight:800;line-height:1.1;letter-spacing:-0.02em;margin-bottom:18px; }
+    .post-excerpt { font-size:15px;line-height:1.75;color:var(--bege-muted);margin-bottom:32px; }
+    .post-read { font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--vermelho);display:flex;align-items:center;gap:8px;transition:gap 0.2s; }
+    .featured-card:hover .post-read { gap:14px; }
+    .blog-grid-section { max-width:1400px;margin:0 auto;padding:60px 60px 100px; }
+    .blog-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line); }
+    .post-card { background:var(--vinho-escuro);overflow:hidden;text-decoration:none;color:inherit;transition:background 0.3s;display:flex;flex-direction:column; }
+    .post-card:hover { background:var(--vinho); }
+    .post-card-img { aspect-ratio:16/10;overflow:hidden;position:relative; }
+    .post-card-img img { width:100%;height:100%;object-fit:cover;filter:grayscale(15%) contrast(1.05);transition:transform 0.5s; }
+    .post-card:hover .post-card-img img { transform:scale(1.04); }
+    .post-card-body { padding:28px 28px 32px;flex:1;display:flex;flex-direction:column; }
+    .post-card-meta { display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap; }
+    .post-card-title { font-size:18px;font-weight:700;line-height:1.2;letter-spacing:-0.01em;margin-bottom:12px;flex:1; }
+    .post-card-excerpt { font-size:13px;color:var(--bege-muted);line-height:1.65; }
+    .newsletter { background:var(--vinho);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 60px; }
+    .newsletter-inner { max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center; }
+    .newsletter h2 { font-size:clamp(28px,3vw,44px);font-weight:800;line-height:1.08;letter-spacing:-0.02em;margin-bottom:16px; }
+    .newsletter h2 em { font-style:italic;font-weight:400;color:var(--bege-muted); }
+    .newsletter p { font-size:15px;color:var(--bege-muted);line-height:1.75; }
+    .newsletter-form { display:flex;gap:0; }
+    .newsletter-input { flex:1;padding:16px 20px;background:rgba(233,222,210,0.06);border:1px solid rgba(233,222,210,0.15);border-right:none;color:var(--bege);font-family:Montserrat,sans-serif;font-size:14px;outline:none;transition:border-color 0.2s; }
+    .newsletter-input:focus { border-color:var(--vermelho); }
+    .newsletter-input::placeholder { color:rgba(233,222,210,0.28); }
+    .newsletter-btn { padding:16px 28px;background:var(--vermelho);border:none;color:var(--branco);font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;white-space:nowrap; }
+    .newsletter-btn:hover { background:#a02020; }
+    footer { background:var(--vinho-escuro);border-top:1px solid rgba(233,222,210,0.06);padding:40px 60px;display:flex;justify-content:space-between;align-items:center; }
+    .footer-logo svg { height:16px;width:auto;opacity:0.3; }
+    .footer-copy { font-size:11px;font-weight:400;color:rgba(233,222,210,0.22);letter-spacing:0.05em; }
+    .footer-right { display:flex;gap:28px; }
+    .footer-right a { font-size:11px;font-weight:500;color:rgba(233,222,210,0.32);text-decoration:none;letter-spacing:0.1em;transition:color 0.2s; }
+    .footer-right a:hover { color:var(--bege); }
+    @media (max-width:900px) {
+      nav { padding:20px 24px; } .nav-links { display:none; }
+      .blog-hero { padding:120px 24px 60px; } .blog-filters { padding:24px; }
+      .blog-featured { padding:40px 24px; } .featured-card { grid-template-columns:1fr; }
+      .featured-body { padding:32px 28px; } .blog-grid-section { padding:40px 24px 80px; }
+      .blog-grid { grid-template-columns:1fr; } .newsletter { padding:60px 24px; }
+      .newsletter-inner { grid-template-columns:1fr;gap:40px; }
+      .newsletter-form { flex-direction:column; }
+      .newsletter-input { border-right:1px solid rgba(233,222,210,0.15);border-bottom:none; }
+      footer { flex-direction:column;gap:20px;padding:32px 24px;text-align:center; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-shell">
+<nav>
+  <a class="nav-logo" href="index.html">
+    <svg width="392" height="47" viewBox="0 0 392 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38.5254 14.0157C42.4012 14.0157 45.437 15.1288 47.633 17.3653C49.8694 19.6017 50.9826 22.8906 50.9826 27.2319V45.1436H46.8133V27.6468C46.8133 24.4389 46.0341 21.9899 44.4656 20.3101C42.9375 18.6302 40.7618 17.7802 37.9485 17.7802C34.7406 17.7802 32.2107 18.782 30.3689 20.7756C28.5272 22.7287 27.6063 25.4508 27.6063 28.9421V45.1537H23.437V27.6569C23.437 24.449 22.6578 22 21.0893 20.3202C19.5612 18.6403 17.3652 17.7903 14.5115 17.7903C11.3441 17.7903 8.81418 18.7921 6.93193 20.7857C5.09016 22.7388 4.16928 25.4609 4.16928 28.9522V45.1638H0V14.2484H3.99725V19.885C5.09016 18.0028 6.61822 16.5557 8.58143 15.5437C10.5345 14.5217 12.7912 14.0157 15.3312 14.0157C17.8712 14.0157 20.1481 14.5621 22.0304 15.6652C23.9531 16.7581 25.38 18.3873 26.3211 20.5428C27.4545 18.5088 29.0838 16.92 31.1988 15.7866C33.3542 14.6127 35.8032 14.0258 38.5355 14.0258L38.5254 14.0157ZM75.0268 45.4371C72.0516 45.4371 69.3699 44.7692 66.9817 43.4435C64.5935 42.0774 62.7112 40.1951 61.3451 37.8069C59.9789 35.4186 59.2908 32.7167 59.2908 29.7011C59.2908 26.6854 59.9789 23.9835 61.3451 21.5953C62.7112 19.207 64.5935 17.345 66.9817 16.0194C69.3699 14.6836 72.0516 14.0258 75.0268 14.0258C78.002 14.0258 80.6836 14.6937 83.0719 16.0194C85.4601 17.3551 87.3221 19.207 88.6478 21.5953C90.0139 23.9835 90.7021 26.6854 90.7021 29.7011C90.7021 32.7167 90.0139 35.4186 88.6478 37.8069C87.312 40.1951 85.4601 42.0774 83.0719 43.4435C80.6836 44.7793 78.002 45.4371 75.0268 45.4371ZM75.0268 41.7333C77.2227 41.7333 79.1758 41.2475 80.8962 40.2659C82.657 39.2439 84.0332 37.817 85.0047 35.9752C85.9863 34.1335 86.4721 32.0387 86.4721 29.6909C86.4721 27.3432 85.9863 25.2484 85.0047 23.4067C84.0231 21.5649 82.657 20.1583 80.8962 19.1767C79.1758 18.1546 77.2126 17.6486 75.0268 17.6486C72.841 17.6486 70.8575 18.1546 69.0967 19.1767C67.3764 20.1583 66.0001 21.5649 64.9881 23.4067C64.0065 25.2484 63.5208 27.3432 63.5208 29.6909C63.5208 32.0387 64.0065 34.1335 64.9881 35.9752C66.0102 37.817 67.3764 39.2439 69.0967 40.2659C70.8575 41.2475 72.8308 41.7333 75.0268 41.7333ZM114.969 14.0157C118.845 14.0157 121.921 15.1491 124.188 17.426C126.495 19.6624 127.649 22.931 127.649 27.2319V45.1436H123.479V27.6468C123.479 24.4389 122.68 21.9899 121.071 20.3101C119.462 18.6302 117.175 17.7802 114.2 17.7802C110.87 17.7802 108.229 18.782 106.276 20.7756C104.353 22.7287 103.402 25.4508 103.402 28.9421V45.1537H99.2329V14.2484H103.23V19.9458C104.364 18.0635 105.932 16.6164 107.926 15.6044C109.96 14.552 112.307 14.0157 114.969 14.0157ZM155.235 43.2613C154.456 43.9697 153.474 44.5162 152.3 44.9108C151.167 45.265 149.973 45.4371 148.718 45.4371C145.824 45.4371 143.587 44.6579 142.019 43.0893C140.45 41.5208 139.671 39.3147 139.671 36.4508V17.77H134.146V14.2484H139.671V7.49864H143.84V14.2484H153.241V17.77H143.84V36.208C143.84 38.0497 144.285 39.4564 145.186 40.438C146.127 41.3791 147.453 41.8446 149.183 41.8446C150.043 41.8446 150.863 41.7029 151.652 41.4297C152.472 41.1565 153.181 40.7618 153.767 40.2558L155.235 43.2512V43.2613ZM188.64 30.9863H162.794C163.027 34.1942 164.262 36.805 166.498 38.7986C168.734 40.7517 171.548 41.7333 174.958 41.7333C176.881 41.7333 178.641 41.3993 180.24 40.7314C181.849 40.0231 183.236 39.0111 184.41 37.6753L186.757 40.3773C185.391 42.0268 183.661 43.2715 181.586 44.1316C179.552 44.9918 177.296 45.4269 174.837 45.4269C171.669 45.4269 168.846 44.759 166.377 43.4334C163.948 42.0672 162.045 40.185 160.679 37.7968C159.313 35.4085 158.625 32.7066 158.625 29.6909C158.625 26.6753 159.273 23.9734 160.568 21.5851C161.904 19.1969 163.705 17.3349 165.972 16.0092C168.279 14.6734 170.87 14.0157 173.723 14.0157C176.577 14.0157 179.147 14.6836 181.414 16.0092C183.681 17.3349 185.462 19.1969 186.757 21.5851C188.053 23.9329 188.7 26.6348 188.7 29.6909L188.64 30.9863ZM173.723 17.598C170.748 17.598 168.239 18.5594 166.204 20.472C164.211 22.3542 163.067 24.8133 162.794 27.8694H184.703C184.43 24.8133 183.276 22.3441 181.242 20.472C179.249 18.5493 176.739 17.598 173.723 17.598ZM197.181 14.2484H201.35V45.1436H197.181V14.2484ZM199.296 7.48852C198.435 7.48852 197.707 7.19505 197.12 6.60811C196.533 6.02118 196.239 5.3128 196.239 4.49312C196.239 3.67343 196.533 3.02577 197.12 2.43883C197.707 1.8519 198.435 1.55843 199.296 1.55843C200.156 1.55843 200.884 1.8519 201.471 2.43883C202.058 2.98529 202.352 3.65319 202.352 4.4324C202.352 5.29257 202.058 6.02118 201.471 6.60811C200.884 7.19505 200.156 7.48852 199.296 7.48852ZM216.954 20.2999C217.936 18.2254 219.383 16.6569 221.296 15.6044C223.249 14.552 225.657 14.0157 228.521 14.0157V18.0635L227.519 18.0028C224.271 18.0028 221.721 19.0046 219.889 20.9982C218.047 22.9918 217.126 25.7949 217.126 29.3975V45.1335H212.957V14.2484H216.954V20.2999ZM248.416 45.4371C245.441 45.4371 242.759 44.7692 240.371 43.4435C237.983 42.0774 236.101 40.1951 234.734 37.8069C233.368 35.4186 232.68 32.7167 232.68 29.7011C232.68 26.6854 233.368 23.9835 234.734 21.5953C236.101 19.207 237.983 17.345 240.371 16.0194C242.759 14.6836 245.441 14.0258 248.416 14.0258C251.391 14.0258 254.073 14.6937 256.461 16.0194C258.849 17.3551 260.711 19.207 262.037 21.5953C263.403 23.9835 264.091 26.6854 264.091 29.7011C264.091 32.7167 263.403 35.4186 262.037 37.8069C260.701 40.1951 258.849 42.0774 256.461 43.4435C254.073 44.7793 251.391 45.4371 248.416 45.4371ZM248.416 41.7333C250.612 41.7333 252.565 41.2475 254.286 40.2659C256.046 39.2439 257.423 37.817 258.394 35.9752C259.376 34.1335 259.861 32.0387 259.861 29.6909C259.861 27.3432 259.376 25.2484 258.394 23.4067C257.413 21.5649 256.046 20.1583 254.286 19.1767C252.565 18.1546 250.602 17.6486 248.416 17.6486C246.23 17.6486 244.247 18.1546 242.486 19.1767C240.766 20.1583 239.389 21.5649 238.378 23.4067C237.396 25.2484 236.91 27.3432 236.91 29.6909C236.91 32.0387 237.396 34.1335 238.378 35.9752C239.4 37.817 240.766 39.2439 242.486 40.2659C244.247 41.2475 246.23 41.7333 248.416 41.7333Z" fill="#E9DED2"/><path d="M304.276 14.2889L291.253 45.1537H282.013L269.05 14.2889H278.289L286.83 35.2871L295.665 14.2889H304.276Z" fill="#E9DED2"/><path d="M316.875 14.2889H307.93V45.1537H316.875V14.2889ZM312.402 9.97794C310.753 9.97794 309.417 9.50231 308.385 8.54095C307.353 7.58971 306.837 6.39559 306.837 4.98897C306.837 3.58234 307.353 2.38823 308.385 1.43698C309.417 0.485741 310.753 0 312.402 0C314.052 0 315.388 0.455382 316.42 1.37627C317.452 2.29715 317.968 3.44067 317.968 4.81694C317.968 6.30452 317.452 7.54923 316.42 8.54095C315.388 9.4922 314.052 9.97794 312.402 9.97794Z" fill="#E9DED2"/><path d="M339.088 45.6091C335.799 45.6091 332.834 44.9412 330.193 43.6054C327.592 42.2291 325.548 40.3368 324.05 37.9283C322.593 35.5198 321.875 32.7875 321.875 29.7213C321.875 26.6551 322.603 23.9228 324.05 21.5143C325.538 19.1058 327.592 17.2337 330.193 15.8878C332.834 14.5115 335.799 13.8234 339.088 13.8234C342.377 13.8234 345.17 14.5115 347.578 15.8878C350.027 17.2236 351.808 19.1564 352.911 21.6863L345.969 25.4103C344.36 22.5769 342.053 21.1601 339.027 21.1601C336.69 21.1601 334.767 21.9292 333.229 23.4573C331.701 24.9853 330.932 27.07 330.932 29.7112C330.932 32.3524 331.701 34.437 333.229 35.9651C334.757 37.4932 336.69 38.2622 339.027 38.2622C342.083 38.2622 344.401 36.8455 345.969 34.012L352.911 37.7967C351.798 40.2457 350.027 42.1583 347.578 43.5346C345.17 44.9108 342.336 45.599 339.088 45.599V45.6091Z" fill="#E9DED2"/><path d="M371.096 33.0405L366.796 37.2907V45.1537H357.84V2.58049H366.796V26.6753L379.87 14.2889H390.546L377.695 27.3634L391.69 45.1537H380.852L371.096 33.0405Z" fill="#E9DED2"/></svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#sobre">Sobre</a></li>
+    <li><a href="mapa-de-fala.html">Mapa de Fala</a></li>
+    <li><a href="index.html#servicos">Servicos</a></li>
+    <li><a href="blog.html" style="color:var(--bege);">Blog</a></li>
+    <li><a href="index.html#contato">Contato</a></li>
+  </ul>
+  <a href="mapa-de-fala.html" class="nav-cta">Fazer meu mapa</a>
+</nav>
+
+<div style="border-bottom:1px solid var(--line);">
+  <div class="blog-hero">
+    <p class="blog-hero-label">Blog</p>
+    <h1>Fala, marca e<br/><em>o que move resultado.</em></h1>
+    <p>Conteudo autoral sobre comunicacao estrategica, posicionamento de marca e o que realmente muda quando a fala acompanha o nivel.</p>
+  </div>
+</div>
+
+<div style="border-bottom:1px solid var(--line);background:var(--vinho);">
+  <div class="blog-filters">
+    <button class="filter-btn active" onclick="filterPosts('todos',this)">Todos</button>
+    <button class="filter-btn" onclick="filterPosts('fala',this)">Fala</button>
+    <button class="filter-btn" onclick="filterPosts('marca',this)">Marca</button>
+    <button class="filter-btn" onclick="filterPosts('cases',this)">Cases</button>
+    <button class="filter-btn" onclick="filterPosts('metodo',this)">Metodo</button>
+    <button class="filter-btn" onclick="filterPosts('carreira',this)">Carreira</button>
+  </div>
+</div>
+
+<div style="border-bottom:1px solid var(--line);">
+  <div class="blog-featured" data-category="fala">
+    <a href="#" class="featured-card">
+      <div class="featured-img">
+        <img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00441.jpg" alt="A reuniao que voce travou" />
+      </div>
+      <div class="featured-body">
+        <div>
+          <div class="post-meta">
+            <span class="post-cat">Fala</span>
+            <span class="post-date">Maio 2026</span>
+            <span style="font-size:11px;color:rgba(233,222,210,0.25);">8 min de leitura</span>
+          </div>
+          <h2 class="post-title">A reuniao que voce travou nao era falta de conhecimento. Era falta de estrutura.</h2>
+          <p class="post-excerpt">Voce sabia o que queria dizer. O problema nao estava no conteudo. Estava na forma como o pensamento foi organizado antes de chegar na sala. Esse e o ponto que quase ninguem ensina.</p>
+        </div>
+        <span class="post-read">Ler agora</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="blog-grid-section">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid var(--line);">
+    <p style="font-size:10px;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(233,222,210,0.3);">Publicacoes recentes</p>
+    <p style="font-size:11px;color:rgba(233,222,210,0.3);" id="post-count">Mostrando 6 publicacoes</p>
+  </div>
+  <div class="blog-grid" id="posts-grid">
+
+    <a href="#" class="post-card" data-category="marca">
+      <div class="post-card-img"><img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00469.jpg" alt="Posicionamento" /></div>
+      <div class="post-card-body">
+        <div class="post-card-meta"><span class="post-cat">Marca</span><span class="post-date">Abril 2026</span></div>
+        <h3 class="post-card-title">Posicionamento nao e o que voce fala sobre si mesmo. E o que as pessoas entendem.</h3>
+        <p class="post-card-excerpt">A maioria dos profissionais confunde posicionamento com descricao. Um e sobre identidade interna. O outro e sobre percepcao externa.</p>
+      </div>
+    </a>
+
+    <a href="#" class="post-card" data-category="carreira">
+      <div class="post-card-img"><img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7854_Original.jpg" alt="Profissional invisivel" /></div>
+      <div class="post-card-body">
+        <div class="post-card-meta"><span class="post-cat">Carreira</span><span class="post-date">Abril 2026</span></div>
+        <h3 class="post-card-title">O profissional que entrega mais do que explica paga um preco que nao aparece no salario.</h3>
+        <p class="post-card-excerpt">Invisibilidade e uma escolha que parece profissionalismo. Mas tem um custo: voce e avaliado pelo que comunica, nao so pelo que faz.</p>
+      </div>
+    </a>
+
+    <a href="#" class="post-card" data-category="metodo">
+      <div class="post-card-img"><img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/05. Banco de Imagens/ChatGPT Image 21 de mai. de 2026, 15_19_38.png" alt="Tres movimentos" /></div>
+      <div class="post-card-body">
+        <div class="post-card-meta"><span class="post-cat">Metodo</span><span class="post-date">Marco 2026</span></div>
+        <h3 class="post-card-title">Mapear, estruturar, treinar. Os tres movimentos de uma fala que funciona de verdade.</h3>
+        <p class="post-card-excerpt">Nao existe fala eficiente sem um mapa do contexto, uma estrutura do raciocinio e pratica real. Essa e a base do metodo Estrategia e Fala.</p>
+      </div>
+    </a>
+
+    <a href="#" class="post-card" data-category="cases">
+      <div class="post-card-img"><img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg" alt="Case reuniao" /></div>
+      <div class="post-card-body">
+        <div class="post-card-meta"><span class="post-cat">Cases</span><span class="post-date">Marco 2026</span></div>
+        <h3 class="post-card-title">Ele participava de todas as reunioes e nao era ouvido. O que mudou em duas sessoes.</h3>
+        <p class="post-card-excerpt">Um gerente senior de tecnologia. Competencia tecnica acima da media. Presenca zero nas discussoes estrategicas.</p>
+      </div>
+    </a>
+
+    <a href="#" class="post-card" data-category="fala">
+      <div class="post-card-img"><img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/05. Banco de Imagens/ChatGPT Image 21 de mai. de 2026, 15_18_54.png" alt="Discordar" /></div>
+      <div class="post-card-body">
+        <div class="post-card-meta"><span class="post-cat">Fala</span><span class="post-date">Fevereiro 2026</span></div>
+        <h3 class="post-card-title">Discordar sem fechar portas: a habilidade que separa quem influencia de quem irrita.</h3>
+        <p class="post-card-excerpt">Discordar e uma habilidade estrategica. A maioria das pessoas ou engole ou explode. Existe um meio-termo que funciona.</p>
+      </div>
+    </a>
+
+    <a href="#" class="post-card" data-category="marca">
+      <div class="post-card-img"><img loading="lazy" src="drive-download-20260503T001933Z-3-001/assets/05. Banco de Imagens/img1-e1124f2d-1920w.webp" alt="Marca pessoal" /></div>
+      <div class="post-card-body">
+        <div class="post-card-meta"><span class="post-cat">Marca</span><span class="post-date">Janeiro 2026</span></div>
+        <h3 class="post-card-title">Marca pessoal nao e personal branding. E o que acontece quando voce para de tentar parecer.</h3>
+        <p class="post-card-excerpt">Personal branding se tornou sinonimo de performance. Mas marca de verdade e construida de dentro para fora.</p>
+      </div>
+    </a>
+
+  </div>
+  <div style="text-align:center;margin-top:56px;">
+    <button onclick="alert('Em breve mais publicacoes.')" style="background:transparent;border:1px solid var(--line);color:var(--bege-muted);padding:14px 36px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='var(--vermelho)';this.style.color='var(--bege)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--bege-muted)'">Carregar mais</button>
+  </div>
+</div>
+
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <div>
+      <p style="font-size:10px;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;color:var(--vermelho);margin-bottom:20px;">Newsletter</p>
+      <h2>Conteudo que chega<br/><em>antes de todo mundo.</em></h2>
+      <p style="margin-top:16px;">Uma vez por semana. Fala, marca, posicionamento. Sem formula pronta e sem assunto pra encher linguica.</p>
+    </div>
+    <div>
+      <form name="newsletter-blog" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
+        <input type="hidden" name="form-name" value="newsletter-blog" />
+        <input type="hidden" name="subject" value="Novo cadastro na newsletter monteirovick" />
+        <input type="hidden" name="source" value="blog-newsletter" />
+        <p hidden><label>Não preencha este campo <input name="bot-field" /></label></p>
+        <div class="newsletter-form">
+          <input type="email" name="email" class="newsletter-input" placeholder="Seu melhor e-mail" required />
+          <button type="submit" class="newsletter-btn">Entrar na lista</button>
+        </div>
+        <p style="font-size:11px;color:rgba(233,222,210,0.3);margin-top:12px;">Sem spam. Cancela quando quiser.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">
+    <svg width="392" height="47" viewBox="0 0 392 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M38.5254 14.0157C42.4012 14.0157 45.437 15.1288 47.633 17.3653C49.8694 19.6017 50.9826 22.8906 50.9826 27.2319V45.1436H46.8133V27.6468C46.8133 24.4389 46.0341 21.9899 44.4656 20.3101C42.9375 18.6302 40.7618 17.7802 37.9485 17.7802C34.7406 17.7802 32.2107 18.782 30.3689 20.7756C28.5272 22.7287 27.6063 25.4508 27.6063 28.9421V45.1537H23.437V27.6569C23.437 24.449 22.6578 22 21.0893 20.3202C19.5612 18.6403 17.3652 17.7903 14.5115 17.7903C11.3441 17.7903 8.81418 18.7921 6.93193 20.7857C5.09016 22.7388 4.16928 25.4609 4.16928 28.9522V45.1638H0V14.2484H3.99725V19.885C5.09016 18.0028 6.61822 16.5557 8.58143 15.5437C10.5345 14.5217 12.7912 14.0157 15.3312 14.0157C17.8712 14.0157 20.1481 14.5621 22.0304 15.6652C23.9531 16.7581 25.38 18.3873 26.3211 20.5428C27.4545 18.5088 29.0838 16.92 31.1988 15.7866C33.3542 14.6127 35.8032 14.0258 38.5355 14.0258L38.5254 14.0157Z" fill="#E9DED2"/></svg>
+  </div>
+  <p class="footer-copy">2026 monteirovick. Todos os direitos reservados.</p>
+  <div class="footer-right">
+    <a href="mapa-de-fala.html">Mapa de Fala</a>
+    <a href="index.html">Home</a>
+    <a href="https://instagram.com/monteirovick" target="_blank">Instagram</a>
+    <a href="https://instagram.com/remind.bx" target="_blank">REMIND</a>
+    <a href="https://linkedin.com/in/monteirovick" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+</div>
+<script>
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => { navEl.classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+  document.querySelectorAll('[data-netlify-form]').forEach(form => {
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const submitButton = form.querySelector('[type="submit"]');
+      const originalText = submitButton ? submitButton.textContent : '';
+      const payload = new URLSearchParams(new FormData(form));
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+      }
+
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: payload.toString()
+        });
+        form.innerHTML = '<p style="font-size:15px;color:var(--bege);font-weight:600;">Você está na lista. Até semana que vem.</p>';
+      } catch (error) {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+        alert('Não foi possível enviar agora. Tente novamente em instantes.');
+      }
+    });
+  });
+
+  function filterPosts(category, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cards = document.querySelectorAll('#posts-grid .post-card, .blog-featured');
+    let visible = 0;
+    cards.forEach(card => {
+      const show = category === 'todos' || card.dataset.category === category;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    const countEl = document.getElementById('post-count');
+    if (countEl) countEl.textContent = 'Mostrando ' + visible + ' publicac' + (visible !== 1 ? 'oes' : 'ao');
+  }
+</script>
+</body>
+</html>

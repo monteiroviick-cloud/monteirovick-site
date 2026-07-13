@@ -1473,10 +1473,14 @@ loading="lazy"       src="drive-download-20260503T001933Z-3-001/assets/03. Fotos
       <p class="section-tag">Contato</p>
       <h2 class="section-title">Vamos falar sobre<br/><em>a sua fala.</em></h2>
     </div>
-    <form class="cta-form" onsubmit="event.preventDefault(); alert('Mensagem enviada! Em breve entro em contato.')">
-      <div class="form-group"><label class="form-label">Como você se chama?</label><input type="text" class="form-field" placeholder="Seu nome" /></div>
-      <div class="form-group"><label class="form-label">Melhor e-mail para responder</label><input type="email" class="form-field" placeholder="seu@email.com" /></div>
-      <div class="form-group"><label class="form-label">O que você quer desenvolver?</label><textarea class="form-field form-textarea" placeholder="Me conta o que trava, o que você quer conquistar, ou o que precisa agora."></textarea></div>
+    <form class="cta-form" name="contato-site" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
+      <input type="hidden" name="form-name" value="contato-site" />
+      <input type="hidden" name="subject" value="Novo contato pelo site monteirovick" />
+      <input type="hidden" name="source" value="home-contato" />
+      <p hidden><label>Não preencha este campo <input name="bot-field" /></label></p>
+      <div class="form-group"><label class="form-label">Como você se chama?</label><input type="text" name="name" class="form-field" placeholder="Seu nome" required /></div>
+      <div class="form-group"><label class="form-label">Melhor e-mail para responder</label><input type="email" name="email" class="form-field" placeholder="seu@email.com" required /></div>
+      <div class="form-group"><label class="form-label">O que você quer desenvolver?</label><textarea name="message" class="form-field form-textarea" placeholder="Me conta o que trava, o que você quer conquistar, ou o que precisa agora." required></textarea></div>
       <button type="submit" class="form-submit">Enviar</button>
     </form>
   </div>
@@ -1510,6 +1514,35 @@ loading="lazy"       src="drive-download-20260503T001933Z-3-001/assets/03. Fotos
   window.addEventListener('scroll', () => {
     navEl.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
+
+  document.querySelectorAll('[data-netlify-form]').forEach(form => {
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      const submitButton = form.querySelector('[type="submit"]');
+      const originalText = submitButton ? submitButton.textContent : '';
+      const payload = new URLSearchParams(new FormData(form));
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+      }
+
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: payload.toString()
+        });
+        form.innerHTML = '<p style="font-size:15px;color:var(--bege);font-weight:600;line-height:1.6;">Mensagem enviada. Em breve a Vick entra em contato.</p>';
+      } catch (error) {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }
+        alert('Não foi possível enviar agora. Tente novamente em instantes.');
+      }
+    });
+  });
 
   const quiz = document.querySelector('[data-quiz]');
   if (quiz) {
