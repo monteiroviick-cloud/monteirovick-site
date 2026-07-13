@@ -228,7 +228,7 @@
 
     /* ─── SOBRE ─── */
     .sobre {
-      padding: 120px 60px; border-top: 1px solid var(--line);
+      padding: 120px 60px;
       display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
       max-width: 1180px; margin: 0 auto;
     }
@@ -636,72 +636,86 @@
     .social-card-arrow { font-size: 18px; color: var(--vermelho); margin-top: auto; padding-top: 16px; transition: transform 0.2s; }
     .social-card:hover .social-card-arrow { transform: translateX(6px); }
 
-    .logos-section > div { max-width: 1180px !important; }
+    .logos-section {
+      padding: 72px 60px 84px;
+      border-top: 1px solid var(--line);
+      background: var(--vinho);
+    }
+    .logos-section > div {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+    .logos-eyebrow {
+      margin: 0 0 46px;
+      color: rgba(233,222,210,0.32);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .logo-panel {
+      position: relative;
+      padding: 34px 42px;
+      border-top: 1px solid rgba(233,222,210,0.08);
+      border-bottom: 1px solid rgba(233,222,210,0.08);
+      background:
+        linear-gradient(90deg, transparent, rgba(233,222,210,0.035), transparent),
+        rgba(30,9,16,0.28);
+    }
+    .logos-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      align-items: center;
+    }
+    .logo-tile {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 20px;
+      border: 1px solid rgba(233,222,210,0.06);
+      background: rgba(10,3,5,0.34);
+    }
     .client-logo {
-      height: 44px;
-      width: auto;
-      max-width: 170px;
+      width: 100%;
+      height: 38px;
       object-fit: contain;
-      opacity: 0.42;
+      opacity: 0.48;
       display: block;
     }
     .client-logo.invert { filter: brightness(0) invert(1); }
     .client-logo.screen {
-      filter: grayscale(1) invert(1) brightness(1.8);
+      filter: grayscale(1) invert(1) brightness(1.9);
       mix-blend-mode: screen;
-      opacity: 0.5;
+      opacity: 0.56;
     }
+    .client-logo.ibm { max-width: 124px; }
+    .client-logo.ipiranga { max-width: 136px; }
+    .client-logo.ifood { max-width: 104px; }
+    .client-logo.bmg { max-width: 116px; }
+    .client-logo.rd { max-width: 156px; }
+    .client-logo.ache { max-width: 142px; height: 42px; }
+    .client-logo.magalu { max-width: 142px; }
+    .client-logo.escad { max-width: 54px; height: 42px; }
+    .client-logo.pedra { max-width: 148px; height: 42px; }
+    .client-logo.planik { max-width: 154px; }
     .video-card {
       position: relative;
       aspect-ratio: 16/9;
       overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(10,3,5,0.22), rgba(10,3,5,0.78)),
-        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") center/cover;
+      background: var(--vinho);
       border: 1px solid rgba(233,222,210,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: var(--bege);
     }
-    .video-play {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: var(--vermelho);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 18px 60px rgba(0,0,0,0.35);
-      transition: transform 0.2s, background 0.2s;
-    }
-    .video-play::before {
-      content: '';
-      margin-left: 5px;
-      width: 0;
-      height: 0;
-      border-top: 14px solid transparent;
-      border-bottom: 14px solid transparent;
-      border-left: 20px solid var(--branco);
-    }
-    .video-card:hover .video-play { transform: scale(1.05); background: #a02020; }
-    .video-caption {
+    .video-card iframe {
       position: absolute;
-      left: 28px;
-      right: 28px;
-      bottom: 24px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: end;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(233,222,210,0.74);
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
     }
-
     /* ─── FOOTER ─── */
     footer {
       background: var(--vinho-escuro); border-top: 1px solid rgba(233,222,210,0.06);
@@ -740,9 +754,18 @@
       .pilares-header-right { text-align: left; }
       .pilares-grid { grid-template-columns: 1fr; }
       .para-quem { grid-template-columns: 1fr; padding: 0 24px; gap: 48px; }
-      .logos-section { padding: 52px 24px !important; }
-      .logos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 34px 24px !important; }
-      .client-logo { height: 38px; max-width: 148px; }
+      .logos-section { padding: 56px 24px; }
+      .logos-eyebrow { margin-bottom: 34px; }
+      .logo-panel { padding: 28px 24px; }
+      .logos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+      .logo-tile { min-height: 74px; padding: 16px; }
+      .client-logo { height: 34px; }
+      .client-logo.ache,
+      .client-logo.escad,
+      .client-logo.pedra { height: 38px; }
       .para-quem-grid { grid-template-columns: 1fr !important; }
       .mapa-hero { padding: 80px 24px 60px; }
       .mapa-quiz-wrap { padding: 0 24px 80px; }
@@ -899,7 +922,7 @@ loading="lazy"       src="drive-download-20260503T001933Z-3-001/assets/03. Fotos
 </section>
 
 <!-- SOBRE -->
-<section id="sobre" style="border-top: 1px solid var(--line);">
+<section id="sobre">
   <div class="sobre">
     <div style="position: relative;">
       <div class="sobre-img-wrap">
@@ -933,20 +956,22 @@ loading="lazy"       src="drive-download-20260503T001933Z-3-001/assets/03. Fotos
 </section>
 
 <!-- LOGOS CLIENTES -->
-<section class="logos-section" style="padding: 48px 60px; border-top: 1px solid var(--line); background: var(--vinho);">
-  <div style="max-width: 1180px; margin: 0 auto;">
-    <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(233,222,210,0.28); text-align: center; margin-bottom: 44px;">Empresas que já confiaram na Vick</p>
-    <div class="logos-grid" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 44px 32px; align-items: center; justify-items: center;">
-      <img class="client-logo invert" src="assets/logos/clientes/ibm.svg" alt="IBM" />
-      <img class="client-logo invert" src="assets/logos/clientes/ipiranga.svg" alt="Ipiranga" />
-      <img class="client-logo invert" src="assets/logos/clientes/ifood.svg" alt="iFood" />
-      <img class="client-logo invert" src="assets/logos/clientes/bmg.svg" alt="Banco BMG" />
-      <img class="client-logo" src="assets/logos/clientes/rd-station.svg" alt="RD Station" />
-      <img class="client-logo invert" src="assets/logos/clientes/ache.svg" alt="Aché" />
-      <img class="client-logo invert" src="assets/logos/clientes/magalu.svg" alt="Magalu" />
-      <img class="client-logo screen" src="assets/logos/clientes/escad.png" alt="Escad" />
-      <img class="client-logo screen" src="assets/logos/clientes/pedra-forte.png" alt="Pedra Forte" />
-      <img class="client-logo screen" src="assets/logos/clientes/planik.png" alt="Planik" />
+<section class="logos-section">
+  <div>
+    <p class="logos-eyebrow">Empresas que já confiaram na Vick</p>
+    <div class="logo-panel" aria-label="Logotipos de empresas que já confiaram na Vick">
+      <div class="logos-grid">
+        <div class="logo-tile"><img class="client-logo invert ibm" src="assets/logos/clientes/ibm.svg" alt="IBM" /></div>
+        <div class="logo-tile"><img class="client-logo invert ipiranga" src="assets/logos/clientes/ipiranga.svg" alt="Ipiranga" /></div>
+        <div class="logo-tile"><img class="client-logo invert ifood" src="assets/logos/clientes/ifood.svg" alt="iFood" /></div>
+        <div class="logo-tile"><img class="client-logo invert bmg" src="assets/logos/clientes/bmg.svg" alt="Banco BMG" /></div>
+        <div class="logo-tile"><img class="client-logo rd" src="assets/logos/clientes/rd-station.svg" alt="RD Station" /></div>
+        <div class="logo-tile"><img class="client-logo invert ache" src="assets/logos/clientes/ache.svg" alt="Aché" /></div>
+        <div class="logo-tile"><img class="client-logo invert magalu" src="assets/logos/clientes/magalu.svg" alt="Magalu" /></div>
+        <div class="logo-tile"><img class="client-logo screen escad" src="assets/logos/clientes/escad.png" alt="Escad" /></div>
+        <div class="logo-tile"><img class="client-logo screen pedra" src="assets/logos/clientes/pedra-forte.png" alt="Pedra Forte" /></div>
+        <div class="logo-tile"><img class="client-logo screen planik" src="assets/logos/clientes/planik.png" alt="Planik" /></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1259,13 +1284,16 @@ loading="lazy"       src="drive-download-20260503T001933Z-3-001/assets/03. Fotos
         <p class="section-body">De dentro para fora, com método e resultado.</p>
         <a href="https://www.rmnd.com.br" target="_blank" class="btn-primary" style="margin-top: 8px; display: inline-block;">Conhecer a REMIND</a>
       </div>
-      <a class="video-card" href="https://www.youtube.com/watch?v=IqQtkGGqmb0" target="_blank" rel="noopener" aria-label="Assistir ao manifesto da REMIND no YouTube">
-        <span class="video-play" aria-hidden="true"></span>
-        <span class="video-caption">
-          <span>Manifesto REMIND</span>
-          <span>Assistir no YouTube</span>
-        </span>
-      </a>
+      <div class="video-card" aria-label="Manifesto REMIND em vídeo">
+        <iframe
+          src="https://www.youtube.com/embed/IqQtkGGqmb0?rel=0&modestbranding=1"
+          title="Manifesto REMIND"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
     </div>
   </div>
 </section>
