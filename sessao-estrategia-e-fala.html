@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sessão de Estratégia & Fala | monteirovick</title>
+  <meta name="description" content="Uma sessão individual para mapear, estruturar e treinar a fala de uma apresentação, reunião ou conversa importante que já está no seu calendário." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sessão de Estratégia &amp; Fala | monteirovick" />
+  <meta property="og:description" content="Pra quem tem uma apresentação ou reunião chegando e precisa organizar o que vai dizer, em que ordem e com quais respostas possíveis." />
+  <meta property="og:image" content="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vinho-escuro: #0a0305;
+      --vinho: #1e0910;
+      --vinho-medio: #3a1018;
+      --vermelho: #c0292a;
+      --bege: #e9ded2;
+      --bege-muted: rgba(233,222,210,0.58);
+      --off: #f5f0eb;
+      --off-muted: rgba(30,9,16,0.66);
+      --ink: #1e0910;
+      --line-dark: rgba(233,222,210,0.12);
+      --line-light: rgba(30,9,16,0.12);
+      --max: 1320px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--ink);
+      background: var(--off);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+    .desktop-break { display: block; }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      padding: 20px 56px;
+      color: var(--bege);
+      background: rgba(10,3,5,0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0;
+      text-decoration: none;
+      font-size: 22px;
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+    .brand span:first-child { font-weight: 300; }
+    .brand span:last-child { font-weight: 800; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--bege-muted);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--bege); }
+
+    .nav-cta {
+      border: 1px solid rgba(233,222,210,0.2);
+      color: var(--bege);
+      padding: 10px 22px;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--vermelho);
+      border-color: var(--vermelho);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 86svh;
+      display: flex;
+      align-items: center;
+      color: var(--bege);
+      overflow: hidden;
+      background: var(--vinho-escuro);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right, rgba(10,3,5,0.98) 0%, rgba(10,3,5,0.84) 32%, rgba(10,3,5,0.32) 68%, rgba(10,3,5,0.78) 100%),
+        linear-gradient(to top, rgba(10,3,5,1) 0%, rgba(10,3,5,0.2) 32%, rgba(10,3,5,0.82) 100%),
+        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg") center 28%/cover;
+      z-index: 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(233,222,210,0.028) 1px, transparent 1px),
+        linear-gradient(rgba(233,222,210,0.024) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(var(--max), calc(100vw - 120px));
+      margin: 0 auto;
+      padding: 132px 0 88px;
+    }
+
+    .eyebrow {
+      display: block;
+      color: var(--vermelho);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      max-width: 1120px;
+      font-size: clamp(42px, 4.7vw, 68px);
+      line-height: 0.96;
+      letter-spacing: -0.06em;
+      font-weight: 900;
+      margin-bottom: 28px;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      color: var(--bege-muted);
+      font-size: 17px;
+      line-height: 1.85;
+      margin-bottom: 38px;
+    }
+
+    .hero-actions,
+    .section-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-primary,
+    .btn-dark,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 15px 28px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--vermelho);
+      color: var(--off);
+    }
+    .btn-primary:hover { background: #9f2022; }
+
+    .btn-outline {
+      color: var(--bege);
+      border-color: rgba(233,222,210,0.24);
+      background: transparent;
+    }
+    .btn-outline:hover {
+      border-color: var(--bege);
+      background: rgba(233,222,210,0.06);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: var(--off);
+    }
+    .btn-dark:hover { background: var(--vermelho); }
+
+    .hero-meta {
+      position: relative;
+      z-index: 2;
+      border-top: 1px solid var(--line-dark);
+      border-bottom: 1px solid var(--line-dark);
+      background: var(--vinho);
+      color: rgba(233,222,210,0.62);
+    }
+    .meta-grid {
+      width: min(var(--max), calc(100vw - 120px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .meta-item {
+      min-height: 92px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px 26px;
+      border-left: 1px solid var(--line-dark);
+    }
+    .meta-item:last-child { border-right: 1px solid var(--line-dark); }
+    .meta-kicker {
+      color: var(--vermelho);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .meta-text {
+      color: var(--bege);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+    .section.dark {
+      background:
+        linear-gradient(90deg, rgba(233,222,210,0.022) 1px, transparent 1px),
+        linear-gradient(rgba(233,222,210,0.022) 1px, transparent 1px),
+        var(--vinho-escuro);
+      background-size: 80px 80px;
+      color: var(--bege);
+    }
+    .section.vinho {
+      background: var(--vinho);
+      color: var(--bege);
+    }
+    .section-inner {
+      width: min(var(--max), calc(100vw - 120px));
+      margin: 0 auto;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 76px;
+      align-items: start;
+    }
+
+    .section-label {
+      color: var(--vermelho);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      max-width: 980px;
+      font-size: clamp(32px, 4.2vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+      margin-bottom: 26px;
+    }
+
+    h3 {
+      font-size: 22px;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      color: var(--off-muted);
+      font-size: 17px;
+      line-height: 1.84;
+    }
+    .dark .lead,
+    .vinho .lead {
+      color: var(--bege-muted);
+    }
+
+    .text-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .plain-list {
+      display: grid;
+      gap: 1px;
+      background: var(--line-light);
+      border: 1px solid var(--line-light);
+    }
+    .dark .plain-list,
+    .vinho .plain-list {
+      background: var(--line-dark);
+      border-color: var(--line-dark);
+    }
+
+    .plain-item {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      gap: 22px;
+      padding: 26px;
+      background: var(--off);
+    }
+    .dark .plain-item,
+    .vinho .plain-item {
+      background: rgba(10,3,5,0.76);
+    }
+
+    .plain-number {
+      color: var(--vermelho);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    .plain-item p {
+      color: var(--off-muted);
+      font-size: 14px;
+      line-height: 1.72;
+    }
+    .dark .plain-item p,
+    .vinho .plain-item p {
+      color: var(--bege-muted);
+    }
+
+    .quote-band {
+      padding: 76px 0;
+      color: var(--bege);
+      background:
+        linear-gradient(to right, rgba(10,3,5,0.92), rgba(10,3,5,0.42)),
+        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") center 38%/cover;
+    }
+    .quote {
+      width: min(var(--max), calc(100vw - 120px));
+      margin: 0 auto;
+      font-size: clamp(30px, 4.4vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      font-weight: 900;
+    }
+    .quote em {
+      color: rgba(233,222,210,0.54);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .format-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line-light);
+      border: 1px solid var(--line-light);
+      margin-top: 36px;
+    }
+    .format-card {
+      background: var(--off);
+      padding: 32px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .format-card strong {
+      color: var(--vermelho);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .format-card p {
+      color: var(--off-muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .format-note {
+      border-top: 1px solid var(--line-light);
+      padding-top: 18px;
+      color: rgba(30,9,16,0.52);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line-dark);
+      border: 1px solid var(--line-dark);
+      margin-top: 38px;
+    }
+    .step {
+      min-height: 250px;
+      background: rgba(10,3,5,0.76);
+      padding: 28px 24px;
+    }
+    .step span {
+      display: block;
+      color: var(--vermelho);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 52px;
+    }
+    .step p {
+      color: var(--bege-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .form-section {
+      padding: 94px 0;
+      color: var(--bege);
+      background:
+        linear-gradient(90deg, rgba(233,222,210,0.022) 1px, transparent 1px),
+        linear-gradient(rgba(233,222,210,0.022) 1px, transparent 1px),
+        var(--vinho-escuro);
+      background-size: 80px 80px;
+    }
+    .form-wrap {
+      width: min(var(--max), calc(100vw - 120px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 42px;
+      align-items: start;
+    }
+    .lead-form {
+      display: grid;
+      gap: 14px;
+      border: 1px solid var(--line-dark);
+      background: rgba(30,9,16,0.42);
+      padding: 24px;
+    }
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    label {
+      display: grid;
+      gap: 8px;
+      color: rgba(233,222,210,0.58);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid rgba(233,222,210,0.14);
+      background: rgba(10,3,5,0.72);
+      color: var(--bege);
+      min-height: 50px;
+      padding: 14px 16px;
+      font: 500 14px/1.4 'Montserrat', sans-serif;
+      outline: none;
+      border-radius: 0;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    textarea {
+      min-height: 124px;
+      resize: vertical;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: rgba(192,41,42,0.8);
+      background: rgba(10,3,5,0.92);
+    }
+    input::placeholder,
+    textarea::placeholder { color: rgba(233,222,210,0.32); }
+    .hidden-field { display: none; }
+    .form-status {
+      color: rgba(233,222,210,0.5);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 34px 56px;
+      border-top: 1px solid var(--line-dark);
+      background: var(--vinho-escuro);
+      color: rgba(233,222,210,0.42);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 12px;
+    }
+    footer a {
+      color: rgba(233,222,210,0.58);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--bege); }
+
+    @media (max-width: 980px) {
+      nav { padding: 18px 24px; }
+      .nav-links { display: none; }
+      .hero-inner,
+      .section-inner,
+      .meta-grid,
+      .form-wrap,
+      .quote {
+        width: min(100% - 40px, var(--max));
+      }
+      .hero {
+        min-height: 82svh;
+      }
+      .hero::before {
+        background:
+          linear-gradient(to bottom, rgba(10,3,5,0.72), rgba(10,3,5,0.96)),
+          url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg") 66% center/cover;
+      }
+      .hero-inner { padding: 120px 0 70px; }
+      h1 { max-width: 720px; }
+      h2 { max-width: 760px; }
+      .meta-grid,
+      .split,
+      .form-wrap {
+        grid-template-columns: 1fr;
+      }
+      .meta-item {
+        border-right: 1px solid var(--line-dark);
+        border-bottom: 1px solid var(--line-dark);
+      }
+      .format-grid,
+      .steps,
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+      .section { padding: 72px 0; }
+    }
+
+    @media (max-width: 640px) {
+      .brand { font-size: 20px; }
+      .nav-cta { padding: 10px 14px; font-size: 10px; }
+      .desktop-break { display: none; }
+      h1 {
+        font-size: clamp(38px, 11vw, 48px);
+        line-height: 0.98;
+      }
+      h2 {
+        font-size: clamp(30px, 9vw, 42px);
+      }
+      .hero-actions,
+      .section-actions {
+        align-items: stretch;
+      }
+      .btn-primary,
+      .btn-dark,
+      .btn-outline {
+        width: 100%;
+      }
+      .plain-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px 20px;
+      }
+      .format-card,
+      .step,
+      .lead-form {
+        padding: 24px 20px;
+      }
+      footer {
+        padding: 30px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav aria-label="Navegação principal">
+    <a class="brand" href="index.html" aria-label="monteirovick">
+      <span>monteiro</span><span>vick</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="mapa-de-fala.html">Mapa de Fala</a></li>
+      <li><a href="seu-lugar-de-fala.html">Seu lugar de fala</a></li>
+      <li><a href="https://www.rmnd.com.br" target="_blank" rel="noopener">REMIND</a></li>
+    </ul>
+    <a class="nav-cta" href="#agendar">Quero uma sessão</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Sessão de Estratégia &amp; Fala</p>
+        <h1>Mapeie, estruture e treine<br class="desktop-break" /> sua próxima reunião.</h1>
+        <p class="hero-copy">Uma sessão 1:1 para preparar uma apresentação, reunião ou conversa importante que já está no seu calendário. A gente organiza o que precisa ser dito, em que ordem e com quais respostas possíveis.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#agendar">Quero trabalhar minha fala</a>
+          <a class="btn-outline" href="#formatos">Ver formatos</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="hero-meta" aria-label="Resumo da sessão">
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-kicker">Formato</span>
+          <span class="meta-text">Online, 1:1, usando uma situação que você precisa conduzir.</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-kicker">Caminhos</span>
+          <span class="meta-text">Sessão avulsa para preparar uma fala. Pacote de 3 para acompanhar um processo.</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-kicker">Foco</span>
+          <span class="meta-text">Apresentação, reunião, pitch, defesa de projeto ou conversa com liderança.</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-inner split">
+        <div>
+          <p class="section-label">Quando faz sentido?</p>
+          <h2>Para quando você já sabe o assunto,<br class="desktop-break" /> mas precisa preparar a condução.</h2>
+          <p class="lead">Tem reunião que não dá para entrar só com domínio técnico e boa vontade. A fala precisa ter começo, passagem, argumento, resposta e saída. É isso que a sessão organiza.</p>
+        </div>
+        <div class="plain-list">
+          <div class="plain-item">
+            <span class="plain-number">01</span>
+            <div>
+              <h3>Uma apresentação para diretoria.</h3>
+              <p>Quando você precisa fazer uma ideia atravessar a sala sem se perder em explicações demais, detalhe demais ou contexto que só você conhece.</p>
+            </div>
+          </div>
+          <div class="plain-item">
+            <span class="plain-number">02</span>
+            <div>
+              <h3>Uma defesa de projeto.</h3>
+              <p>Quando a entrega existe, mas ainda falta uma linha que mostre por que aquilo importa, qual decisão precisa sair dali e onde podem aparecer resistências.</p>
+            </div>
+          </div>
+          <div class="plain-item">
+            <span class="plain-number">03</span>
+            <div>
+              <h3>Uma conversa difícil.</h3>
+              <p>Quando podem vir perguntas, discordâncias ou ruídos, e você não quer depender só do improviso.</p>
+            </div>
+          </div>
+          <div class="plain-item">
+            <span class="plain-number">04</span>
+            <div>
+              <h3>Uma fala que precisa ser direta sem ficar pobre.</h3>
+              <p>Porque cortar rodeio não é achatar o assunto. Às vezes a precisão está em decidir o que entra, o que sai e o que precisa aparecer primeiro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band" aria-label="Frase central">
+      <p class="quote">Falar melhor começa antes da fala.<br class="desktop-break" /> <em>Começa na estrutura do pensamento.</em></p>
+    </section>
+
+    <section class="section dark">
+      <div class="section-inner split">
+        <div>
+          <p class="section-label">O método</p>
+          <h2>Mapear, estruturar e treinar<br class="desktop-break" /> antes de entrar na conversa.</h2>
+          <p class="lead">A sessão tem começo, meio e fim. Primeiro a gente entende o contexto. Depois organiza a fala. Por fim, treina as passagens, as perguntas e os pontos que podem confundir.</p>
+        </div>
+        <div class="plain-list">
+          <div class="plain-item">
+            <span class="plain-number">Base</span>
+            <div>
+              <h3>Mapear o contexto.</h3>
+              <p>O que está em jogo, quem vai escutar, que decisão precisa acontecer e qual parte da sua fala não pode ficar implícita.</p>
+            </div>
+          </div>
+          <div class="plain-item">
+            <span class="plain-number">Forma</span>
+            <div>
+              <h3>Estruturar o raciocínio.</h3>
+              <p>Começo, ordem dos argumentos, exemplos, cortes e passagem entre uma ideia e outra. Estrutura não engessa; evita que você se espalhe.</p>
+            </div>
+          </div>
+          <div class="plain-item">
+            <span class="plain-number">Pressão</span>
+            <div>
+              <h3>Treinar a fala em uso.</h3>
+              <p>Ajuste de frase, resposta para objeções, simulação de perguntas e caminhos para retomar o ponto quando a conversa sair do roteiro.</p>
+            </div>
+          </div>
+          <div class="plain-item">
+            <span class="plain-number">Treino</span>
+            <div>
+              <h3>Fechar o próximo passo.</h3>
+              <p>O objetivo é saber por onde começar, como sustentar e como encerrar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="formatos">
+      <div class="section-inner">
+        <p class="section-label">Formatos</p>
+        <h2>Uma sessão para uma fala específica.<br class="desktop-break" /> Três para um processo maior.</h2>
+        <p class="lead" style="max-width: 760px;">Se existe uma apresentação com data, a sessão avulsa costuma ser suficiente. Se você está preparando uma sequência de conversas, uma narrativa de carreira ou um projeto que ainda vai passar por várias pessoas, três encontros dão mais espaço para ajustar sem pressa.</p>
+        <div class="format-grid">
+          <div class="format-card">
+            <div>
+              <strong>Sessão avulsa</strong>
+              <h3>Para preparar uma situação pontual.</h3>
+              <p>Apresentação, reunião, conversa com liderança, defesa de projeto, pitch ou qualquer fala que já tem data e consequência.</p>
+            </div>
+            <p class="format-note">Você chega com o cenário. A gente mapeia, estrutura e treina uma versão possível de usar, sem transformar sua fala em texto decorado.</p>
+          </div>
+          <div class="format-card">
+            <div>
+              <strong>Pacote de 3 sessões</strong>
+              <h3>Para acompanhar um tema em construção.</h3>
+              <p>Indicado quando a fala envolve uma narrativa maior, mais de uma reunião ou um posicionamento que precisa amadurecer enquanto o contexto anda.</p>
+            </div>
+            <p class="format-note">Investimento e disponibilidade entram depois que você conta o contexto. Nem toda demanda pede o mesmo formato, e isso importa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section vinho">
+      <div class="section-inner">
+        <p class="section-label">Começo, meio e fim</p>
+        <h2>O que acontece dentro da sessão.</h2>
+        <div class="steps">
+          <div class="step">
+            <span>01</span>
+            <h3>Mapear.</h3>
+            <p>A gente entende a reunião, quem vai estar do outro lado, o que você precisa provocar e onde a fala costuma perder força.</p>
+          </div>
+          <div class="step">
+            <span>02</span>
+            <h3>Estruturar.</h3>
+            <p>A gente define mensagem central, ordem, exemplos, cortes e possíveis caminhos de resposta para o que pode surgir.</p>
+          </div>
+          <div class="step">
+            <span>03</span>
+            <h3>Treinar.</h3>
+            <p>A gente fala em voz alta, ajusta o que soa confuso e testa como você retoma o ponto se alguém discordar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" id="agendar">
+      <div class="form-wrap">
+        <div>
+          <p class="section-label">Agendar conversa</p>
+          <h2>Qual fala você precisa preparar?</h2>
+          <p class="lead">Pode ser uma apresentação para diretoria, uma conversa com cliente, uma reunião que você vem adiando ou um projeto que precisa sair da sua cabeça e chegar mais claro na mesa.</p>
+        </div>
+
+        <form class="lead-form" name="sessao-estrategia-fala" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
+          <input type="hidden" name="form-name" value="sessao-estrategia-fala" />
+          <input type="hidden" name="subject" value="Novo interesse em Sessão de Estratégia e Fala" />
+          <input type="hidden" name="source" value="lp-sessao-estrategia-e-fala" />
+          <p class="hidden-field"><label>Não preencha este campo <input name="bot-field" /></label></p>
+
+          <div class="field-row">
+            <label>
+              Nome
+              <input type="text" name="name" autocomplete="name" placeholder="Seu nome" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required />
+            </label>
+          </div>
+
+          <div class="field-row">
+            <label>
+              WhatsApp
+              <input type="tel" name="whatsapp" autocomplete="tel" placeholder="Com DDD" />
+            </label>
+            <label>
+              O que faz mais sentido agora?
+              <select name="interest" required>
+                <option value="">Escolha uma opção</option>
+                <option value="sessao-avulsa">Sessão avulsa</option>
+                <option value="pacote-3-sessoes">Pacote de 3 sessões</option>
+                <option value="nao-sei-ainda">Ainda não sei</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Qual fala você quer preparar?
+            <textarea name="situation" placeholder="Ex: apresentação para diretoria, reunião com cliente, defesa de projeto, conversa com liderança..." required></textarea>
+          </label>
+
+          <label>
+            Onde costuma travar?
+            <textarea name="challenge" placeholder="Ex: abrir a fala, organizar a linha, responder perguntas, cortar excesso, não se perder quando alguém discorda..."></textarea>
+          </label>
+
+          <button class="btn-primary" type="submit">Quero uma sessão</button>
+          <p class="form-status">Isso cai direto no painel de leads do site. Depois, eu retorno pelo contato informado.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>monteirovick | Estratégia &amp; Fala</span>
+    <a href="index.html">Voltar para o site</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-netlify-form]').forEach(form => {
+      form.addEventListener('submit', async event => {
+        event.preventDefault();
+
+        const submitButton = form.querySelector('[type="submit"]');
+        const originalText = submitButton ? submitButton.textContent : '';
+        const payload = new URLSearchParams(new FormData(form));
+
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.textContent = 'Enviando...';
+        }
+
+        try {
+          await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: payload.toString()
+          });
+
+          form.innerHTML = '<p style="font-size:17px;color:var(--bege);font-weight:700;line-height:1.7;">Recebi seu contexto. Vou olhar com calma e te retorno com o próximo passo para essa fala.</p>';
+        } catch (error) {
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+          }
+          alert('Não consegui enviar agora. Tente novamente em alguns instantes.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

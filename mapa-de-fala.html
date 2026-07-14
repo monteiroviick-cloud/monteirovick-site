@@ -63,7 +63,6 @@
     }
     .lp-hero-inner { max-width: var(--page-max); margin: 0 auto; text-align: center; }
     .lp-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--vermelho); margin-bottom: 28px; display: flex; align-items: center; justify-content: center; gap: 12px; }
-    .lp-tag::before, .lp-tag::after { content: ''; display: block; width: 32px; height: 1px; background: var(--vermelho); }
     .lp-headline { font-size: clamp(36px, 5.5vw, 76px); font-weight: 900; line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 28px; }
     .lp-headline em { font-style: italic; font-weight: 400; color: var(--bege-muted); }
     .lp-sub { font-size: 18px; font-weight: 400; line-height: 1.75; color: var(--bege-muted); max-width: 580px; margin: 0 auto 48px; }
@@ -235,9 +234,9 @@
   <div class="lp-hero-inner">
     <p class="lp-tag">Mapa de Fala</p>
     <h1 class="lp-headline">Descubra onde sua fala<br/><em>trava de verdade.</em></h1>
-    <p class="lp-sub">4 perguntas. 2 minutos. Uma leitura inicial do que sua fala está pedindo agora e qual caminho faz mais sentido para o seu momento.</p>
-    <a href="#quiz" class="btn-primary">Fazer meu mapa grátis</a>
-    <p class="lp-micro">Grátis. Sem compromisso. Resultado na hora.</p>
+    <p class="lp-sub">4 perguntas. Menos de 1 minuto. Uma leitura inicial do que sua fala está pedindo agora e qual caminho faz mais sentido para o seu momento.</p>
+    <a href="#quiz" class="btn-primary">Acessar meu mapa!</a>
+    <p class="lp-micro">Grátis. Resultado na hora.</p>
   </div>
 </section>
 
@@ -245,7 +244,7 @@
 <section class="lp-progress-section" id="como-funciona">
   <div class="lp-progress-inner">
     <p style="font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--vermelho);margin-bottom:20px;text-align:center;">Como funciona</p>
-    <h2 style="font-size:clamp(26px,3vw,40px);font-weight:800;text-align:center;letter-spacing:-0.02em;margin-bottom:48px;">Em 3 minutos, você tem<br/>um caminho claro.</h2>
+    <h2 style="font-size:clamp(26px,3vw,40px);font-weight:800;text-align:center;letter-spacing:-0.02em;margin-bottom:48px;">Em poucos minutos, você tem<br/>um caminho claro.</h2>
     <div class="progress-steps">
       <div class="progress-step">
         <p class="step-num">Passo 1</p>
@@ -255,7 +254,7 @@
       <div class="progress-step">
         <p class="step-num">Passo 2</p>
         <h3 class="step-title">Deixe seu contato</h3>
-        <p class="step-desc">Nome e e-mail para receber o diagnóstico completo.</p>
+        <p class="step-desc">Nome e e-mail para receber o diagnóstico inicial.</p>
       </div>
       <div class="progress-step">
         <p class="step-num">Passo 3</p>
@@ -330,7 +329,7 @@
           <div class="options">
             <button class="option" type="button" data-path="mentoria">Na hora de responder, discordar ou sustentar um ponto.</button>
             <button class="option" type="button" data-path="comunidade">Na constância. Eu evito aparecer ou participar.</button>
-            <button class="option" type="button" data-path="mapa">Na estrutura. Eu começo bem e depois me espalho.</button>
+            <button class="option" type="button" data-path="mapa">Na estrutura. Eu começo bem e depois me atrapalho.</button>
             <button class="option" type="button" data-path="marca">Na percepção. Explico muito e ainda não valorizam.</button>
           </div>
         </div>
@@ -350,9 +349,9 @@
           <h3>Qual próximo passo você toparia dar?</h3>
           <p class="question-sub">Escolha o movimento que parece possível agora, não o ideal.</p>
           <div class="options">
-            <button class="option" type="button" data-path="mentoria">Marcar uma conversa para trabalhar meu caso.</button>
-            <button class="option" type="button" data-path="comunidade">Entrar em uma comunidade de prática.</button>
-            <button class="option" type="button" data-path="mapa">Receber uma leitura mais profunda antes de decidir.</button>
+            <button class="option" type="button" data-path="mentoria">Marcar uma sessão estratégica para trabalhar meu caso.</button>
+            <button class="option" type="button" data-path="comunidade">Entrar em uma comunidade de prática contínua.</button>
+            <button class="option" type="button" data-path="mapa">Aprofundar essa reflexão antes de decidir.</button>
             <button class="option" type="button" data-path="marca">Revisar como minha marca comunica valor.</button>
           </div>
         </div>
@@ -387,36 +386,12 @@
   </div>
 </section>
 
-<!-- PROVA SOCIAL -->
-<section class="lp-proof">
-  <div class="lp-proof-inner">
-    <p style="font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--vermelho);margin-bottom:48px;text-align:center;">Quem já fez</p>
-    <div class="proof-grid">
-      <div class="proof-item">
-        <p class="proof-quote">"O mapa me fez entender que eu não travava por insegurança. Travava porque não organizava o argumento antes. Isso mudou tudo."</p>
-        <p class="proof-author">Marcos T.</p>
-        <p class="proof-cargo">Gerente de Projetos · Tecnologia</p>
-      </div>
-      <div class="proof-item">
-        <p class="proof-quote">"Achei que ia ser mais um teste. Mas o resultado foi surpreendentemente preciso sobre o que eu precisava trabalhar."</p>
-        <p class="proof-author">Fernanda L.</p>
-        <p class="proof-cargo">Consultora · Marketing</p>
-      </div>
-      <div class="proof-item">
-        <p class="proof-quote">"Três minutos e eu tinha mais clareza sobre minha fala do que depois de semanas pensando sozinho no assunto."</p>
-        <p class="proof-author">Ricardo A.</p>
-        <p class="proof-cargo">Coordenador Financeiro</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CTA FINAL -->
 <section class="lp-cta-final">
   <div class="lp-cta-inner">
     <p style="font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--vermelho);margin-bottom:24px;">Pronto para começar?</p>
     <h2 style="font-size:clamp(28px,4vw,52px);font-weight:800;letter-spacing:-0.025em;margin-bottom:20px;line-height:1.1;">3 minutos.<br/><em>Um caminho claro.</em></h2>
-    <p style="font-size:16px;color:var(--bege-muted);margin-bottom:40px;line-height:1.7;">Grátis. Sem compromisso. Resultado na hora.</p>
+    <p style="font-size:16px;color:var(--bege-muted);margin-bottom:40px;line-height:1.7;">Grátis. Resultado na hora.</p>
     <a href="#quiz" class="btn-primary">Fazer meu mapa agora</a>
   </div>
 </section>
@@ -455,36 +430,36 @@
 
     const results = {
       mapa: {
-        badge: 'Diagnóstico',
-        title: 'Comece pelo mapa da sua fala.',
-        copy: 'Você parece estar numa fase de entender o padrão antes de escolher o formato. O próximo passo é observar onde sua fala se espalha, o que ela tenta resolver e que tipo de estrutura deixaria seu pensamento mais fácil de sustentar.',
-        items: ['Ler o padrão da sua fala', 'Separar contexto, intenção e próximo passo', 'Organizar pensamento antes de treinar presença'],
-        cta: 'index.html#contato',
-        ctaLabel: 'Ir direto para conversar com a Vick'
+        badge: 'Mentoria 1:1',
+        title: 'Você precisa olhar para a sua fala de perto.',
+        copy: 'Existe uma situação, um padrão ou um desafio específico pedindo mais clareza. Na mentoria 1:1, partimos do seu contexto para organizar o pensamento, construir a fala e preparar como colocá-la em prática.',
+        items: ['Ler os padrões da sua fala', 'Organizar contexto, intenção e próximo passo', 'Preparar reuniões, apresentações ou conversas importantes'],
+        cta: 'sessao-estrategia-e-fala.html',
+        ctaLabel: 'Conhecer a mentoria 1:1'
       },
       mentoria: {
-        badge: 'Mentoria individual',
-        title: 'Seu próximo passo é individual.',
-        copy: 'Suas respostas apontam para uma situação concreta, com pouco espaço para improviso. Aqui faz sentido trabalhar 1:1, usando cenas reais do seu trabalho para preparar argumento, condução e resposta.',
-        items: ['Preparar reuniões, pitchs ou conversas difíceis', 'Treinar como sustentar um ponto sob pressão', 'Construir uma fala aplicável ao seu contexto'],
-        cta: 'index.html#mentoria-individual',
-        ctaLabel: 'Ir direto para mentoria individual'
+        badge: 'Mentoria 1:1',
+        title: 'Você precisa olhar para a sua fala de perto.',
+        copy: 'Existe uma situação, um padrão ou um desafio específico pedindo mais clareza. Na mentoria 1:1, partimos do seu contexto para organizar o pensamento, construir a fala e preparar como colocá-la em prática.',
+        items: ['Ler os padrões da sua fala', 'Organizar contexto, intenção e próximo passo', 'Preparar reuniões, apresentações ou conversas importantes'],
+        cta: 'sessao-estrategia-e-fala.html',
+        ctaLabel: 'Conhecer a mentoria 1:1'
       },
       comunidade: {
         badge: 'Comunidade',
-        title: 'Sua fala precisa de prática contínua.',
-        copy: 'O que aparece aqui é necessidade de ritmo. Você não precisa transformar cada fala em uma grande apresentação. Precisa de espaço para testar ideia, ouvir retorno e criar naturalidade com frequência.',
-        items: ['Praticar em ambiente cuidado', 'Receber retorno sem pressão de performance', 'Criar constância para aparecer e se posicionar'],
+        title: 'Você precisa de espaço para praticar.',
+        copy: 'Sua fala não depende apenas de preparo, mas de continuidade. A comunidade Seu lugar de fala é um espaço para testar ideias, receber retornos e ganhar segurança para se posicionar com mais naturalidade.',
+        items: ['Praticar em um ambiente cuidado', 'Receber retornos sem pressão de performance', 'Criar constância para falar e se posicionar'],
         cta: 'seu-lugar-de-fala.html',
-        ctaLabel: 'Ir direto para Seu Lugar de Fala'
+        ctaLabel: 'Conhecer a comunidade'
       },
       marca: {
-        badge: 'Valor percebido',
-        title: 'Sua fala precisa comunicar valor com mais precisão.',
-        copy: 'Suas respostas mostram uma questão de percepção. A entrega existe, mas talvez esteja chegando explicada demais e posicionada de menos. O próximo passo é alinhar narrativa, oferta e marca para que o valor fique mais evidente.',
-        items: ['Traduzir diferencial com mais clareza', 'Ajustar discurso de venda e posicionamento', 'Alinhar fala, marca e percepção de valor'],
-        cta: 'index.html#marca-valor',
-        ctaLabel: 'Ir direto para marca e valor'
+        badge: 'REMIND',
+        title: 'O desafio está na forma como sua marca comunica valor.',
+        copy: 'Sua questão vai além da fala individual. Ela envolve o posicionamento, a narrativa e a percepção de valor da marca. Na REMIND, olhamos para esses pontos de forma conectada para tornar mais claro o lugar que a marca ocupa e por que ela deve ser escolhida.',
+        items: ['Tornar o diferencial mais claro', 'Alinhar narrativa, oferta e posicionamento', 'Aproximar marca, comunicação e percepção de valor'],
+        cta: 'https://www.rmnd.com.br',
+        ctaLabel: 'Conhecer a REMIND'
       }
     };
 

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu lugar de fala | monteirovick</title>
+  <meta name="description" content="Uma comunidade para praticar fala, organizar pensamento e sustentar presença com mais constância." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vinho-escuro: #0a0305;
+      --vinho: #1e0910;
+      --vinho-medio: #3a1018;
+      --vermelho: #c0292a;
+      --bege: #e9ded2;
+      --bege-muted: rgba(233,222,210,0.56);
+      --line: rgba(233,222,210,0.1);
+      --branco: #f5f0eb;
+      --page-max: 1180px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--bege);
+      background:
+        linear-gradient(90deg, rgba(233,222,210,0.022) 1px, transparent 1px),
+        linear-gradient(rgba(233,222,210,0.022) 1px, transparent 1px),
+        var(--vinho-escuro);
+      background-size: 80px 80px;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 28px; padding: 20px 60px;
+      background: rgba(10,3,5,0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 18px; width: auto; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 34px; list-style: none; }
+    .nav-links a {
+      color: var(--bege-muted); text-decoration: none;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--bege); }
+    .nav-cta {
+      border: 1px solid rgba(233,222,210,0.18);
+      color: var(--bege); padding: 10px 22px; text-decoration: none;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: var(--vermelho); border-color: var(--vermelho); }
+
+    .page {
+      width: min(var(--page-max), calc(100vw - 96px));
+      margin: 0 auto;
+      padding: 118px 0 80px;
+    }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 98px;
+      border: 1px solid var(--line);
+      background: rgba(10,3,5,0.68);
+      padding: 16px;
+    }
+    .side-title {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(233,222,210,0.34); padding: 10px 10px 14px;
+    }
+    .side-link {
+      display: flex; align-items: center; gap: 12px;
+      min-height: 42px; padding: 10px 12px;
+      color: var(--bege-muted); text-decoration: none;
+      font-size: 13px; font-weight: 600;
+      border-left: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .side-link span { width: 18px; text-align: center; opacity: 0.86; }
+    .side-link:hover,
+    .side-link.is-active {
+      color: var(--bege);
+      background: rgba(233,222,210,0.055);
+      border-left-color: var(--vermelho);
+    }
+    .side-pill {
+      margin-left: auto; min-width: 20px; height: 20px; border-radius: 999px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--vermelho); color: var(--branco);
+      font-size: 10px; font-weight: 800;
+    }
+    .side-note {
+      margin-top: 18px; padding: 16px 12px 10px;
+      border-top: 1px solid var(--line);
+      color: rgba(233,222,210,0.38);
+      font-size: 12px; line-height: 1.65;
+    }
+
+    .main-panel {
+      border: 1px solid var(--line);
+      background: rgba(10,3,5,0.58);
+      overflow: hidden;
+    }
+    .cover {
+      min-height: 260px;
+      background:
+        linear-gradient(to top, rgba(10,3,5,0.94) 0%, rgba(10,3,5,0.16) 62%),
+        linear-gradient(to right, rgba(10,3,5,0.7), rgba(10,3,5,0.08)),
+        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00441.jpg") center 42%/cover;
+    }
+    .community-head {
+      padding: 28px 36px 26px;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--vermelho); margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1.02; letter-spacing: -0.035em;
+      margin-bottom: 16px;
+    }
+    .head-copy {
+      max-width: 720px;
+      color: var(--bege-muted);
+      font-size: 16px; line-height: 1.78;
+    }
+    .head-meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-top: 24px;
+      color: rgba(233,222,210,0.42);
+      font-size: 12px; font-weight: 600;
+    }
+    .avatars { display: flex; align-items: center; }
+    .avatar {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-left: -8px;
+      border: 1px solid rgba(233,222,210,0.18);
+      background: var(--vinho-medio); color: var(--bege);
+      font-size: 10px; font-weight: 800;
+    }
+    .avatar:first-child { margin-left: 0; }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 1px;
+      background: var(--line);
+    }
+    .feed, .aside { background: rgba(10,3,5,0.74); }
+    .feed { padding: 28px; }
+    .aside { padding: 28px 24px; }
+
+    .toolbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      margin-bottom: 18px;
+      color: rgba(233,222,210,0.38);
+      font-size: 12px; font-weight: 700;
+    }
+    .composer {
+      min-height: 56px;
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      background: rgba(233,222,210,0.035);
+      color: rgba(233,222,210,0.35);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+    .post {
+      border: 1px solid var(--line);
+      background: rgba(30,9,16,0.38);
+      padding: 24px;
+      margin-bottom: 14px;
+    }
+    .post-top {
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(233,222,210,0.42);
+      font-size: 12px; margin-bottom: 18px;
+    }
+    .post-author { color: var(--bege); font-weight: 800; }
+    .post-title {
+      font-size: 20px; line-height: 1.22; letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+    .post-title mark {
+      background: rgba(192,41,42,0.26);
+      color: var(--bege);
+      padding: 0 4px;
+    }
+    .post-copy {
+      color: var(--bege-muted);
+      font-size: 14px; line-height: 1.75;
+    }
+    .post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .tag {
+      border: 1px solid rgba(233,222,210,0.1);
+      color: rgba(233,222,210,0.48);
+      padding: 6px 9px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    }
+
+    .aside-block {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+    .aside-block:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+    .aside-title {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--vermelho); margin-bottom: 14px;
+    }
+    .ritual-list { display: grid; gap: 12px; }
+    .ritual {
+      border: 1px solid rgba(233,222,210,0.08);
+      padding: 14px;
+      background: rgba(233,222,210,0.03);
+    }
+    .ritual strong {
+      display: block; color: var(--bege);
+      font-size: 13px; margin-bottom: 5px;
+    }
+    .ritual span {
+      color: rgba(233,222,210,0.42);
+      font-size: 12px; line-height: 1.55;
+    }
+    .btn-primary {
+      width: 100%;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--vermelho); color: var(--branco);
+      padding: 15px 20px; text-decoration: none;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .btn-primary:hover { background: #a02020; }
+    .small-copy {
+      color: rgba(233,222,210,0.42);
+      font-size: 12px; line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .nav-logo img { height: 16px; max-width: 46vw; }
+      .nav-cta { padding: 10px 14px; font-size: 10px; }
+      .page { width: min(100% - 48px, 620px); padding-top: 92px; }
+      .workspace { grid-template-columns: 1fr; }
+      .sidebar { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+      .side-title, .side-note { grid-column: 1 / -1; }
+      .content { grid-template-columns: 1fr; }
+      .community-head, .feed, .aside { padding: 24px; }
+      .cover { min-height: 190px; }
+    }
+
+    @media (max-width: 560px) {
+      .page { width: calc(100% - 32px); }
+      .sidebar { grid-template-columns: 1fr; }
+      .head-meta, .toolbar { align-items: flex-start; flex-direction: column; }
+      .post { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html#inicio" class="nav-logo" aria-label="monteirovick">
+      <img src="drive-download-20260503T001933Z-3-001/assets/01. Branding/01. Logotipo/Property 1=Bege claro.svg" alt="monteirovick">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#inicio">Início</a></li>
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="mapa-de-fala.html">Mapa de Fala</a></li>
+      <li><a href="index.html#servicos">Serviços</a></li>
+      <li><a href="index.html#contato">Contato</a></li>
+    </ul>
+    <a href="index.html#contato" class="nav-cta">Entrar na lista</a>
+  </nav>
+
+  <main class="page">
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Canais da comunidade">
+        <p class="side-title">Seu lugar de fala</p>
+        <a href="#daily" class="side-link is-active"><span>01</span>Daily</a>
+        <a href="#ensaios" class="side-link"><span>02</span>Ensaios de fala<span class="side-pill">3</span></a>
+        <a href="#reunioes" class="side-link"><span>03</span>Reuniões reais</a>
+        <a href="#roteiros" class="side-link"><span>04</span>Roteiros e mapas</a>
+        <a href="#biblioteca" class="side-link"><span>05</span>Biblioteca</a>
+        <a href="#faq" class="side-link"><span>06</span>FAQ</a>
+        <p class="side-note">Uma comunidade pequena, com ritmo e direção. Menos ruído, mais prática aplicada ao jeito como você pensa e fala.</p>
+      </aside>
+
+      <section class="main-panel">
+        <div class="cover" role="img" aria-label="Pessoa escrevendo em uma mesa de trabalho"></div>
+
+        <header class="community-head">
+          <p class="eyebrow">Comunidade</p>
+          <h1>Seu lugar de fala</h1>
+          <p class="head-copy">Um espaço contínuo para praticar fala, organizar pensamento e sustentar presença sem transformar toda exposição em uma apresentação final. Aqui a fala ganha rotina, escuta e retorno.</p>
+          <div class="head-meta">
+            <span>Grupo guiado pela Vick</span>
+            <span>Encontros, prompts e prática semanal</span>
+            <div class="avatars" aria-label="Participantes">
+              <span class="avatar">VM</span>
+              <span class="avatar">L</span>
+              <span class="avatar">R</span>
+              <span class="avatar">B</span>
+              <span class="avatar">+</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="content">
+          <section class="feed" aria-label="Feed da comunidade">
+            <div class="toolbar">
+              <span>Ordenar por: mais recentes</span>
+              <span>Ritmo semanal</span>
+            </div>
+
+            <div class="composer">Escreva uma situação de fala que você quer trabalhar...</div>
+
+            <article class="post" id="daily">
+              <div class="post-top"><span class="avatar">VM</span><span class="post-author">Vick Monteiro</span><span>Daily</span></div>
+              <h2 class="post-title"><mark>Antes de falar, escreva a intenção.</mark></h2>
+              <p class="post-copy">O exercício de hoje é simples: escolha uma conversa da semana e escreva em uma linha o movimento que sua fala precisa provocar. Informar, alinhar, pedir decisão, discordar, reposicionar. A fala muda quando a intenção para de ficar implícita.</p>
+              <div class="post-tags">
+                <span class="tag">Prompt diário</span>
+                <span class="tag">Intenção</span>
+                <span class="tag">Reuniões</span>
+              </div>
+            </article>
+
+            <article class="post" id="ensaios">
+              <div class="post-top"><span class="avatar">VM</span><span class="post-author">Vick Monteiro</span><span>Ensaio da semana</span></div>
+              <h2 class="post-title">Como começar uma fala sem pedir licença demais</h2>
+              <p class="post-copy">Nesta semana, vamos treinar aberturas. A proposta é sair do começo justificativo e entrar com contexto, direção e frase central. Cada pessoa traz uma situação real e recebe uma devolutiva curta.</p>
+              <div class="post-tags">
+                <span class="tag">Prática</span>
+                <span class="tag">Abertura</span>
+                <span class="tag">Feedback</span>
+              </div>
+            </article>
+
+            <article class="post" id="reunioes">
+              <div class="post-top"><span class="avatar">VM</span><span class="post-author">Vick Monteiro</span><span>Reuniões reais</span></div>
+              <h2 class="post-title">Traga uma reunião em que você saiu com a sensação de que falou menos do que pensava</h2>
+              <p class="post-copy">A gente vai olhar para o antes, o durante e o depois. O objetivo não é montar uma fala perfeita. É encontrar o ponto de entrada, a frase que sustenta o argumento e o próximo passo que precisava ter ficado claro.</p>
+              <div class="post-tags">
+                <span class="tag">Caso real</span>
+                <span class="tag">Argumento</span>
+                <span class="tag">Próximo passo</span>
+              </div>
+            </article>
+          </section>
+
+          <aside class="aside" aria-label="Informações da comunidade">
+            <div class="aside-block">
+              <p class="aside-title">Como funciona</p>
+              <div class="ritual-list">
+                <div class="ritual"><strong>Daily de fala</strong><span>Prompts curtos para observar uma situação da semana.</span></div>
+                <div class="ritual"><strong>Ensaios guiados</strong><span>Prática de aberturas, respostas, posicionamento e condução.</span></div>
+                <div class="ritual"><strong>Devolutivas</strong><span>Retorno objetivo para ajustar estrutura, intenção e presença.</span></div>
+              </div>
+            </div>
+
+            <div class="aside-block">
+              <p class="aside-title">Para quem</p>
+              <p class="small-copy">Profissionais que querem participar mais, aparecer com mais consistência e parar de depender apenas do improviso quando precisam falar.</p>
+              <a href="index.html#contato" class="btn-primary">Entrar na lista</a>
+            </div>
+
+            <div class="aside-block" id="biblioteca">
+              <p class="aside-title">Biblioteca</p>
+              <div class="ritual-list">
+                <div class="ritual"><strong>Mapa de reunião</strong><span>Contexto, intenção, frase central e fechamento.</span></div>
+                <div class="ritual"><strong>Banco de começos</strong><span>Formas de abrir sem se diminuir.</span></div>
+                <div class="ritual"><strong>Roteiros de resposta</strong><span>Discordar, retomar, pedir decisão e reposicionar.</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
