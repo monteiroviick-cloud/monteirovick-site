@@ -252,7 +252,7 @@
     .stat-label { font-size: 11px; font-weight: 500; color: var(--bege-muted); line-height: 1.4; }
 
     /* ─── PILARES ─── */
-    .pilares { background: var(--vinho); padding: 100px 60px; border-top: 1px solid var(--line); }
+    .pilares { background: var(--vinho); padding: 100px 60px; border-top: 0; }
     .pilares-header {
       max-width: 1180px; margin: 0 auto 60px;
       display: flex; justify-content: space-between; align-items: flex-end;
@@ -639,7 +639,7 @@
 
     .logos-section {
       padding: 72px 60px 84px;
-      border-top: 1px solid var(--line);
+      border-top: 0;
       background: var(--vinho);
     }
     .logos-section > div {
@@ -658,11 +658,8 @@
     .logo-panel {
       position: relative;
       padding: 34px 42px;
-      border-top: 1px solid rgba(233,222,210,0.08);
-      border-bottom: 1px solid rgba(233,222,210,0.08);
-      background:
-        linear-gradient(90deg, transparent, rgba(233,222,210,0.035), transparent),
-        rgba(30,9,16,0.28);
+      border: 0;
+      background: transparent;
     }
     .logos-grid {
       display: grid;
@@ -701,9 +698,9 @@
       max-width: 220px;
       height: 76px;
       filter: none;
-      mix-blend-mode: screen;
-      opacity: 0.86;
-      transform: scale(1.28);
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      transform: scale(1.22);
     }
     .client-logo.pedra { max-width: 148px; height: 42px; }
     .client-logo.planik { max-width: 154px; }
