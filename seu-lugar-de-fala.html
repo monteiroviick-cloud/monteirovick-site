@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png?v=20260715" />
   <title>Seu lugar de fala | monteirovick</title>
   <meta name="description" content="Uma comunidade para praticar fala, organizar pensamento e sustentar presença com mais constância." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -121,7 +122,7 @@
       background:
         linear-gradient(to top, rgba(10,3,5,0.94) 0%, rgba(10,3,5,0.16) 62%),
         linear-gradient(to right, rgba(10,3,5,0.7), rgba(10,3,5,0.08)),
-        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN00441.jpg") center 42%/cover;
+        url("assets/lp-photos/comunidade-cover.jpg") center 46%/cover;
     }
     .community-head {
       padding: 28px 36px 26px;
@@ -157,6 +158,42 @@
       font-size: 10px; font-weight: 800;
     }
     .avatar:first-child { margin-left: 0; }
+
+    .head-gallery {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .head-gallery figure,
+    .post-media,
+    .aside-photo {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--vinho);
+    }
+    .head-gallery figure { min-height: 210px; }
+    .head-gallery figure:nth-child(2) { min-height: 210px; }
+    .head-gallery img,
+    .post-media img,
+    .aside-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: block;
+      object-fit: cover;
+      filter: saturate(0.86) contrast(1.04);
+    }
+    .head-gallery figure::after,
+    .post-media::after,
+    .aside-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,3,5,0.64), rgba(10,3,5,0.04) 58%);
+      pointer-events: none;
+    }
 
     .content {
       display: grid;
@@ -209,6 +246,10 @@
       color: var(--bege-muted);
       font-size: 14px; line-height: 1.75;
     }
+    .post-media {
+      min-height: 190px;
+      margin: 18px 0 4px;
+    }
     .post-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
     .tag {
       border: 1px solid rgba(233,222,210,0.1);
@@ -255,6 +296,164 @@
       font-size: 12px; line-height: 1.7;
       margin-bottom: 18px;
     }
+    .aside-photo {
+      min-height: 168px;
+      margin-top: 16px;
+    }
+    .lp-section {
+      padding: 54px 36px;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 90px;
+    }
+    .lp-section.is-dark {
+      background: rgba(10,3,5,0.42);
+    }
+    .lp-section h2 {
+      max-width: 760px;
+      font-size: clamp(30px, 3.4vw, 50px);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+    }
+    .lp-text {
+      max-width: 760px;
+      color: var(--bege-muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+    .lp-text + .lp-text { margin-top: 12px; }
+    .highlight-line {
+      margin-top: 28px;
+      padding: 24px;
+      border: 1px solid rgba(233,222,210,0.1);
+      background: rgba(192,41,42,0.16);
+      color: var(--bege);
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      font-weight: 900;
+    }
+    .section-grid,
+    .practice-grid,
+    .compare-grid,
+    .faq-grid {
+      display: grid;
+      gap: 1px;
+      margin-top: 28px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .section-grid { grid-template-columns: repeat(3, 1fr); }
+    .practice-grid { grid-template-columns: repeat(2, 1fr); }
+    .compare-grid { grid-template-columns: repeat(2, 1fr); }
+    .faq-grid { grid-template-columns: 1fr; }
+    .info-card,
+    .practice-item,
+    .compare-card,
+    .faq-item {
+      background: rgba(30,9,16,0.38);
+      padding: 24px;
+    }
+    .info-card strong,
+    .compare-card strong,
+    .faq-item strong {
+      display: block;
+      color: var(--bege);
+      font-size: 17px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .info-card span,
+    .compare-card span,
+    .faq-item span,
+    .practice-item {
+      color: var(--bege-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .plain-checks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      margin-top: 28px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .plain-checks li {
+      list-style: none;
+      background: rgba(30,9,16,0.38);
+      color: var(--bege-muted);
+      padding: 18px 20px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .plain-checks li::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 10px;
+      background: var(--vermelho);
+      vertical-align: 2px;
+    }
+    .practical-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+      color: var(--bege-muted);
+      font-size: 14px;
+      line-height: 1.65;
+      padding-left: 18px;
+    }
+    .community-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+      border: 1px solid var(--line);
+      background: rgba(10,3,5,0.58);
+      padding: 24px;
+    }
+    .community-form label {
+      display: grid;
+      gap: 8px;
+      color: rgba(233,222,210,0.58);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .community-form input,
+    .community-form textarea {
+      width: 100%;
+      border: 1px solid rgba(233,222,210,0.14);
+      background: rgba(10,3,5,0.72);
+      color: var(--bege);
+      min-height: 50px;
+      padding: 14px 16px;
+      font: 500 14px/1.4 'Montserrat', sans-serif;
+      outline: none;
+      border-radius: 0;
+    }
+    .community-form textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+    .consent-row {
+      display: flex !important;
+      grid-template-columns: none;
+      align-items: flex-start;
+      gap: 10px !important;
+      text-transform: none !important;
+      letter-spacing: 0 !important;
+      font-size: 12px !important;
+      line-height: 1.55;
+    }
+    .consent-row input {
+      width: auto;
+      min-height: 0;
+      margin-top: 2px;
+    }
+    .hidden-field { display: none; }
 
     @media (max-width: 900px) {
       nav { padding: 16px 24px; }
@@ -266,7 +465,15 @@
       .sidebar { position: static; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
       .side-title, .side-note { grid-column: 1 / -1; }
       .content { grid-template-columns: 1fr; }
+      .head-gallery { grid-template-columns: 1fr; }
       .community-head, .feed, .aside { padding: 24px; }
+      .lp-section { padding: 42px 24px; }
+      .section-grid,
+      .practice-grid,
+      .compare-grid,
+      .plain-checks {
+        grid-template-columns: 1fr;
+      }
       .cover { min-height: 190px; }
     }
 
@@ -290,32 +497,32 @@
       <li><a href="index.html#servicos">Serviços</a></li>
       <li><a href="index.html#contato">Contato</a></li>
     </ul>
-    <a href="index.html#contato" class="nav-cta">Entrar na lista</a>
+    <a href="#entrar" class="nav-cta">Quero entrar na comunidade</a>
   </nav>
 
   <main class="page">
     <div class="workspace">
-      <aside class="sidebar" aria-label="Canais da comunidade">
+      <aside class="sidebar" aria-label="Seções da comunidade">
         <p class="side-title">Seu lugar de fala</p>
-        <a href="#daily" class="side-link is-active"><span>01</span>Daily</a>
-        <a href="#ensaios" class="side-link"><span>02</span>Ensaios de fala<span class="side-pill">3</span></a>
-        <a href="#reunioes" class="side-link"><span>03</span>Reuniões reais</a>
-        <a href="#roteiros" class="side-link"><span>04</span>Roteiros e mapas</a>
-        <a href="#biblioteca" class="side-link"><span>05</span>Biblioteca</a>
-        <a href="#faq" class="side-link"><span>06</span>FAQ</a>
+        <a href="#proposta" class="side-link is-active"><span>01</span>A proposta</a>
+        <a href="#para-quem" class="side-link"><span>02</span>Para quem</a>
+        <a href="#como-funciona" class="side-link"><span>03</span>Como funciona</a>
+        <a href="#praticar" class="side-link"><span>04</span>O que praticar</a>
+        <a href="#faq" class="side-link"><span>05</span>FAQ</a>
+        <a href="#entrar" class="side-link"><span>06</span>Entrar na lista</a>
         <p class="side-note">Uma comunidade pequena, com ritmo e direção. Menos ruído, mais prática aplicada ao jeito como você pensa e fala.</p>
       </aside>
 
       <section class="main-panel">
-        <div class="cover" role="img" aria-label="Pessoa escrevendo em uma mesa de trabalho"></div>
+        <div class="cover" role="img" aria-label="Encontro de fala em uma sala de trabalho"></div>
 
         <header class="community-head">
-          <p class="eyebrow">Comunidade</p>
-          <h1>Seu lugar de fala</h1>
-          <p class="head-copy">Um espaço contínuo para praticar fala, organizar pensamento e sustentar presença sem transformar toda exposição em uma apresentação final. Aqui a fala ganha rotina, escuta e retorno.</p>
+          <p class="eyebrow">Comunidade de prática contínua</p>
+          <h1>Seu Lugar de Fala.</h1>
+          <p class="head-copy">Um espaço para organizar ideias, testar a própria fala e ganhar mais naturalidade para se posicionar no trabalho.</p>
+          <p class="head-copy">Sem transformar toda participação em uma grande apresentação. Sem esperar uma situação decisiva para começar a praticar.</p>
           <div class="head-meta">
-            <span>Grupo guiado pela Vick</span>
-            <span>Encontros, prompts e prática semanal</span>
+            <span>Prática contínua, ensaios guiados e devolutivas.</span>
             <div class="avatars" aria-label="Participantes">
               <span class="avatar">VM</span>
               <span class="avatar">L</span>
@@ -324,77 +531,159 @@
               <span class="avatar">+</span>
             </div>
           </div>
+          <div class="head-gallery" aria-label="Fotos da comunidade em prática">
+            <figure>
+              <img src="assets/lp-photos/comunidade-head-a.jpg" alt="Vick conduzindo uma prática em grupo" />
+            </figure>
+            <figure>
+              <img src="assets/lp-photos/comunidade-head-b.jpg" alt="Vick em atividade de fala com participantes" />
+            </figure>
+          </div>
         </header>
 
-        <div class="content">
-          <section class="feed" aria-label="Feed da comunidade">
-            <div class="toolbar">
-              <span>Ordenar por: mais recentes</span>
-              <span>Ritmo semanal</span>
+        <section class="lp-section" id="proposta">
+          <p class="eyebrow">Fala se constrói falando</p>
+          <h2>Você não precisa esperar uma grande apresentação para trabalhar a sua fala.</h2>
+          <p class="lp-text">A fala também se constrói nas reuniões da semana, nas ideias que você ainda não colocou na conversa e nas respostas que só aparecem depois.</p>
+          <p class="lp-text">Seu Lugar de Fala cria um ritmo de observação, prática e retorno para que você possa testar antes, ajustar durante e se posicionar com mais naturalidade quando o contexto pedir.</p>
+          <div class="highlight-line">Toda fala revela um raciocínio. Organize o seu.</div>
+        </section>
+
+        <section class="lp-section is-dark" id="para-quem">
+          <p class="eyebrow">Seu momento</p>
+          <h2>Para quem sabe que precisa falar mais, mas ainda não encontrou ritmo para praticar.</h2>
+          <ul class="plain-checks">
+            <li>Pensa bastante, mas se perde quando começa a explicar.</li>
+            <li>Evita entrar em conversas por não saber como organizar o ponto.</li>
+            <li>Encontra a resposta certa quando a reunião já terminou.</li>
+            <li>Quer aparecer e se posicionar com mais constância.</li>
+            <li>Precisa testar ideias antes de levá-las para o contexto real.</li>
+            <li>Quer receber retorno sem pressão de performance.</li>
+          </ul>
+          <div class="highlight-line">Você não precisa chegar com uma grande fala pronta. Precisa chegar com algo que queira colocar em movimento.</div>
+        </section>
+
+        <section class="lp-section" id="como-funciona">
+          <p class="eyebrow">Como funciona</p>
+          <h2>Prática, retorno e continuidade.</h2>
+          <div class="section-grid">
+            <div class="info-card">
+              <strong>Daily de fala</strong>
+              <span>Observe o que acontece quando você fala. Prompts curtos para reconhecer situações da semana, organizar o pensamento e escolher o que vale levar para a prática.</span>
             </div>
-
-            <div class="composer">Escreva uma situação de fala que você quer trabalhar...</div>
-
-            <article class="post" id="daily">
-              <div class="post-top"><span class="avatar">VM</span><span class="post-author">Vick Monteiro</span><span>Daily</span></div>
-              <h2 class="post-title"><mark>Antes de falar, escreva a intenção.</mark></h2>
-              <p class="post-copy">O exercício de hoje é simples: escolha uma conversa da semana e escreva em uma linha o movimento que sua fala precisa provocar. Informar, alinhar, pedir decisão, discordar, reposicionar. A fala muda quando a intenção para de ficar implícita.</p>
-              <div class="post-tags">
-                <span class="tag">Prompt diário</span>
-                <span class="tag">Intenção</span>
-                <span class="tag">Reuniões</span>
-              </div>
-            </article>
-
-            <article class="post" id="ensaios">
-              <div class="post-top"><span class="avatar">VM</span><span class="post-author">Vick Monteiro</span><span>Ensaio da semana</span></div>
-              <h2 class="post-title">Como começar uma fala sem pedir licença demais</h2>
-              <p class="post-copy">Nesta semana, vamos treinar aberturas. A proposta é sair do começo justificativo e entrar com contexto, direção e frase central. Cada pessoa traz uma situação real e recebe uma devolutiva curta.</p>
-              <div class="post-tags">
-                <span class="tag">Prática</span>
-                <span class="tag">Abertura</span>
-                <span class="tag">Feedback</span>
-              </div>
-            </article>
-
-            <article class="post" id="reunioes">
-              <div class="post-top"><span class="avatar">VM</span><span class="post-author">Vick Monteiro</span><span>Reuniões reais</span></div>
-              <h2 class="post-title">Traga uma reunião em que você saiu com a sensação de que falou menos do que pensava</h2>
-              <p class="post-copy">A gente vai olhar para o antes, o durante e o depois. O objetivo não é montar uma fala perfeita. É encontrar o ponto de entrada, a frase que sustenta o argumento e o próximo passo que precisava ter ficado claro.</p>
-              <div class="post-tags">
-                <span class="tag">Caso real</span>
-                <span class="tag">Argumento</span>
-                <span class="tag">Próximo passo</span>
-              </div>
-            </article>
-          </section>
-
-          <aside class="aside" aria-label="Informações da comunidade">
-            <div class="aside-block">
-              <p class="aside-title">Como funciona</p>
-              <div class="ritual-list">
-                <div class="ritual"><strong>Daily de fala</strong><span>Prompts curtos para observar uma situação da semana.</span></div>
-                <div class="ritual"><strong>Ensaios guiados</strong><span>Prática de aberturas, respostas, posicionamento e condução.</span></div>
-                <div class="ritual"><strong>Devolutivas</strong><span>Retorno objetivo para ajustar estrutura, intenção e presença.</span></div>
-              </div>
+            <div class="info-card">
+              <strong>Ensaios guiados</strong>
+              <span>Teste antes de precisar usar. Exercícios para praticar aberturas, argumentos, respostas, transições e fechamentos em situações reais de trabalho.</span>
             </div>
-
-            <div class="aside-block">
-              <p class="aside-title">Para quem</p>
-              <p class="small-copy">Profissionais que querem participar mais, aparecer com mais consistência e parar de depender apenas do improviso quando precisam falar.</p>
-              <a href="index.html#contato" class="btn-primary">Entrar na lista</a>
+            <div class="info-card">
+              <strong>Devolutivas</strong>
+              <span>Entenda o que funciona e o que precisa de ajuste. Retornos diretos sobre estrutura, intenção, clareza e presença.</span>
             </div>
+          </div>
+          <figure class="post-media">
+            <img src="assets/lp-photos/comunidade-ensaio.jpg" alt="Vick conduzindo ensaio de fala em grupo" />
+          </figure>
+          <div class="highlight-line">Não é um curso para assistir. É um espaço para colocar a fala em uso.</div>
+        </section>
 
-            <div class="aside-block" id="biblioteca">
-              <p class="aside-title">Biblioteca</p>
-              <div class="ritual-list">
-                <div class="ritual"><strong>Mapa de reunião</strong><span>Contexto, intenção, frase central e fechamento.</span></div>
-                <div class="ritual"><strong>Banco de começos</strong><span>Formas de abrir sem se diminuir.</span></div>
-                <div class="ritual"><strong>Roteiros de resposta</strong><span>Discordar, retomar, pedir decisão e reposicionar.</span></div>
-              </div>
+        <section class="lp-section is-dark" id="praticar">
+          <p class="eyebrow">Fala em contexto real</p>
+          <h2>Da ideia ainda solta ao ponto que precisa ser colocado na conversa.</h2>
+          <ul class="plain-checks">
+            <li>Organizar uma ideia antes de apresentá-la.</li>
+            <li>Entrar em uma conversa com mais direção.</li>
+            <li>Explicar um projeto sem se perder nos detalhes.</li>
+            <li>Sustentar um ponto quando existe resistência.</li>
+            <li>Responder sem depender apenas do improviso.</li>
+            <li>Discordar sem abandonar a própria posição.</li>
+            <li>Retomar o raciocínio sob pressão.</li>
+            <li>Encerrar uma fala com um próximo passo claro.</li>
+          </ul>
+        </section>
+
+        <section class="lp-section">
+          <p class="eyebrow">Com a prática</p>
+          <h2>Sua fala não precisa parecer ensaiada. Precisa encontrar estrutura.</h2>
+          <p class="lp-text">A proposta não é criar uma forma única de falar. É ajudar você a reconhecer como pensa, organizar o que quer dizer e construir mais repertório para diferentes situações.</p>
+          <div class="practice-grid">
+            <div class="practice-item">Mais clareza para organizar o pensamento.</div>
+            <div class="practice-item">Mais precisão para escolher o que dizer.</div>
+            <div class="practice-item">Mais repertório para responder e conduzir.</div>
+            <div class="practice-item">Mais constância para aparecer e participar.</div>
+            <div class="practice-item">Mais naturalidade para ocupar a conversa.</div>
+          </div>
+        </section>
+
+        <section class="lp-section is-dark">
+          <p class="eyebrow">Qual caminho faz sentido</p>
+          <h2>Uma situação concreta pede preparação. Uma fala em construção pede continuidade.</h2>
+          <div class="compare-grid">
+            <div class="compare-card">
+              <strong>Seu Lugar de Fala</strong>
+              <span>Para quem quer praticar com frequência, testar ideias, receber retorno e desenvolver repertório ao longo do tempo.</span>
             </div>
-          </aside>
-        </div>
+            <div class="compare-card">
+              <strong>Sessão 1:1 de Estratégia &amp; Fala</strong>
+              <span>Para quem tem uma apresentação, reunião, pitch, defesa de projeto ou conversa importante que precisa ser preparada agora.</span>
+              <a href="sessao-estrategia-e-fala.html" class="btn-primary" style="margin-top:18px;">Conhecer a sessão 1:1</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lp-section">
+          <p class="eyebrow">Com Vick Monteiro</p>
+          <h2>Estratégia, estrutura e fala aplicada ao trabalho.</h2>
+          <p class="lp-text">Sou estrategista de marca, especialista em comunicação e fundadora da REMIND. Meu trabalho une pensamento estruturado, repertório de negócio e prática de fala para ajudar profissionais a se posicionarem com mais clareza em contextos reais.</p>
+          <p class="lp-text">Na comunidade, conduzo as práticas e devolutivas com atenção ao que está em jogo, ao que precisa ser dito e ao movimento que cada fala pretende provocar.</p>
+          <figure class="post-media">
+            <img src="assets/lp-photos/comunidade-aside.jpg" alt="Vick conduzindo uma atividade em sala" />
+          </figure>
+        </section>
+
+        <section class="lp-section is-dark">
+          <p class="eyebrow">Para participar</p>
+          <h2>O que você precisa saber.</h2>
+          <p class="lp-text">As informações operacionais ainda estão em definição. A lista de interesse vai receber primeiro os detalhes sobre onde a comunidade acontece, frequência das práticas, devolutivas, encontros ao vivo, envio de falas, valor, pagamento, entrada e cancelamento.</p>
+          <ul class="practical-list">
+            <li>Onde a comunidade acontece.</li>
+            <li>Frequência das práticas e devolutivas.</li>
+            <li>Existência ou não de encontros ao vivo.</li>
+            <li>Como enviar uma fala para receber retorno.</li>
+            <li>Valor, forma de pagamento, entrada e cancelamento.</li>
+          </ul>
+        </section>
+
+        <section class="lp-section" id="faq">
+          <p class="eyebrow">FAQ</p>
+          <h2>Dúvidas comuns.</h2>
+          <div class="faq-grid">
+            <div class="faq-item"><strong>Preciso ter experiência com oratória?</strong><span>Não. A comunidade parte das situações que você já vive no trabalho e do que precisa desenvolver agora.</span></div>
+            <div class="faq-item"><strong>Preciso falar em público para participar?</strong><span>Não. A prática também envolve reuniões, conversas, respostas, posicionamentos e outras situações do cotidiano profissional.</span></div>
+            <div class="faq-item"><strong>Vou precisar enviar vídeos?</strong><span>Esse formato ainda será definido. Se o envio for opcional, isso vai ficar explícito antes da abertura.</span></div>
+            <div class="faq-item"><strong>Qual é a diferença para a sessão 1:1?</strong><span>A sessão 1:1 prepara uma situação concreta. A comunidade cria continuidade para praticar, receber retorno e desenvolver repertório ao longo do tempo.</span></div>
+            <div class="faq-item"><strong>As práticas acontecem ao vivo?</strong><span>O formato final dos encontros ainda será comunicado para a lista de interesse.</span></div>
+          </div>
+        </section>
+
+        <section class="lp-section is-dark" id="entrar">
+          <p class="eyebrow">Seu próximo movimento</p>
+          <h2>Sua fala não precisa esperar a próxima situação decisiva.</h2>
+          <p class="lp-text">Comece a praticar enquanto as ideias ainda estão ganhando forma. Teste, escute, ajuste e encontre mais clareza para ocupar as conversas que fazem parte do seu trabalho.</p>
+
+          <form class="community-form" name="seu-lugar-de-fala" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
+            <input type="hidden" name="form-name" value="seu-lugar-de-fala" />
+            <input type="hidden" name="subject" value="Novo interesse em Seu Lugar de Fala" />
+            <input type="hidden" name="source" value="lp-seu-lugar-de-fala" />
+            <p class="hidden-field"><label>Não preencha este campo <input name="bot-field" /></label></p>
+
+            <label>Nome*<input type="text" name="name" autocomplete="name" required /></label>
+            <label>E-mail*<input type="email" name="email" autocomplete="email" required /></label>
+            <label>WhatsApp<input type="tel" name="whatsapp" autocomplete="tel" /></label>
+            <label>O que você gostaria de praticar com mais frequência?<textarea name="practice" required></textarea></label>
+            <label class="consent-row"><input type="checkbox" name="consent" required /> Autorizo o contato e o uso dos dados enviados para retorno sobre a comunidade.</label>
+            <button class="btn-primary" type="submit">Quero entrar para Seu Lugar de Fala</button>
+          </form>
+        </section>
       </section>
     </div>
   </main>
