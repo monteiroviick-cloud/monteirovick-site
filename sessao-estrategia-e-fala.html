@@ -8,7 +8,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Sessão de Estratégia &amp; Fala | monteirovick" />
   <meta property="og:description" content="Pra quem tem uma apresentação ou reunião chegando e precisa organizar o que vai dizer, em que ordem e com quais respostas possíveis." />
-  <meta property="og:image" content="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg" />
+  <meta property="og:image" content="assets/lp-photos/sessao-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -121,7 +121,7 @@
       background:
         linear-gradient(to right, rgba(10,3,5,0.98) 0%, rgba(10,3,5,0.84) 32%, rgba(10,3,5,0.32) 68%, rgba(10,3,5,0.78) 100%),
         linear-gradient(to top, rgba(10,3,5,1) 0%, rgba(10,3,5,0.2) 32%, rgba(10,3,5,0.82) 100%),
-        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg") center 28%/cover;
+        url("assets/lp-photos/sessao-hero.jpg") center 38%/cover;
       z-index: 0;
     }
 
@@ -156,19 +156,24 @@
     }
 
     h1 {
-      max-width: 1120px;
-      font-size: clamp(42px, 4.7vw, 68px);
+      max-width: 980px;
+      font-size: clamp(38px, 4.05vw, 60px);
       line-height: 0.96;
       letter-spacing: -0.06em;
       font-weight: 900;
       margin-bottom: 28px;
     }
+    h1 em {
+      color: rgba(233,222,210,0.62);
+      font-style: italic;
+      font-weight: 400;
+    }
 
     .hero-copy {
-      max-width: 610px;
+      max-width: 570px;
       color: var(--bege-muted);
-      font-size: 17px;
-      line-height: 1.85;
+      font-size: 16px;
+      line-height: 1.8;
       margin-bottom: 38px;
     }
 
@@ -224,27 +229,26 @@
     .hero-meta {
       position: relative;
       z-index: 2;
-      border-top: 1px solid var(--line-dark);
-      border-bottom: 1px solid var(--line-dark);
-      background: var(--vinho);
+      padding: 42px 0 46px;
+      background: var(--vinho-escuro);
       color: rgba(233,222,210,0.62);
     }
     .meta-grid {
       width: min(var(--max), calc(100vw - 120px));
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
     }
     .meta-item {
-      min-height: 92px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 8px;
-      padding: 20px 26px;
-      border-left: 1px solid var(--line-dark);
+      padding: 0;
     }
-    .meta-item:last-child { border-right: 1px solid var(--line-dark); }
+    .meta-item.is-focus {
+      grid-column: 1 / -1;
+    }
     .meta-kicker {
       color: var(--vermelho);
       font-size: 10px;
@@ -258,9 +262,72 @@
       font-weight: 700;
       line-height: 1.35;
     }
+    .meta-detail {
+      color: var(--bege-muted);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    .meta-price {
+      display: block;
+      color: var(--bege);
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+    .meta-price small {
+      display: block;
+      margin-top: 4px;
+      color: rgba(233,222,210,0.54);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    .focus-icons {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 18px;
+    }
+    .focus-card {
+      display: grid;
+      gap: 12px;
+      color: var(--bege-muted);
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .focus-icon {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--vermelho);
+    }
+    .focus-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke: currentColor;
+      stroke-width: 1.55;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+    .focus-card strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--bege);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
 
     .section {
       padding: 92px 0;
+      scroll-margin-top: 88px;
     }
     .section.dark {
       background:
@@ -325,6 +392,48 @@
       gap: 18px;
     }
 
+    .visual-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+      margin-top: 32px;
+      border: 1px solid var(--line-light);
+      background: var(--vinho);
+    }
+    .dark .visual-card,
+    .vinho .visual-card,
+    .form-section .visual-card {
+      border-color: var(--line-dark);
+    }
+    .visual-card img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: block;
+      object-fit: cover;
+      filter: saturate(0.86) contrast(1.04);
+    }
+    .visual-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,3,5,0.72), rgba(10,3,5,0.06) 58%);
+      pointer-events: none;
+    }
+    .visual-card figcaption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 16px;
+      z-index: 1;
+      color: rgba(233,222,210,0.72);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+
     .plain-list {
       display: grid;
       gap: 1px;
@@ -371,7 +480,7 @@
       color: var(--bege);
       background:
         linear-gradient(to right, rgba(10,3,5,0.92), rgba(10,3,5,0.42)),
-        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") center 38%/cover;
+        url("assets/lp-photos/sessao-quote.jpg") center 48%/cover;
     }
     .quote {
       width: min(var(--max), calc(100vw - 120px));
@@ -398,7 +507,7 @@
     .format-card {
       background: var(--off);
       padding: 32px;
-      min-height: 260px;
+      min-height: 420px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -422,6 +531,51 @@
       color: rgba(30,9,16,0.52);
       font-size: 12px;
       line-height: 1.6;
+    }
+    .card-photo {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      min-height: 0;
+      margin: 0 -32px -32px;
+      overflow: hidden;
+      background: var(--vinho);
+    }
+    .card-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      display: block;
+      object-fit: cover;
+      filter: saturate(0.86) contrast(1.04);
+    }
+    .card-photo.is-speaking img {
+      object-position: 44% 48%;
+    }
+    .card-photo.is-room img {
+      object-position: center 50%;
+    }
+    .card-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,3,5,0.64), rgba(10,3,5,0.04) 62%);
+      pointer-events: none;
+    }
+
+    .photo-duo {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .photo-duo .visual-card {
+      margin-top: 0;
+      min-height: 300px;
+    }
+    .photo-duo .visual-card:nth-child(2) {
+      min-height: 300px;
     }
 
     .steps {
@@ -452,13 +606,120 @@
       line-height: 1.7;
     }
 
+    .method-section h2 {
+      max-width: 900px;
+      margin-bottom: 34px;
+    }
+    .method-cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+    .method-card {
+      min-height: 330px;
+      padding: 32px;
+      background: rgba(30,9,16,0.72);
+      border: 1px solid rgba(233,222,210,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 34px;
+    }
+    .method-card span {
+      color: var(--vermelho);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .method-card p {
+      color: var(--bege-muted);
+      font-size: 14px;
+      line-height: 1.74;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin-top: 38px;
+      background: var(--line-dark);
+      border: 1px solid var(--line-dark);
+    }
+    .price-card {
+      min-height: 430px;
+      background: rgba(10,3,5,0.76);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .price-card strong {
+      display: block;
+      color: var(--vermelho);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .price-value {
+      display: block;
+      color: var(--bege);
+      font-size: clamp(34px, 4.2vw, 58px);
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      margin: 18px 0;
+    }
+    .price-value small {
+      display: block;
+      margin-top: 10px;
+      color: rgba(233,222,210,0.54);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.45;
+    }
+    .price-card p,
+    .price-card li {
+      color: var(--bege-muted);
+      font-size: 14px;
+      line-height: 1.72;
+    }
+    .price-card ul {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .price-card li::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: var(--vermelho);
+      transform: translateY(-1px);
+    }
+    .price-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     .form-section {
       padding: 94px 0;
-      color: var(--bege);
+      scroll-margin-top: 88px;
+      color: var(--ink);
       background:
-        linear-gradient(90deg, rgba(233,222,210,0.022) 1px, transparent 1px),
-        linear-gradient(rgba(233,222,210,0.022) 1px, transparent 1px),
-        var(--vinho-escuro);
+        linear-gradient(90deg, rgba(30,9,16,0.035) 1px, transparent 1px),
+        linear-gradient(rgba(30,9,16,0.035) 1px, transparent 1px),
+        var(--off);
       background-size: 80px 80px;
     }
     .form-wrap {
@@ -472,8 +733,8 @@
     .lead-form {
       display: grid;
       gap: 14px;
-      border: 1px solid var(--line-dark);
-      background: rgba(30,9,16,0.42);
+      border: 1px solid var(--line-light);
+      background: rgba(255,255,255,0.28);
       padding: 24px;
     }
     .field-row {
@@ -484,7 +745,7 @@
     label {
       display: grid;
       gap: 8px;
-      color: rgba(233,222,210,0.58);
+      color: rgba(30,9,16,0.58);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 0.12em;
@@ -494,9 +755,9 @@
     textarea,
     select {
       width: 100%;
-      border: 1px solid rgba(233,222,210,0.14);
-      background: rgba(10,3,5,0.72);
-      color: var(--bege);
+      border: 1px solid rgba(30,9,16,0.16);
+      background: rgba(255,255,255,0.5);
+      color: var(--ink);
       min-height: 50px;
       padding: 14px 16px;
       font: 500 14px/1.4 'Montserrat', sans-serif;
@@ -512,13 +773,13 @@
     textarea:focus,
     select:focus {
       border-color: rgba(192,41,42,0.8);
-      background: rgba(10,3,5,0.92);
+      background: rgba(255,255,255,0.88);
     }
     input::placeholder,
-    textarea::placeholder { color: rgba(233,222,210,0.32); }
+    textarea::placeholder { color: rgba(30,9,16,0.34); }
     .hidden-field { display: none; }
     .form-status {
-      color: rgba(233,222,210,0.5);
+      color: rgba(30,9,16,0.54);
       font-size: 12px;
       line-height: 1.7;
     }
@@ -556,7 +817,7 @@
       .hero::before {
         background:
           linear-gradient(to bottom, rgba(10,3,5,0.72), rgba(10,3,5,0.96)),
-          url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/IMG_7809_Original.jpg") 66% center/cover;
+          url("assets/lp-photos/sessao-hero.jpg") 62% center/cover;
       }
       .hero-inner { padding: 120px 0 70px; }
       h1 { max-width: 720px; }
@@ -566,11 +827,16 @@
       .form-wrap {
         grid-template-columns: 1fr;
       }
+      .focus-icons,
+      .method-cards {
+        grid-template-columns: 1fr;
+      }
       .meta-item {
-        border-right: 1px solid var(--line-dark);
-        border-bottom: 1px solid var(--line-dark);
+        border: 0;
       }
       .format-grid,
+      .photo-duo,
+      .pricing-grid,
       .steps,
       .field-row {
         grid-template-columns: 1fr;
@@ -633,29 +899,52 @@
   <main>
     <section class="hero">
       <div class="hero-inner">
-        <p class="eyebrow">Sessão de Estratégia &amp; Fala</p>
-        <h1>Mapeie, estruture e treine<br class="desktop-break" /> sua próxima reunião.</h1>
-        <p class="hero-copy">Uma sessão 1:1 para preparar uma apresentação, reunião ou conversa importante que já está no seu calendário. A gente organiza o que precisa ser dito, em que ordem e com quais respostas possíveis.</p>
+        <p class="eyebrow">Sessão individual 1:1</p>
+        <h1>Não deixe uma fala importante depender do improviso.<br class="desktop-break" /><em>Tenha clareza para dizer o que importa e para sustentar o seu posicionamento.</em></h1>
+        <p class="hero-copy">Prepare uma reunião, apresentação, pitch ou conversa importante com uma narrativa mais clara, argumentos bem construídos e respostas preparadas para o contexto real.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="#agendar">Quero trabalhar minha fala</a>
-          <a class="btn-outline" href="#formatos">Ver formatos</a>
+          <a class="btn-primary" href="#agendar">Agendar uma sessão</a>
+          <a class="btn-outline" href="#formatos">Entender o processo</a>
         </div>
       </div>
     </section>
 
     <div class="hero-meta" aria-label="Resumo da sessão">
       <div class="meta-grid">
-        <div class="meta-item">
-          <span class="meta-kicker">Formato</span>
-          <span class="meta-text">Online, 1:1, usando uma situação que você precisa conduzir.</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-kicker">Caminhos</span>
-          <span class="meta-text">Sessão avulsa para preparar uma fala. Pacote de 3 para acompanhar um processo.</span>
-        </div>
-        <div class="meta-item">
+        <div class="meta-item is-focus">
           <span class="meta-kicker">Foco</span>
-          <span class="meta-text">Apresentação, reunião, pitch, defesa de projeto ou conversa com liderança.</span>
+          <div class="focus-icons">
+            <span class="focus-card">
+              <span class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 5h16v10H4z" /><path d="M9 19h6" /><path d="M12 15v4" /></svg>
+              </span>
+              <span><strong>Apresentação</strong>Organizar a narrativa e conduzir a mensagem com clareza.</span>
+            </span>
+            <span class="focus-card">
+              <span class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 8h10" /><path d="M7 12h7" /><path d="M5 18l3-3h9a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v5" /></svg>
+              </span>
+              <span><strong>Reunião</strong>Posicionar pontos, direcionar a conversa e gerar encaminhamentos.</span>
+            </span>
+            <span class="focus-card">
+              <span class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7" /><circle cx="12" cy="12" r="3" /><path d="M12 2v3" /><path d="M12 19v3" /><path d="M2 12h3" /><path d="M19 12h3" /></svg>
+              </span>
+              <span><strong>Pitch</strong>Sintetizar valor, defender uma ideia e provocar uma decisão.</span>
+            </span>
+            <span class="focus-card">
+              <span class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z" /><path d="M10 8h4" /><path d="M10 12h4" /><path d="M10 16h2" /></svg>
+              </span>
+              <span><strong>Projeto</strong>Apresentar o raciocínio, sustentar escolhas e conquistar adesão.</span>
+            </span>
+            <span class="focus-card">
+              <span class="focus-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 4l7 4v5c0 4-3 6-7 7-4-1-7-3-7-7V8z" /><path d="M9 12l2 2 4-5" /></svg>
+              </span>
+              <span><strong>Liderança</strong>Comunicar expectativas, defender pontos e conduzir temas sensíveis.</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
@@ -664,36 +953,29 @@
       <div class="section-inner split">
         <div>
           <p class="section-label">Quando faz sentido?</p>
-          <h2>Para quando você já sabe o assunto,<br class="desktop-break" /> mas precisa preparar a condução.</h2>
-          <p class="lead">Tem reunião que não dá para entrar só com domínio técnico e boa vontade. A fala precisa ter começo, passagem, argumento, resposta e saída. É isso que a sessão organiza.</p>
+          <h2>Tem reunião em que domínio técnico não basta.</h2>
+          <p class="lead">A fala precisa chegar com direção, argumento, respiro e saída.</p>
         </div>
         <div class="plain-list">
           <div class="plain-item">
             <span class="plain-number">01</span>
             <div>
               <h3>Uma apresentação para diretoria.</h3>
-              <p>Quando você precisa fazer uma ideia atravessar a sala sem se perder em explicações demais, detalhe demais ou contexto que só você conhece.</p>
+              <p>Quando a ideia precisa atravessar a sala sem virar uma sequência de explicações.</p>
             </div>
           </div>
           <div class="plain-item">
             <span class="plain-number">02</span>
             <div>
               <h3>Uma defesa de projeto.</h3>
-              <p>Quando a entrega existe, mas ainda falta uma linha que mostre por que aquilo importa, qual decisão precisa sair dali e onde podem aparecer resistências.</p>
+              <p>Quando a entrega existe, mas ainda falta a linha que mostra por que ela importa.</p>
             </div>
           </div>
           <div class="plain-item">
             <span class="plain-number">03</span>
             <div>
               <h3>Uma conversa difícil.</h3>
-              <p>Quando podem vir perguntas, discordâncias ou ruídos, e você não quer depender só do improviso.</p>
-            </div>
-          </div>
-          <div class="plain-item">
-            <span class="plain-number">04</span>
-            <div>
-              <h3>Uma fala que precisa ser direta sem ficar pobre.</h3>
-              <p>Porque cortar rodeio não é achatar o assunto. Às vezes a precisão está em decidir o que entra, o que sai e o que precisa aparecer primeiro.</p>
+              <p>Quando podem vir perguntas, discordâncias ou ruídos, e improvisar já não parece uma boa ideia.</p>
             </div>
           </div>
         </div>
@@ -701,45 +983,35 @@
     </section>
 
     <section class="quote-band" aria-label="Frase central">
-      <p class="quote">Falar melhor começa antes da fala.<br class="desktop-break" /> <em>Começa na estrutura do pensamento.</em></p>
+      <p class="quote">Toda fala revela um raciocínio.<br class="desktop-break" /> <em>Estruture o seu.</em></p>
     </section>
 
-    <section class="section dark">
-      <div class="section-inner split">
-        <div>
-          <p class="section-label">O método</p>
-          <h2>Mapear, estruturar e treinar<br class="desktop-break" /> antes de entrar na conversa.</h2>
-          <p class="lead">A sessão tem começo, meio e fim. Primeiro a gente entende o contexto. Depois organiza a fala. Por fim, treina as passagens, as perguntas e os pontos que podem confundir.</p>
-        </div>
-        <div class="plain-list">
-          <div class="plain-item">
-            <span class="plain-number">Base</span>
+    <section class="section dark method-section">
+      <div class="section-inner">
+        <p class="section-label">O método</p>
+        <h2>Mapear,<br />estruturar<br />e treinar antes de entrar na conversa.</h2>
+        <div class="method-cards">
+          <article class="method-card">
+            <span>01</span>
             <div>
               <h3>Mapear o contexto.</h3>
-              <p>O que está em jogo, quem vai escutar, que decisão precisa acontecer e qual parte da sua fala não pode ficar implícita.</p>
+              <p>Entender o que está em jogo, quem precisa escutar, qual decisão precisa sair dali e o que não pode ficar implícito.</p>
             </div>
-          </div>
-          <div class="plain-item">
-            <span class="plain-number">Forma</span>
+          </article>
+          <article class="method-card">
+            <span>02</span>
             <div>
               <h3>Estruturar o raciocínio.</h3>
-              <p>Começo, ordem dos argumentos, exemplos, cortes e passagem entre uma ideia e outra. Estrutura não engessa; evita que você se espalhe.</p>
+              <p>Definir por onde começar, em que ordem conduzir, quais exemplos usar, o que cortar e como passar de uma ideia para outra.</p>
             </div>
-          </div>
-          <div class="plain-item">
-            <span class="plain-number">Pressão</span>
+          </article>
+          <article class="method-card">
+            <span>03</span>
             <div>
               <h3>Treinar a fala em uso.</h3>
-              <p>Ajuste de frase, resposta para objeções, simulação de perguntas e caminhos para retomar o ponto quando a conversa sair do roteiro.</p>
+              <p>Testar frases, preparar respostas, trabalhar objeções e encontrar caminhos para começar, sustentar o ponto e fechar o próximo passo.</p>
             </div>
-          </div>
-          <div class="plain-item">
-            <span class="plain-number">Treino</span>
-            <div>
-              <h3>Fechar o próximo passo.</h3>
-              <p>O objetivo é saber por onde começar, como sustentar e como encerrar.</p>
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -747,48 +1019,69 @@
     <section class="section" id="formatos">
       <div class="section-inner">
         <p class="section-label">Formatos</p>
-        <h2>Uma sessão para uma fala específica.<br class="desktop-break" /> Três para um processo maior.</h2>
-        <p class="lead" style="max-width: 760px;">Se existe uma apresentação com data, a sessão avulsa costuma ser suficiente. Se você está preparando uma sequência de conversas, uma narrativa de carreira ou um projeto que ainda vai passar por várias pessoas, três encontros dão mais espaço para ajustar sem pressa.</p>
+        <h2>Sessão 1:1 de Estratégia &amp; Fala.</h2>
+        <p class="lead" style="max-width: 760px;">Um encontro individual para trabalhar uma situação real do seu contexto profissional.</p>
         <div class="format-grid">
           <div class="format-card">
             <div>
-              <strong>Sessão avulsa</strong>
-              <h3>Para preparar uma situação pontual.</h3>
-              <p>Apresentação, reunião, conversa com liderança, defesa de projeto, pitch ou qualquer fala que já tem data e consequência.</p>
+              <strong>Como funciona?</strong>
+              <h3>Você chega com um cenário.</h3>
+              <p>Durante a sessão, a gente mapeia o que está em jogo, estrutura o raciocínio e consegue treinar uma fala possível de usar.</p>
             </div>
-            <p class="format-note">Você chega com o cenário. A gente mapeia, estrutura e treina uma versão possível de usar, sem transformar sua fala em texto decorado.</p>
+            <p class="format-note">Ideal para apresentações, reuniões, pitches, defesa de projetos ou conversas com lideranças.</p>
+            <figure class="card-photo is-speaking" aria-label="Vick conduzindo uma fala em sala">
+              <img src="assets/lp-photos/sessao-formatos-a.jpg" alt="Vick conduzindo uma fala em sala" />
+            </figure>
           </div>
           <div class="format-card">
             <div>
-              <strong>Pacote de 3 sessões</strong>
-              <h3>Para acompanhar um tema em construção.</h3>
-              <p>Indicado quando a fala envolve uma narrativa maior, mais de uma reunião ou um posicionamento que precisa amadurecer enquanto o contexto anda.</p>
+              <strong>Continuidade</strong>
+              <h3>Como funcionam os próximos passos?</h3>
+              <p>O trabalho começa com uma sessão. Se o tema pede acompanhamento, uma definição mais próxima ou construção de material, a gente define os próximos encontros a partir do que ainda precisa ser construído e ajustado.</p>
             </div>
-            <p class="format-note">Investimento e disponibilidade entram depois que você conta o contexto. Nem toda demanda pede o mesmo formato, e isso importa.</p>
+            <p class="format-note">Ideal para ideias que precisam de mais suporte para desenvolvimento, construção e apresentação.</p>
+            <figure class="card-photo is-room" aria-label="Sala com pessoas acompanhando uma apresentação conduzida por Vick">
+              <img src="assets/lp-photos/sessao-grupo.jpg" alt="Sala com pessoas acompanhando uma apresentação conduzida por Vick" />
+            </figure>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section vinho">
+    <section class="section vinho" id="investimento">
       <div class="section-inner">
-        <p class="section-label">Começo, meio e fim</p>
-        <h2>O que acontece dentro da sessão.</h2>
-        <div class="steps">
-          <div class="step">
-            <span>01</span>
-            <h3>Mapear.</h3>
-            <p>A gente entende a reunião, quem vai estar do outro lado, o que você precisa provocar e onde a fala costuma perder força.</p>
+        <p class="section-label">Formatos e investimento</p>
+        <h2>Escolha o formato<br class="desktop-break" /> da sua preparação.</h2>
+        <p class="lead" style="max-width: 760px;">Os dois caminhos partem de uma situação real. A diferença está no tempo de construção, ensaio e ajuste.</p>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div>
+              <strong>Sessão avulsa</strong>
+              <h3>Uma fala específica para preparar agora.</h3>
+              <span class="price-value">R$ 599</span>
+              <p>Um encontro online e individual para trabalhar uma apresentação, reunião, pitch, defesa de projeto ou conversa importante.</p>
+              <ul>
+                <li>Mapeamento do contexto e do que está em jogo.</li>
+                <li>Estrutura da fala, ordem dos argumentos e cortes necessários.</li>
+                <li>Treino de respostas para perguntas, objeções e pontos sensíveis.</li>
+              </ul>
+            </div>
+            <div class="price-actions">
+              <a class="btn-primary" href="#agendar">Comprar sessão avulsa</a>
+            </div>
           </div>
-          <div class="step">
-            <span>02</span>
-            <h3>Estruturar.</h3>
-            <p>A gente define mensagem central, ordem, exemplos, cortes e possíveis caminhos de resposta para o que pode surgir.</p>
-          </div>
-          <div class="step">
-            <span>03</span>
-            <h3>Treinar.</h3>
-            <p>A gente fala em voz alta, ajusta o que soa confuso e testa como você retoma o ponto se alguém discordar.</p>
+          <div class="price-card">
+            <div>
+              <strong>Depois da primeira sessão</strong>
+              <h3>Algumas falas pedem mais tempo.</h3>
+              <p>A depender da complexidade, da maturidade da fala e do material envolvido, novos encontros podem ser necessários.</p>
+              <p>A princípio, a gente começa com uma sessão. Ao final dela, definimos juntos os próximos passos.</p>
+              <ul>
+                <li>Quando a narrativa ainda precisa ser desenvolvida.</li>
+                <li>Quando existe material para construir ou ajustar.</li>
+                <li>Quando a fala precisa de mais ensaio antes de ir para a situação real.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -798,8 +1091,8 @@
       <div class="form-wrap">
         <div>
           <p class="section-label">Agendar conversa</p>
-          <h2>Qual fala você precisa preparar?</h2>
-          <p class="lead">Pode ser uma apresentação para diretoria, uma conversa com cliente, uma reunião que você vem adiando ou um projeto que precisa sair da sua cabeça e chegar mais claro na mesa.</p>
+          <h2>Qual o seu maior desafio?</h2>
+          <p class="lead">Pode ser uma apresentação, uma conversa com cliente, uma reunião adiada ou um projeto que precisa chegar mais claro na mesa.</p>
         </div>
 
         <form class="lead-form" name="sessao-estrategia-fala" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-form>
@@ -810,39 +1103,18 @@
 
           <div class="field-row">
             <label>
-              Nome
+              Nome*
               <input type="text" name="name" autocomplete="name" placeholder="Seu nome" required />
             </label>
             <label>
-              E-mail
+              E-mail*
               <input type="email" name="email" autocomplete="email" placeholder="seu@email.com" required />
             </label>
           </div>
 
-          <div class="field-row">
-            <label>
-              WhatsApp
-              <input type="tel" name="whatsapp" autocomplete="tel" placeholder="Com DDD" />
-            </label>
-            <label>
-              O que faz mais sentido agora?
-              <select name="interest" required>
-                <option value="">Escolha uma opção</option>
-                <option value="sessao-avulsa">Sessão avulsa</option>
-                <option value="pacote-3-sessoes">Pacote de 3 sessões</option>
-                <option value="nao-sei-ainda">Ainda não sei</option>
-              </select>
-            </label>
-          </div>
-
           <label>
-            Qual fala você quer preparar?
+            Qual situação você precisa preparar?*
             <textarea name="situation" placeholder="Ex: apresentação para diretoria, reunião com cliente, defesa de projeto, conversa com liderança..." required></textarea>
-          </label>
-
-          <label>
-            Onde costuma travar?
-            <textarea name="challenge" placeholder="Ex: abrir a fala, organizar a linha, responder perguntas, cortar excesso, não se perder quando alguém discorda..."></textarea>
           </label>
 
           <button class="btn-primary" type="submit">Quero uma sessão</button>
@@ -854,7 +1126,7 @@
 
   <footer>
     <span>monteirovick | Estratégia &amp; Fala</span>
-    <a href="index.html">Voltar para o site</a>
+    <a href="index.html">Voltar para o Home</a>
   </footer>
 
   <script>
@@ -878,7 +1150,7 @@
             body: payload.toString()
           });
 
-          form.innerHTML = '<p style="font-size:17px;color:var(--bege);font-weight:700;line-height:1.7;">Recebi seu contexto. Vou olhar com calma e te retorno com o próximo passo para essa fala.</p>';
+          form.innerHTML = '<p style="font-size:17px;color:var(--ink);font-weight:700;line-height:1.7;">Recebi seu contexto. Vou olhar com calma e te retorno com o próximo passo para essa fala.</p>';
         } catch (error) {
           if (submitButton) {
             submitButton.disabled = false;
