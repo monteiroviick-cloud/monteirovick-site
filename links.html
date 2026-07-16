@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=20260715" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260715" />
+  <link rel="shortcut icon" href="/favicon.ico?v=20260715" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260715" />
+  <title>Links | monteirovick</title>
+  <meta name="description" content="Links principais de Vick Monteiro." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Links | monteirovick" />
+  <meta property="og:description" content="Faça a sua ideia chegar mais longe." />
+  <meta property="og:image" content="drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --vinho-escuro: #0a0305;
+      --vinho: #1e0910;
+      --vermelho: #c0292a;
+      --bege: #e9ded2;
+      --bege-muted: rgba(233,222,210,0.64);
+      --off: #f5f0eb;
+      --ink: #1e0910;
+      --muted: rgba(30,9,16,0.62);
+      --line-dark: rgba(233,222,210,0.16);
+      --line-light: rgba(30,9,16,0.12);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      font-family: "Montserrat", sans-serif;
+      color: var(--bege);
+      background: var(--vinho-escuro);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    .hero {
+      min-height: 100svh;
+      background:
+        linear-gradient(to right, rgba(10,3,5,0.98) 0%, rgba(10,3,5,0.9) 38%, rgba(10,3,5,0.46) 100%),
+        linear-gradient(to top, rgba(10,3,5,1) 0%, rgba(10,3,5,0.08) 44%, rgba(10,3,5,0.86) 100%),
+        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") center 38%/cover no-repeat;
+    }
+
+    .hero-inner {
+      width: min(var(--max), calc(100% - 48px));
+      min-height: 100svh;
+      margin: 0 auto;
+      padding: 28px 0 34px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 36px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: baseline;
+      width: fit-content;
+      color: var(--bege);
+      text-decoration: none;
+      font-size: 23px;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+    .brand span:first-child { font-weight: 300; }
+    .brand span:last-child { font-weight: 800; }
+
+    .hero-grid {
+      align-self: center;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(330px, 0.55fr);
+      gap: clamp(42px, 7vw, 92px);
+      align-items: center;
+      padding: 34px 0;
+    }
+
+    .eyebrow,
+    .form-kicker,
+    .section-tag {
+      color: var(--vermelho);
+      font-size: 11px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow { margin-bottom: 18px; }
+
+    h1 {
+      max-width: 720px;
+      color: var(--bege);
+      font-size: clamp(54px, 8vw, 104px);
+      line-height: 0.92;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .form-card {
+      border: 1px solid var(--line-dark);
+      background: rgba(10,3,5,0.58);
+      backdrop-filter: blur(16px);
+      padding: 28px;
+    }
+
+    .lead-form {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .lead-form label {
+      display: grid;
+      gap: 7px;
+      color: var(--bege-muted);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .lead-form input,
+    .lead-form textarea {
+      width: 100%;
+      border: 1px solid var(--line-dark);
+      border-radius: 0;
+      background: rgba(233,222,210,0.06);
+      color: var(--bege);
+      font: inherit;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 14px 15px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .lead-form textarea {
+      min-height: 82px;
+      resize: vertical;
+    }
+
+    .lead-form input:focus,
+    .lead-form textarea:focus {
+      border-color: rgba(233,222,210,0.42);
+      background: rgba(233,222,210,0.1);
+    }
+
+    .lead-form input::placeholder,
+    .lead-form textarea::placeholder {
+      color: rgba(233,222,210,0.42);
+    }
+
+    .form-button {
+      min-height: 48px;
+      border: 1px solid var(--vermelho);
+      background: var(--vermelho);
+      color: var(--bege);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .form-button:hover {
+      background: #de3031;
+      border-color: #de3031;
+    }
+
+    .form-button:disabled {
+      opacity: 0.72;
+      cursor: wait;
+    }
+
+    .form-status {
+      display: none;
+      margin-top: 2px;
+      padding: 13px 14px;
+      border: 1px solid rgba(233,222,210,0.2);
+      background: rgba(233,222,210,0.08);
+      color: var(--bege);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .form-status.is-visible {
+      display: block;
+    }
+
+    .form-status.is-error {
+      border-color: rgba(192,41,42,0.58);
+      color: var(--bege);
+    }
+
+    .page-footer {
+      color: var(--ink);
+      background: var(--off);
+    }
+
+    .page-footer-inner {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 28px 0 34px;
+      border-top: 1px solid var(--line-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: baseline;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+    .footer-brand span:first-child { font-weight: 300; }
+    .footer-brand span:last-child { font-weight: 800; }
+
+    .footer-right {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px 16px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--vermelho);
+      border-bottom-color: var(--vermelho);
+    }
+
+    .tools {
+      min-height: 82svh;
+      display: flex;
+      align-items: center;
+      color: var(--ink);
+      background: var(--off);
+      padding: 76px 0;
+    }
+
+    .tools-inner {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(250px, 0.38fr) minmax(0, 0.62fr);
+      gap: clamp(40px, 7vw, 90px);
+      align-items: start;
+    }
+
+    .tools h2 {
+      max-width: 420px;
+      margin-top: 18px;
+      color: var(--ink);
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .tools-copy {
+      max-width: 420px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .tool-list {
+      border-top: 1px solid var(--line-light);
+    }
+
+    .tool-item,
+    .tool-all {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 0;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line-light);
+      transition: color 0.2s;
+    }
+
+    .tool-item:hover,
+    .tool-all:hover {
+      color: var(--vermelho);
+    }
+
+    .tool-item strong,
+    .tool-all strong {
+      display: block;
+      color: inherit;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 850;
+    }
+
+    .tool-item span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .tool-item em,
+    .tool-all em {
+      color: var(--vermelho);
+      font-style: normal;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .tool-all {
+      border-bottom: 0;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        min-height: auto;
+        background:
+          linear-gradient(180deg, rgba(10,3,5,0.72) 0%, rgba(10,3,5,0.96) 48%, rgba(10,3,5,1) 100%),
+          url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") 58% top/auto 560px no-repeat;
+        background-color: var(--vinho-escuro);
+      }
+
+      .hero-inner {
+        min-height: 100svh;
+      }
+
+      .hero-grid,
+      .tools-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        align-content: end;
+        padding-top: 82px;
+      }
+
+      .form-card {
+        padding: 22px;
+      }
+
+      .tools {
+        min-height: auto;
+        padding: 58px 0;
+      }
+
+      .tools h2,
+      .tools-copy {
+        max-width: 620px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-inner,
+      .tools-inner {
+        width: min(100% - 32px, var(--max));
+      }
+
+      .hero-inner {
+        gap: 28px;
+        padding: 22px 0 28px;
+      }
+
+      h1 {
+        font-size: clamp(46px, 13vw, 68px);
+      }
+
+      .hero-grid {
+        gap: 26px;
+        padding-top: 78px;
+        padding-bottom: 12px;
+      }
+
+      .form-card {
+        padding: 18px;
+      }
+
+      .lead-form input,
+      .lead-form textarea {
+        padding: 12px 13px;
+      }
+
+      .lead-form textarea {
+        min-height: 72px;
+      }
+
+      .form-button {
+        min-height: 46px;
+      }
+
+      .page-footer-inner {
+        width: min(100% - 32px, var(--max));
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-right,
+      .footer-links {
+        justify-content: flex-start;
+      }
+
+      .tool-item,
+      .tool-all {
+        padding: 18px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero" aria-labelledby="titulo">
+    <div class="hero-inner">
+      <a href="index.html" class="brand" aria-label="monteirovick">
+        <span>monteiro</span><span>vick</span>
+      </a>
+
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Estratégia & fala</p>
+          <h1 id="titulo">Faça a sua ideia chegar mais longe.</h1>
+        </div>
+
+        <aside class="form-card" aria-label="Contato">
+          <p class="form-kicker">Contato</p>
+          <form class="lead-form" name="links-contato" method="POST" data-netlify="true" data-netlify-form>
+            <input type="hidden" name="form-name" value="links-contato" />
+            <input type="hidden" name="subject" value="Novo contato pela página de links" />
+            <input type="hidden" name="source" value="lp-links" />
+
+            <label>
+              Nome
+              <input type="text" name="name" placeholder="Seu nome" required />
+            </label>
+            <label>
+              E-mail
+              <input type="email" name="email" placeholder="seu@email.com" required />
+            </label>
+            <label>
+              Principal desafio
+              <textarea name="challenge" placeholder="Me conta: onde a sua ideia precisa chegar?" required></textarea>
+            </label>
+            <button class="form-button" type="submit">Enviar contato</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="tools" aria-labelledby="ferramentas-titulo">
+    <div class="tools-inner">
+      <div>
+        <p class="section-tag">Ferramentas</p>
+        <h2 id="ferramentas-titulo">Para tirar a ideia do lugar.</h2>
+        <p class="tools-copy">Materiais REMIND para organizar marca, venda, jornada e gestão com mais clareza.</p>
+      </div>
+
+      <div class="tool-list">
+        <a class="tool-item" href="https://rmnd.com.br/livrobrandingevendas" target="_blank" rel="noopener">
+          <div><strong>Branding & Vendas</strong><span>Para aproximar marca, desejo e decisão de compra.</span></div><em>→</em>
+        </a>
+        <a class="tool-item" href="https://rmnd.com.br/jornada_empreendedor" target="_blank" rel="noopener">
+          <div><strong>Jornada do Cliente</strong><span>Para enxergar a experiência antes, durante e depois da compra.</span></div><em>→</em>
+        </a>
+        <a class="tool-item" href="https://www.rmnd.com.br/HUBGESTAO" target="_blank" rel="noopener">
+          <div><strong>Hub de Gestão</strong><span>Para organizar processos, rotina e visão do negócio.</span></div><em>→</em>
+        </a>
+        <a class="tool-item" href="https://rmnd.com.br/guia_geral" target="_blank" rel="noopener">
+          <div><strong>Estratégia de Vendas</strong><span>Para estruturar oferta, argumento e caminho comercial.</span></div><em>→</em>
+        </a>
+        <a class="tool-all" href="https://www.rmnd.com.br/shop" target="_blank" rel="noopener">
+          <strong>Ver todas as ferramentas</strong><em>→</em>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer" aria-label="Rodapé">
+    <div class="page-footer-inner">
+      <a href="index.html" class="footer-brand" aria-label="monteirovick">
+        <span>monteiro</span><span>vick</span>
+      </a>
+      <div class="footer-right">
+        <nav class="footer-links" aria-label="Redes e contato">
+          <a href="mailto:vick@rmnd.com.br">E-mail</a>
+          <a href="https://instagram.com/monteirovick" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.linkedin.com/in/victoriafmonteiro/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://instagram.com/remind.bx" target="_blank" rel="noopener">REMIND</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const contactForm = document.querySelector('form[name="links-contato"]');
+    const formStatus = document.querySelector('[data-form-status]');
+
+    if (contactForm && formStatus) {
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const button = contactForm.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+        const formData = new FormData(contactForm);
+
+        formStatus.className = 'form-status';
+        formStatus.textContent = '';
+        button.disabled = true;
+        button.textContent = 'Enviando...';
+
+        try {
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData).toString()
+          });
+
+          if (!response.ok) throw new Error('form-submit-failed');
+
+          contactForm.reset();
+          formStatus.textContent = 'Mensagem enviada com sucesso. Em breve eu retorno pelo contato informado.';
+          formStatus.classList.add('is-visible');
+          button.textContent = 'Enviado';
+        } catch (error) {
+          formStatus.textContent = 'Não consegui enviar agora. Tente novamente em alguns instantes ou use o e-mail no rodapé.';
+          formStatus.classList.add('is-visible', 'is-error');
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      });
+    }
+  </script>
+</body>
+</html>
