@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=20260715" />
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260715" />
-  <link rel="shortcut icon" href="/favicon.ico?v=20260715" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260715" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=20260716" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=20260716" />
+  <link rel="shortcut icon" href="/favicon.ico?v=20260716" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260716" />
   <title>monteirovick</title>
   <meta name="description" content="Links principais de Vick Monteiro." />
   <meta property="og:type" content="website" />
@@ -47,9 +47,12 @@
     .hero {
       min-height: 100svh;
       background:
-        linear-gradient(to right, rgba(10,3,5,0.98) 0%, rgba(10,3,5,0.9) 38%, rgba(10,3,5,0.46) 100%),
-        linear-gradient(to top, rgba(10,3,5,1) 0%, rgba(10,3,5,0.08) 44%, rgba(10,3,5,0.86) 100%),
-        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") center 38%/cover no-repeat;
+        linear-gradient(90deg, rgba(10,3,5,0.95) 0%, rgba(10,3,5,0.72) 32%, rgba(10,3,5,0.50) 54%, rgba(10,3,5,0.88) 100%),
+        linear-gradient(to bottom, rgba(10,3,5,0.24), rgba(10,3,5,0.76)),
+        url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg");
+      background-size: cover;
+      background-position: 54% center;
+      background-repeat: no-repeat;
     }
 
     .hero-inner {
@@ -61,6 +64,13 @@
       display: grid;
       grid-template-rows: auto 1fr auto;
       gap: 36px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
 
     .brand {
@@ -76,12 +86,44 @@
     .brand span:first-child { font-weight: 300; }
     .brand span:last-child { font-weight: 800; }
 
+    .top-social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-icon {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(233,222,210,0.2);
+      color: var(--bege);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .social-icon svg {
+      width: 17px;
+      height: 17px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .social-icon:hover {
+      border-color: var(--vermelho);
+      background: var(--vermelho);
+      color: var(--bege);
+    }
+
     .hero-grid {
       align-self: center;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(330px, 390px);
-      gap: clamp(34px, 6vw, 92px);
+      grid-template-columns: minmax(300px, 0.82fr) minmax(320px, 380px);
+      gap: clamp(40px, 12vw, 220px);
       align-items: center;
+      justify-content: space-between;
       padding: 34px 0;
     }
 
@@ -99,9 +141,9 @@
     .eyebrow { margin-bottom: 18px; }
 
     h1 {
-      max-width: 690px;
+      max-width: 520px;
       color: var(--bege);
-      font-size: clamp(48px, 6vw, 86px);
+      font-size: clamp(42px, 5vw, 76px);
       line-height: 0.92;
       font-weight: 900;
       letter-spacing: 0;
@@ -118,6 +160,8 @@
       background: rgba(10,3,5,0.58);
       backdrop-filter: blur(16px);
       padding: 28px;
+      justify-self: end;
+      width: 100%;
     }
 
     .lead-form {
@@ -357,14 +401,8 @@
       margin-top: 4px;
     }
 
-    @media (max-width: 860px) {
-      .hero {
-        min-height: auto;
-        background:
-          linear-gradient(180deg, rgba(10,3,5,0.72) 0%, rgba(10,3,5,0.96) 48%, rgba(10,3,5,1) 100%),
-          url("drive-download-20260503T001933Z-3-001/assets/03. Fotos em alta/SAN01014.jpg") 58% top/auto 560px no-repeat;
-        background-color: var(--vinho-escuro);
-      }
+    @media (max-width: 760px) {
+      .hero { min-height: auto; }
 
       .hero-inner {
         min-height: 100svh;
@@ -377,7 +415,7 @@
 
       .hero-grid {
         align-content: end;
-        padding-top: 82px;
+        padding-top: 56px;
       }
 
       .form-card {
@@ -392,6 +430,8 @@
       .tools h2 {
         max-width: 620px;
       }
+
+      .top-social { gap: 8px; }
     }
 
     @media (max-width: 560px) {
@@ -412,9 +452,18 @@
       }
 
       .hero-grid {
-        gap: 26px;
-        padding-top: 78px;
+        gap: 24px;
+        padding-top: 42px;
         padding-bottom: 12px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+      }
+
+      .social-icon {
+        width: 36px;
+        height: 36px;
       }
 
       .form-card {
@@ -451,15 +500,26 @@
       .tool-all {
         padding: 18px 0;
       }
+
     }
   </style>
 </head>
 <body>
   <section class="hero" aria-labelledby="titulo">
     <div class="hero-inner">
-      <a href="home-oficial.html" class="brand" aria-label="monteirovick">
-        <span>monteiro</span><span>vick</span>
-      </a>
+      <header class="topbar">
+        <a href="home-oficial.html" class="brand" aria-label="monteirovick">
+          <span>monteiro</span><span>vick</span>
+        </a>
+        <nav class="top-social" aria-label="Redes sociais">
+          <a class="social-icon" href="https://instagram.com/monteirovick" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5ZM12 7.2A4.8 4.8 0 1 1 12 16.8 4.8 4.8 0 0 1 12 7.2Zm0 2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2Zm5.05-2.5a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.linkedin.com/in/victoriafmonteiro/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5ZM3 9.75h4v10.75H3V9.75Zm6.25 0h3.82v1.47h.06c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.77 2.65 4.77 6.1v5.14h-4v-4.56c0-1.09-.02-2.49-1.52-2.49-1.52 0-1.75 1.18-1.75 2.4v4.65h-4V9.75Z"/></svg>
+          </a>
+        </nav>
+      </header>
 
       <div class="hero-grid">
         <div>
