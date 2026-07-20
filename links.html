@@ -436,6 +436,7 @@
 
     .tool-contact {
       width: fit-content;
+      max-width: 100%;
       min-height: 48px;
       margin-top: 18px;
       display: inline-flex;
@@ -454,8 +455,9 @@
 
     .tool-contact strong {
       font-size: 11px;
-      line-height: 1;
+      line-height: 1.18;
       font-weight: 900;
+      white-space: normal;
     }
 
     .tool-contact span {
@@ -612,6 +614,21 @@
         padding: 18px 0;
       }
 
+      .tool-contact {
+        width: 100%;
+        min-height: auto;
+        padding: 14px 16px;
+        gap: 12px;
+        justify-content: space-between;
+        letter-spacing: 0.08em;
+      }
+
+      .tool-contact strong {
+        max-width: calc(100% - 28px);
+        font-size: 10px;
+        line-height: 1.28;
+      }
+
     }
   </style>
 </head>
@@ -653,7 +670,7 @@
           <div><strong>Branding & Vendas</strong><span>Para aproximar marca, desejo e decisão de compra.</span></div><em>→</em>
         </div>
         <div class="tool-item">
-          <div><strong>Jornada do Cliente</strong><span>Para enxergar a experiência antes, durante e depois da compra.</span></div><em>→</em>
+          <div><strong>Jornada do Cliente</strong><span>Para enxergar a experiência do zero à compra.</span></div><em>→</em>
         </div>
         <div class="tool-item">
           <div><strong>Hub de Gestão</strong><span>Para organizar processos, rotina e visão do negócio.</span></div><em>→</em>
@@ -665,7 +682,7 @@
           <strong>Ver todas as ferramentas</strong><em>→</em>
         </div>
         <a class="tool-all tool-contact" href="#contato">
-          <strong>Me conta onde a sua ideia precisa chegar</strong><em>→</em>
+          <strong>Me conte onde a sua ideia precisa chegar</strong><em>→</em>
         </a>
       </div>
     </div>
